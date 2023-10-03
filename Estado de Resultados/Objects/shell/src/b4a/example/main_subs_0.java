@@ -105,17 +105,17 @@ _fd.runMethod(true,"setFastScroll",parent.mostCurrent.__c.getField(true,"True"))
  BA.debugLineNum = 90;BA.debugLine="fd.ShowOnlyFolders=False";
 Debug.ShouldStop(33554432);
 _fd.runMethod(true,"setShowOnlyFolders",parent.mostCurrent.__c.getField(true,"False"));
- BA.debugLineNum = 91;BA.debugLine="fd.FileFilter= Colors.Cyan";
-Debug.ShouldStop(67108864);
-_fd.runMethod(true,"setFileFilter",BA.NumberToString(parent.mostCurrent.__c.getField(false,"Colors").getField(true,"Cyan")));
- BA.debugLineNum = 92;BA.debugLine="fd.FilePath = File.DirInternal";
+ BA.debugLineNum = 92;BA.debugLine="fd.TextColor=Colors.Black";
 Debug.ShouldStop(134217728);
-_fd.runMethod(true,"setFilePath",parent.mostCurrent.__c.getField(false,"File").runMethod(true,"getDirInternal"));
- BA.debugLineNum = 93;BA.debugLine="Dim sf As Object = fd.ShowAsync(\"Select file\", \"Y";
+_fd.setField ("TextColor",parent.mostCurrent.__c.getField(false,"Colors").getField(true,"Black"));
+ BA.debugLineNum = 93;BA.debugLine="fd.FilePath = File.DirInternal";
 Debug.ShouldStop(268435456);
-_sf = _fd.runMethod(false,"ShowAsync",(Object)(BA.ObjectToCharSequence("Select file")),(Object)(BA.ObjectToString("Yes")),(Object)(BA.ObjectToString("Cancel")),(Object)(BA.ObjectToString("No")),main.mostCurrent.activityBA,(Object)((parent.mostCurrent.__c.getField(false,"Null"))),(Object)(parent.mostCurrent.__c.getField(true,"False")));Debug.locals.put("sf", _sf);Debug.locals.put("sf", _sf);
- BA.debugLineNum = 94;BA.debugLine="Wait For (sf) Dialog_Result(Result As Int)";
+_fd.runMethod(true,"setFilePath",parent.mostCurrent.__c.getField(false,"File").runMethod(true,"getDirInternal"));
+ BA.debugLineNum = 94;BA.debugLine="Dim sf As Object = fd.ShowAsync(\"Select file\", \"Y";
 Debug.ShouldStop(536870912);
+_sf = _fd.runMethod(false,"ShowAsync",(Object)(BA.ObjectToCharSequence("Select file")),(Object)(BA.ObjectToString("Yes")),(Object)(BA.ObjectToString("Cancel")),(Object)(BA.ObjectToString("No")),main.mostCurrent.activityBA,(Object)((parent.mostCurrent.__c.getField(false,"Null"))),(Object)(parent.mostCurrent.__c.getField(true,"False")));Debug.locals.put("sf", _sf);Debug.locals.put("sf", _sf);
+ BA.debugLineNum = 95;BA.debugLine="Wait For (sf) Dialog_Result(Result As Int)";
+Debug.ShouldStop(1073741824);
 parent.mostCurrent.__c.runVoidMethod ("WaitFor","dialog_result", main.processBA, anywheresoftware.b4a.pc.PCResumableSub.createDebugResumeSub(this, "main", "boton_click"), _sf);
 this.state = 5;
 return;
@@ -124,8 +124,8 @@ case 5:
 this.state = 1;
 _result = (RemoteObject) result.getArrayElement(true,RemoteObject.createImmutable(0));Debug.locals.put("Result", _result);
 ;
- BA.debugLineNum = 95;BA.debugLine="If Result = DialogResponse.POSITIVE Then";
-Debug.ShouldStop(1073741824);
+ BA.debugLineNum = 96;BA.debugLine="If Result = DialogResponse.POSITIVE Then";
+Debug.ShouldStop(-2147483648);
 if (true) break;
 
 case 1:
@@ -138,26 +138,26 @@ this.state = 3;
 case 3:
 //C
 this.state = 4;
- BA.debugLineNum = 96;BA.debugLine="Log(\"File path: \" & fd.FilePath)";
-Debug.ShouldStop(-2147483648);
-parent.mostCurrent.__c.runVoidMethod ("LogImpl","5917513",RemoteObject.concat(RemoteObject.createImmutable("File path: "),_fd.runMethod(true,"getFilePath")),0);
- BA.debugLineNum = 97;BA.debugLine="Log(\"File name: \" & fd.ChosenName)";
+ BA.debugLineNum = 97;BA.debugLine="Log(\"File path: \" & fd.FilePath)";
 Debug.ShouldStop(1);
-parent.mostCurrent.__c.runVoidMethod ("LogImpl","5917514",RemoteObject.concat(RemoteObject.createImmutable("File name: "),_fd.runMethod(true,"getChosenName")),0);
+parent.mostCurrent.__c.runVoidMethod ("LogImpl","3458762",RemoteObject.concat(RemoteObject.createImmutable("File path: "),_fd.runMethod(true,"getFilePath")),0);
+ BA.debugLineNum = 98;BA.debugLine="Log(\"File name: \" & fd.ChosenName)";
+Debug.ShouldStop(2);
+parent.mostCurrent.__c.runVoidMethod ("LogImpl","3458763",RemoteObject.concat(RemoteObject.createImmutable("File name: "),_fd.runMethod(true,"getChosenName")),0);
  if (true) break;
 
 case 4:
 //C
 this.state = -1;
 ;
- BA.debugLineNum = 99;BA.debugLine="Label1.Text = \"Ruta = \" & fd.FilePath";
-Debug.ShouldStop(4);
-parent.mostCurrent._label1.runMethod(true,"setText",BA.ObjectToCharSequence(RemoteObject.concat(RemoteObject.createImmutable("Ruta = "),_fd.runMethod(true,"getFilePath"))));
- BA.debugLineNum = 100;BA.debugLine="Label2.Text = \"Archivo = \" & fd.ChosenName";
+ BA.debugLineNum = 100;BA.debugLine="Label1.Text = \"Ruta = \" & fd.FilePath";
 Debug.ShouldStop(8);
-parent.mostCurrent._label2.runMethod(true,"setText",BA.ObjectToCharSequence(RemoteObject.concat(RemoteObject.createImmutable("Archivo = "),_fd.runMethod(true,"getChosenName"))));
- BA.debugLineNum = 101;BA.debugLine="End Sub";
+parent.mostCurrent._label1.runMethod(true,"setText",BA.ObjectToCharSequence(RemoteObject.concat(RemoteObject.createImmutable("Ruta = "),_fd.runMethod(true,"getFilePath"))));
+ BA.debugLineNum = 101;BA.debugLine="Label2.Text = \"Archivo = \" & fd.ChosenName";
 Debug.ShouldStop(16);
+parent.mostCurrent._label2.runMethod(true,"setText",BA.ObjectToCharSequence(RemoteObject.concat(RemoteObject.createImmutable("Archivo = "),_fd.runMethod(true,"getChosenName"))));
+ BA.debugLineNum = 102;BA.debugLine="End Sub";
+Debug.ShouldStop(32);
 if (true) break;
 
             }

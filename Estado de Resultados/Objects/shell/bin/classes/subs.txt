@@ -14,7 +14,7 @@ main,activity_resume,0,0,51,53
 
 
 
-main,boton_click,0,0,87,101
+main,boton_click,0,1,87,102
 ,label1,,label2
 
 

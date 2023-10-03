@@ -1,0 +1,117 @@
+﻿Build1=Default,b4a.example
+File1=Pantalla1.bal
+File2=Pantalla2.bal
+FileGroup1=Default Group
+FileGroup2=Default Group
+Group=Default Group
+Library1=core
+Library2=xui
+Library3=dialogs
+ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="33"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~CreateResourceFromFile(Macro, Themes.LightTheme)~\n~'End of default text.~\n~
+Module1=Starter
+NumberOfFiles=2
+NumberOfLibraries=3
+NumberOfModules=1
+Version=12.5
+@EndOfDesignText@
+#Region  Project Attributes 
+	#ApplicationLabel: B4A Example
+	#VersionCode: 1
+	#VersionName: 
+	'SupportedOrientations possible values: unspecified, landscape or portrait.
+	#SupportedOrientations: unspecified
+	#CanInstallToExternalStorage: False
+#End Region
+
+#Region  Activity Attributes 
+	#FullScreen: False
+	#IncludeTitle: True
+#End Region
+
+Sub Process_Globals
+	'These global variables will be declared once when the application starts.
+	'These variables can be accessed from all modules.
+	Private xui As XUI
+	
+	
+End Sub
+
+
+Sub Globals
+	'These global variables will be redeclared each time the activity is created.
+	Private INICIAR As Button
+	
+	Private info As Button
+	Dim Usuario As String
+	Dim Label1, Label2 As Label
+	
+	
+	Private Nombre As EditText
+	
+	Usuario = Nombre 'Estamos guardando el texto ingresado en Nombre a la variable USUARIO
+	
+	Private HiUsuario As Label
+	
+	Private Boton As Button
+	
+End Sub
+
+
+Sub Activity_Create(FirstTime As Boolean)
+	'Activity.LoadLayout("Layout")
+	
+	Activity.LoadLayout("Pantalla1")
+	
+End Sub
+
+Sub Activity_Resume
+
+End Sub
+
+Sub Activity_Pause (UserClosed As Boolean)
+
+End Sub
+
+Private Sub INICIAR_Click
+	Usuario = Nombre.Text
+	Activity.RemoveAllViews
+	Activity.LoadLayout("Pantalla2")
+	HiUsuario.Text= "Hola " & Usuario
+	' Crea etiqueta Ruta
+	Label1.Initialize("Label1")
+	Label1.TextColor = Colors.Black
+	Label1.Text = "Ruta = "
+	Activity.AddView(Label1, 100, 630, 500, 100) ' Posicion, ancho y alto
+       
+	' Crea etiqueta Archivo
+	Label2.Initialize("Label2")
+	Label2.TextColor = Colors.Red
+	Label2.Text = "Archivo = "
+	Activity.AddView(Label2, 100, 750, 500, 150) ' Posicion, ancho y alto
+	
+	'MsgboxAsync("Necesitamos ingresar el nombre del archivo de Excel", "Primer Paso")
+	
+	
+End Sub
+
+Private Sub info_Click
+MsgboxAsync("Recuerda verificar que el archivo elegido es el correcto", "INFORMACIÓN")
+
+	
+End Sub
+
+Private Sub Boton_Click
+	Dim fd As FileDialog
+	fd.FastScroll = True
+	fd.ShowOnlyFolders=False
+	fd.FileFilter= Colors.Cyan
+	fd.FilePath = File.DirInternal
+	Dim sf As Object = fd.ShowAsync("Select file", "Yes", "Cancel", "No", Null, False)
+	Wait For (sf) Dialog_Result(Result As Int)
+	If Result = DialogResponse.POSITIVE Then
+		Log("File path: " & fd.FilePath)
+		Log("File name: " & fd.ChosenName)
+	End If
+	Label1.Text = "Ruta = " & fd.FilePath
+	Label2.Text = "Archivo = " & fd.ChosenName
+End Sub

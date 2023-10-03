@@ -455,17 +455,17 @@ _fd.setFastScroll(anywheresoftware.b4a.keywords.Common.True);
 RDebugUtils.currentLine=458755;
  //BA.debugLineNum = 458755;BA.debugLine="fd.ShowOnlyFolders=False";
 _fd.setShowOnlyFolders(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=458757;
- //BA.debugLineNum = 458757;BA.debugLine="fd.TextColor=Colors.Black";
+RDebugUtils.currentLine=458756;
+ //BA.debugLineNum = 458756;BA.debugLine="fd.TextColor=Colors.Black";
 _fd.TextColor = anywheresoftware.b4a.keywords.Common.Colors.Black;
-RDebugUtils.currentLine=458758;
- //BA.debugLineNum = 458758;BA.debugLine="fd.FilePath = File.DirInternal";
+RDebugUtils.currentLine=458757;
+ //BA.debugLineNum = 458757;BA.debugLine="fd.FilePath = File.DirInternal";
 _fd.setFilePath(anywheresoftware.b4a.keywords.Common.File.getDirInternal());
-RDebugUtils.currentLine=458759;
- //BA.debugLineNum = 458759;BA.debugLine="Dim sf As Object = fd.ShowAsync(\"Select file\", \"Y";
+RDebugUtils.currentLine=458758;
+ //BA.debugLineNum = 458758;BA.debugLine="Dim sf As Object = fd.ShowAsync(\"Select file\", \"Y";
 _sf = _fd.ShowAsync(BA.ObjectToCharSequence("Select file"),"Yes","Cancel","No",mostCurrent.activityBA,(android.graphics.Bitmap)(anywheresoftware.b4a.keywords.Common.Null),anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=458760;
- //BA.debugLineNum = 458760;BA.debugLine="Wait For (sf) Dialog_Result(Result As Int)";
+RDebugUtils.currentLine=458759;
+ //BA.debugLineNum = 458759;BA.debugLine="Wait For (sf) Dialog_Result(Result As Int)";
 anywheresoftware.b4a.keywords.Common.WaitFor("dialog_result", processBA, new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "main", "boton_click"), _sf);
 this.state = 5;
 return;
@@ -474,8 +474,8 @@ case 5:
 this.state = 1;
 _result = (Integer) result[0];
 ;
-RDebugUtils.currentLine=458761;
- //BA.debugLineNum = 458761;BA.debugLine="If Result = DialogResponse.POSITIVE Then";
+RDebugUtils.currentLine=458760;
+ //BA.debugLineNum = 458760;BA.debugLine="If Result = DialogResponse.POSITIVE Then";
 if (true) break;
 
 case 1:
@@ -488,26 +488,26 @@ this.state = 3;
 case 3:
 //C
 this.state = 4;
+RDebugUtils.currentLine=458761;
+ //BA.debugLineNum = 458761;BA.debugLine="Log(\"File path: \" & fd.FilePath)";
+anywheresoftware.b4a.keywords.Common.LogImpl("7458761","File path: "+_fd.getFilePath(),0);
 RDebugUtils.currentLine=458762;
- //BA.debugLineNum = 458762;BA.debugLine="Log(\"File path: \" & fd.FilePath)";
-anywheresoftware.b4a.keywords.Common.LogImpl("3458762","File path: "+_fd.getFilePath(),0);
-RDebugUtils.currentLine=458763;
- //BA.debugLineNum = 458763;BA.debugLine="Log(\"File name: \" & fd.ChosenName)";
-anywheresoftware.b4a.keywords.Common.LogImpl("3458763","File name: "+_fd.getChosenName(),0);
+ //BA.debugLineNum = 458762;BA.debugLine="Log(\"File name: \" & fd.ChosenName)";
+anywheresoftware.b4a.keywords.Common.LogImpl("7458762","File name: "+_fd.getChosenName(),0);
  if (true) break;
 
 case 4:
 //C
 this.state = -1;
 ;
-RDebugUtils.currentLine=458765;
- //BA.debugLineNum = 458765;BA.debugLine="Label1.Text = \"Ruta = \" & fd.FilePath";
+RDebugUtils.currentLine=458764;
+ //BA.debugLineNum = 458764;BA.debugLine="Label1.Text = \"Ruta = \" & fd.FilePath";
 parent.mostCurrent._label1.setText(BA.ObjectToCharSequence("Ruta = "+_fd.getFilePath()));
-RDebugUtils.currentLine=458766;
- //BA.debugLineNum = 458766;BA.debugLine="Label2.Text = \"Archivo = \" & fd.ChosenName";
+RDebugUtils.currentLine=458765;
+ //BA.debugLineNum = 458765;BA.debugLine="Label2.Text = \"Archivo = \" & fd.ChosenName";
 parent.mostCurrent._label2.setText(BA.ObjectToCharSequence("Archivo = "+_fd.getChosenName()));
-RDebugUtils.currentLine=458767;
- //BA.debugLineNum = 458767;BA.debugLine="End Sub";
+RDebugUtils.currentLine=458766;
+ //BA.debugLineNum = 458766;BA.debugLine="End Sub";
 if (true) break;
 
             }

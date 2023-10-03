@@ -104,7 +104,6 @@ Private Sub Boton_Click
 	Dim fd As FileDialog
 	fd.FastScroll = True
 	fd.ShowOnlyFolders=False
-	'fd.FileFilter= Colors.Cyan
 	fd.TextColor=Colors.Black
 	fd.FilePath = File.DirInternal
 	Dim sf As Object = fd.ShowAsync("Select file", "Yes", "Cancel", "No", Null, False)

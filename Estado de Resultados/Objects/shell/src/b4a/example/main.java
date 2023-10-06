@@ -56,16 +56,20 @@ public boolean isSingleton() {
 	}
 public static RemoteObject __c = RemoteObject.declareNull("anywheresoftware.b4a.keywords.Common");
 public static RemoteObject _xui = RemoteObject.declareNull("anywheresoftware.b4a.objects.B4XViewWrapper.XUI");
+public static RemoteObject _xls = RemoteObject.declareNull("de.donmanfred.XSSFWorkbookwrapper");
 public static RemoteObject _iniciar = RemoteObject.declareNull("anywheresoftware.b4a.objects.ButtonWrapper");
 public static RemoteObject _info = RemoteObject.declareNull("anywheresoftware.b4a.objects.ButtonWrapper");
 public static RemoteObject _usuario = RemoteObject.createImmutable("");
-public static RemoteObject _label1 = RemoteObject.declareNull("anywheresoftware.b4a.objects.LabelWrapper");
-public static RemoteObject _label2 = RemoteObject.declareNull("anywheresoftware.b4a.objects.LabelWrapper");
+public static RemoteObject _archivo = RemoteObject.createImmutable("");
+public static RemoteObject _path = RemoteObject.createImmutable("");
 public static RemoteObject _nombre = RemoteObject.declareNull("anywheresoftware.b4a.objects.EditTextWrapper");
 public static RemoteObject _hiusuario = RemoteObject.declareNull("anywheresoftware.b4a.objects.LabelWrapper");
 public static RemoteObject _boton = RemoteObject.declareNull("anywheresoftware.b4a.objects.ButtonWrapper");
+public static RemoteObject _label1 = RemoteObject.declareNull("anywheresoftware.b4a.objects.LabelWrapper");
+public static RemoteObject _label2 = RemoteObject.declareNull("anywheresoftware.b4a.objects.LabelWrapper");
+public static RemoteObject _analisis = RemoteObject.declareNull("anywheresoftware.b4a.objects.ButtonWrapper");
 public static b4a.example.starter _starter = null;
   public Object[] GetGlobals() {
-		return new Object[] {"Activity",main.mostCurrent._activity,"Boton",main.mostCurrent._boton,"HiUsuario",main.mostCurrent._hiusuario,"info",main.mostCurrent._info,"INICIAR",main.mostCurrent._iniciar,"Label1",main.mostCurrent._label1,"Label2",main.mostCurrent._label2,"Nombre",main.mostCurrent._nombre,"Starter",Debug.moduleToString(b4a.example.starter.class),"Usuario",main.mostCurrent._usuario,"xui",main._xui};
+		return new Object[] {"Activity",main.mostCurrent._activity,"Analisis",main.mostCurrent._analisis,"archivo",main.mostCurrent._archivo,"Boton",main.mostCurrent._boton,"HiUsuario",main.mostCurrent._hiusuario,"info",main.mostCurrent._info,"INICIAR",main.mostCurrent._iniciar,"Label1",main.mostCurrent._label1,"Label2",main.mostCurrent._label2,"Nombre",main.mostCurrent._nombre,"path",main.mostCurrent._path,"Starter",Debug.moduleToString(b4a.example.starter.class),"Usuario",main.mostCurrent._usuario,"xls",main._xls,"xui",main._xui};
 }
 }

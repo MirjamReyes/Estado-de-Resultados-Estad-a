@@ -378,14 +378,18 @@ BA.applicationContext.stopService(new android.content.Intent(BA.applicationConte
 }
 public anywheresoftware.b4a.keywords.Common __c = null;
 public static anywheresoftware.b4a.objects.B4XViewWrapper.XUI _xui = null;
+public static de.donmanfred.XSSFWorkbookwrapper _xls = null;
 public anywheresoftware.b4a.objects.ButtonWrapper _iniciar = null;
 public anywheresoftware.b4a.objects.ButtonWrapper _info = null;
 public static String _usuario = "";
-public anywheresoftware.b4a.objects.LabelWrapper _label1 = null;
-public anywheresoftware.b4a.objects.LabelWrapper _label2 = null;
+public static String _archivo = "";
+public static String _path = "";
 public anywheresoftware.b4a.objects.EditTextWrapper _nombre = null;
 public anywheresoftware.b4a.objects.LabelWrapper _hiusuario = null;
 public anywheresoftware.b4a.objects.ButtonWrapper _boton = null;
+public anywheresoftware.b4a.objects.LabelWrapper _label1 = null;
+public anywheresoftware.b4a.objects.LabelWrapper _label2 = null;
+public anywheresoftware.b4a.objects.ButtonWrapper _analisis = null;
 public b4a.example.starter _starter = null;
 public static String  _activity_create(boolean _firsttime) throws Exception{
 RDebugUtils.currentModule="main";
@@ -396,8 +400,8 @@ RDebugUtils.currentLine=131072;
 RDebugUtils.currentLine=131075;
  //BA.debugLineNum = 131075;BA.debugLine="Activity.LoadLayout(\"Pantalla1\")";
 mostCurrent._activity.LoadLayout("Pantalla1",mostCurrent.activityBA);
-RDebugUtils.currentLine=131077;
- //BA.debugLineNum = 131077;BA.debugLine="End Sub";
+RDebugUtils.currentLine=131078;
+ //BA.debugLineNum = 131078;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{
@@ -416,6 +420,47 @@ RDebugUtils.currentLine=196608;
  //BA.debugLineNum = 196608;BA.debugLine="Sub Activity_Resume";
 RDebugUtils.currentLine=196610;
  //BA.debugLineNum = 196610;BA.debugLine="End Sub";
+return "";
+}
+public static String  _analisis_click() throws Exception{
+RDebugUtils.currentModule="main";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "analisis_click", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "analisis_click", null));}
+de.donmanfred.XLSSheetwrapper _sheet = null;
+int _firstrow = 0;
+int _lastrow = 0;
+RDebugUtils.currentLine=983040;
+ //BA.debugLineNum = 983040;BA.debugLine="Private Sub Analisis_Click";
+RDebugUtils.currentLine=983042;
+ //BA.debugLineNum = 983042;BA.debugLine="File.Copy(File.DirAssets,archivo,File.DirInternal";
+anywheresoftware.b4a.keywords.Common.File.Copy(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),mostCurrent._archivo,anywheresoftware.b4a.keywords.Common.File.getDirInternal(),mostCurrent._archivo);
+RDebugUtils.currentLine=983043;
+ //BA.debugLineNum = 983043;BA.debugLine="xls.Initialize(\"\",File.Combine(File.DirInternal,a";
+_xls.Initialize(processBA,"",anywheresoftware.b4a.keywords.Common.File.Combine(anywheresoftware.b4a.keywords.Common.File.getDirInternal(),mostCurrent._archivo));
+RDebugUtils.currentLine=983044;
+ //BA.debugLineNum = 983044;BA.debugLine="Log($\"ActiveSheetIndex=${xls.ActiveSheetIndex}\"$)";
+anywheresoftware.b4a.keywords.Common.LogImpl("6983044",("ActiveSheetIndex="+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_xls.getActiveSheetIndex()))+""),0);
+RDebugUtils.currentLine=983045;
+ //BA.debugLineNum = 983045;BA.debugLine="Dim sheet As XLSSheet = xls.getSheetAt(xls.Active";
+_sheet = new de.donmanfred.XLSSheetwrapper();
+_sheet = _xls.getSheetAt(_xls.getActiveSheetIndex());
+RDebugUtils.currentLine=983046;
+ //BA.debugLineNum = 983046;BA.debugLine="Log($\"ActiveSheet.ActiveCell=${sheet.ActiveCell}\"";
+anywheresoftware.b4a.keywords.Common.LogImpl("6983046",("ActiveSheet.ActiveCell="+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_sheet.getActiveCell()))+""),0);
+RDebugUtils.currentLine=983047;
+ //BA.debugLineNum = 983047;BA.debugLine="Log($\"ActiveSheet.hasComments=${sheet.hasComments";
+anywheresoftware.b4a.keywords.Common.LogImpl("6983047",("ActiveSheet.hasComments="+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_sheet.hasComments()))+""),0);
+RDebugUtils.currentLine=983048;
+ //BA.debugLineNum = 983048;BA.debugLine="Dim firstrow As Int = sheet.FirstRowNum";
+_firstrow = _sheet.getFirstRowNum();
+RDebugUtils.currentLine=983049;
+ //BA.debugLineNum = 983049;BA.debugLine="Dim lastrow As Int = sheet.LastRowNum";
+_lastrow = _sheet.getLastRowNum();
+RDebugUtils.currentLine=983050;
+ //BA.debugLineNum = 983050;BA.debugLine="Log($\"Row FirstRow=${firstrow}, LastRow=${lastrow";
+anywheresoftware.b4a.keywords.Common.LogImpl("6983050",("Row FirstRow="+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_firstrow))+", LastRow="+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_lastrow))+""),0);
+RDebugUtils.currentLine=983052;
+ //BA.debugLineNum = 983052;BA.debugLine="End Sub";
 return "";
 }
 public static void  _boton_click() throws Exception{
@@ -490,10 +535,10 @@ case 3:
 this.state = 4;
 RDebugUtils.currentLine=458761;
  //BA.debugLineNum = 458761;BA.debugLine="Log(\"File path: \" & fd.FilePath)";
-anywheresoftware.b4a.keywords.Common.LogImpl("7458761","File path: "+_fd.getFilePath(),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("6458761","File path: "+_fd.getFilePath(),0);
 RDebugUtils.currentLine=458762;
  //BA.debugLineNum = 458762;BA.debugLine="Log(\"File name: \" & fd.ChosenName)";
-anywheresoftware.b4a.keywords.Common.LogImpl("7458762","File name: "+_fd.getChosenName(),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("6458762","File name: "+_fd.getChosenName(),0);
  if (true) break;
 
 case 4:
@@ -507,7 +552,10 @@ RDebugUtils.currentLine=458765;
  //BA.debugLineNum = 458765;BA.debugLine="Label2.Text = \"Archivo = \" & fd.ChosenName";
 parent.mostCurrent._label2.setText(BA.ObjectToCharSequence("Archivo = "+_fd.getChosenName()));
 RDebugUtils.currentLine=458766;
- //BA.debugLineNum = 458766;BA.debugLine="End Sub";
+ //BA.debugLineNum = 458766;BA.debugLine="archivo = fd.ChosenName";
+parent.mostCurrent._archivo = _fd.getChosenName();
+RDebugUtils.currentLine=458768;
+ //BA.debugLineNum = 458768;BA.debugLine="End Sub";
 if (true) break;
 
             }
@@ -545,32 +593,8 @@ mostCurrent._activity.LoadLayout("Pantalla2",mostCurrent.activityBA);
 RDebugUtils.currentLine=327684;
  //BA.debugLineNum = 327684;BA.debugLine="HiUsuario.Text= \"Hola \" & Usuario";
 mostCurrent._hiusuario.setText(BA.ObjectToCharSequence("Hola "+mostCurrent._usuario));
-RDebugUtils.currentLine=327686;
- //BA.debugLineNum = 327686;BA.debugLine="Label1.Initialize(\"Label1\")";
-mostCurrent._label1.Initialize(mostCurrent.activityBA,"Label1");
 RDebugUtils.currentLine=327687;
- //BA.debugLineNum = 327687;BA.debugLine="Label1.TextColor = Colors.Black";
-mostCurrent._label1.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.Black);
-RDebugUtils.currentLine=327688;
- //BA.debugLineNum = 327688;BA.debugLine="Label1.Text = \"Ruta = \"";
-mostCurrent._label1.setText(BA.ObjectToCharSequence("Ruta = "));
-RDebugUtils.currentLine=327689;
- //BA.debugLineNum = 327689;BA.debugLine="Activity.AddView(Label1, 100, 630, 500, 100) ' Po";
-mostCurrent._activity.AddView((android.view.View)(mostCurrent._label1.getObject()),(int) (100),(int) (630),(int) (500),(int) (100));
-RDebugUtils.currentLine=327692;
- //BA.debugLineNum = 327692;BA.debugLine="Label2.Initialize(\"Label2\")";
-mostCurrent._label2.Initialize(mostCurrent.activityBA,"Label2");
-RDebugUtils.currentLine=327693;
- //BA.debugLineNum = 327693;BA.debugLine="Label2.TextColor = Colors.Red";
-mostCurrent._label2.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.Red);
-RDebugUtils.currentLine=327694;
- //BA.debugLineNum = 327694;BA.debugLine="Label2.Text = \"Archivo = \"";
-mostCurrent._label2.setText(BA.ObjectToCharSequence("Archivo = "));
-RDebugUtils.currentLine=327695;
- //BA.debugLineNum = 327695;BA.debugLine="Activity.AddView(Label2, 100, 750, 500, 150) ' Po";
-mostCurrent._activity.AddView((android.view.View)(mostCurrent._label2.getObject()),(int) (100),(int) (750),(int) (500),(int) (150));
-RDebugUtils.currentLine=327700;
- //BA.debugLineNum = 327700;BA.debugLine="End Sub";
+ //BA.debugLineNum = 327687;BA.debugLine="End Sub";
 return "";
 }
 }

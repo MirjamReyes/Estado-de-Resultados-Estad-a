@@ -14,6 +14,7 @@
 	<uses-permission android:name="android.permission.INTERNET"/>
 	<uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
 	<application
+		android:name="androidx.multidex.MultiDexApplication"
 		android:icon="@drawable/icon"
 		android:label="B4A Example"
 		android:theme="@style/LightTheme">

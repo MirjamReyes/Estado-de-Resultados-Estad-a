@@ -29,6 +29,10 @@ Version=12.5
 	#IncludeTitle: True
 #End Region
 
+
+#AdditionalJar: poi-3.12-android-a
+#AdditionalJar: poi-ooxml-schemas-3.12-20150511-a
+#MultiDex: true
 Sub Process_Globals
 	'These global variables will be declared once when the application starts.
 	'These variables can be accessed from all modules.
@@ -45,7 +49,7 @@ Sub Globals
 	Private info As Button
 	Dim Usuario As String
 	Dim archivo As String
-	Dim path as String
+	Dim path As String
 	
 	
 	Private Nombre As EditText

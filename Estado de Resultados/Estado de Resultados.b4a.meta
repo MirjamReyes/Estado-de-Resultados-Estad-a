@@ -1,9 +1,9 @@
 ﻿ModuleBookmarks0=
 ModuleBookmarks1=
-ModuleBreakpoints0=104
+ModuleBreakpoints0=
 ModuleBreakpoints1=
 ModuleClosedNodes0=1
 ModuleClosedNodes1=1
-NavigationStack=Diseñador Visual,Pantalla1.bal,-100,6,Main,INICIAR_Click,62,6,Main,info_Click,70,6,Main,Process_Globals,18,4,Diseñador Visual,Pantalla2.bal,-100,6,Main,Activity_Resume,56,0,Main,Activity_Create,50,6,Main,Globals,39,6,Main,Boton_Click,93,6,Main,Analisis_Click,99,6
+NavigationStack=Main,info_Click,70,6,Main,Process_Globals,18,4,Diseñador Visual,Pantalla2.bal,-100,6,Main,Activity_Create,58,6,Main,Boton_Click,85,6,Diseñador Visual,EstadoResultados.bal,-100,1,Main,INICIAR_Click,78,6,Main,Activity_Resume,68,0,Main,Globals,39,6,Main,Analisis_Click,137,6
 SelectedBuild=0
 VisibleModules=1

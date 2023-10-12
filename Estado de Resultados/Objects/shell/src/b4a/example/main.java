@@ -61,6 +61,7 @@ public static RemoteObject _iniciar = RemoteObject.declareNull("anywheresoftware
 public static RemoteObject _info = RemoteObject.declareNull("anywheresoftware.b4a.objects.ButtonWrapper");
 public static RemoteObject _usuario = RemoteObject.createImmutable("");
 public static RemoteObject _archivo = RemoteObject.createImmutable("");
+public static RemoteObject _path = RemoteObject.createImmutable("");
 public static RemoteObject _nombre = RemoteObject.declareNull("anywheresoftware.b4a.objects.EditTextWrapper");
 public static RemoteObject _hiusuario = RemoteObject.declareNull("anywheresoftware.b4a.objects.LabelWrapper");
 public static RemoteObject _boton = RemoteObject.declareNull("anywheresoftware.b4a.objects.ButtonWrapper");
@@ -77,6 +78,6 @@ public static RemoteObject _concepto6 = RemoteObject.declareNull("anywheresoftwa
 public static RemoteObject _concepto7 = RemoteObject.declareNull("anywheresoftware.b4a.objects.LabelWrapper");
 public static b4a.example.starter _starter = null;
   public Object[] GetGlobals() {
-		return new Object[] {"Activity",main.mostCurrent._activity,"Analisis",main.mostCurrent._analisis,"archivo",main.mostCurrent._archivo,"Boton",main.mostCurrent._boton,"Concepto",main.mostCurrent._concepto,"Concepto1",main.mostCurrent._concepto1,"Concepto2",main.mostCurrent._concepto2,"Concepto3",main.mostCurrent._concepto3,"Concepto4",main.mostCurrent._concepto4,"Concepto5",main.mostCurrent._concepto5,"Concepto6",main.mostCurrent._concepto6,"Concepto7",main.mostCurrent._concepto7,"HiUsuario",main.mostCurrent._hiusuario,"info",main.mostCurrent._info,"INICIAR",main.mostCurrent._iniciar,"Label1",main.mostCurrent._label1,"Label2",main.mostCurrent._label2,"Nombre",main.mostCurrent._nombre,"Starter",Debug.moduleToString(b4a.example.starter.class),"Usuario",main.mostCurrent._usuario,"xls",main._xls,"xui",main._xui};
+		return new Object[] {"Activity",main.mostCurrent._activity,"Analisis",main.mostCurrent._analisis,"archivo",main.mostCurrent._archivo,"Boton",main.mostCurrent._boton,"Concepto",main.mostCurrent._concepto,"Concepto1",main.mostCurrent._concepto1,"Concepto2",main.mostCurrent._concepto2,"Concepto3",main.mostCurrent._concepto3,"Concepto4",main.mostCurrent._concepto4,"Concepto5",main.mostCurrent._concepto5,"Concepto6",main.mostCurrent._concepto6,"Concepto7",main.mostCurrent._concepto7,"HiUsuario",main.mostCurrent._hiusuario,"info",main.mostCurrent._info,"INICIAR",main.mostCurrent._iniciar,"Label1",main.mostCurrent._label1,"Label2",main.mostCurrent._label2,"Nombre",main.mostCurrent._nombre,"path",main.mostCurrent._path,"Starter",Debug.moduleToString(b4a.example.starter.class),"Usuario",main.mostCurrent._usuario,"xls",main._xls,"xui",main._xui};
 }
 }

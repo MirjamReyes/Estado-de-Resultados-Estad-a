@@ -2,9 +2,11 @@
 File1=EstadoResultados.bal
 File2=Pantalla1.bal
 File3=Pantalla2.bal
+File4=plantilla.xlsx
 FileGroup1=Default Group
 FileGroup2=Default Group
 FileGroup3=Default Group
+FileGroup4=Default Group
 Group=Default Group
 Library1=core
 Library2=dialogs
@@ -12,7 +14,7 @@ Library3=xui
 Library4=apoi
 ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="33"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~CreateResourceFromFile(Macro, Themes.LightTheme)~\n~'End of default text.~\n~
 Module1=Starter
-NumberOfFiles=3
+NumberOfFiles=4
 NumberOfLibraries=4
 NumberOfModules=1
 Version=12.5
@@ -51,13 +53,12 @@ Sub Globals
 	Private info As Button
 	Dim Usuario As String
 	Dim archivo As String
-
-	'Dim path As String
-
+	Dim path As String
+	
 	
 	Private Nombre As EditText
 	
-	Usuario = Nombre.text
+'	Usuario = Nombre 
 	'Estamos guardando el texto ingresado en Nombre a la variable USUARIO
 	
 	Private HiUsuario As Label
@@ -68,7 +69,6 @@ Sub Globals
 	Private Label2 As Label
 	Private Analisis As Button
 	Private Concepto As Label
-	
 	Private Concepto1 As Label
 	Private Concepto2 As Label
 	Private Concepto3 As Label
@@ -139,49 +139,48 @@ Private Sub Analisis_Click
 	Dim firstrow As Int = sheet.FirstRowNum
 	Dim lastrow As Int = sheet.LastRowNum
 	Log($"Row FirstRow=${firstrow}, LastRow=${lastrow}"$)
-	
-	For i= firstrow To lastrow
-		Dim row As XSSFRow =sheet.getRow(i)
-		'Log(row)
-		Dim firstcell As Int = row.FirstCellNum
-		Dim lastcell As Int = row.LastCellNum
-		Log($"Row #${i} FirstCell=${row.FirstCellNum}, LastCell=${row.LastCellNum}"$)
-'		If i = 1 Then
-'			Dim cell As XSSFCell =row.getCell(13)
-'			cell.StringCellValue = "Test.pdf"
-'		End If
-		For o= firstcell To lastcell-1
-			Dim Cell As XSSFCell =row.getCell(o)
-			Log($"Cell #${o}"$)
-			'Log(cell.IsInitialized)
-			If Cell.IsInitialized Then
-				Log($"CellValueType=${Cell.CellType}"$)
- 				Log("Raw:"&Cell.RawValue)
-				If Cell.CellType = 1 Then
-					Log(Cell.StringCellValue)
-					Dim Texto As String = Cell.StringCellValue
-	
-					
-				else if Cell.CellType = 0 Then
-					Log(Cell.NumericCellValue)
-				End If
-				'	Log(cell)
-			End If
-			'Log(row)
-
-		Next
-	Next
+'	
+'	For i= firstrow To lastrow
+'		Dim row As XSSFRow =sheet.getRow(i)
+'		'Log(row)
+'		Dim firstcell As Int = row.FirstCellNum
+'		Dim lastcell As Int = row.LastCellNum
+'		Log($"Row #${i} FirstCell=${row.FirstCellNum}, LastCell=${row.LastCellNum}"$)
+''		If i = 1 Then
+''			Dim cell As XSSFCell =row.getCell(13)
+''			cell.StringCellValue = "Test.pdf"
+''		End If
+'		For o= firstcell To lastcell-1
+'			Dim Cell As XSSFCell =row.getCell(o)
+'			Log($"Cell #${o}"$)
+'			'Log(cell.IsInitialized)
+'			If Cell.IsInitialized Then
+'				Log($"CellValueType=${Cell.CellType}"$)
+'				Log("Raw:"&Cell.RawValue)
+'				If Cell.CellType = 1 Then
+'					Log(Cell.StringCellValue)
+'				else if Cell.CellType = 0 Then
+'					Log(Cell.NumericCellValue)
+'				End If
+'				'	Log(cell)
+'			End If
+'			'Log(row)
+'
+'		Next
+'	Next
 	'Dim celda As XSSFCell
 	
 	'Cell.StringCellValue = ACEditText1.Text
 	Activity.RemoveAllViews
 	Activity.LoadLayout("EstadoResultados")
-	Dim row As XSSFRow =sheet.getRow(2)
-	Dim Cell As XSSFCell =row.getCell(12)
-	Cell.IsInitialized
+	Dim row As XSSFRow =sheet.getRow(0)
+	Dim Cell As XSSFCell =row.getCell(0)
+	
+	Log("valor pelon:"&Cell.RawValue)
+	Dim Texto1 As String = Cell.StringCellValue
 	Log(Cell.StringCellValue)
-	
-	
+	Concepto.text= Texto1
+	Log(Concepto.text)
 	
 	
 End Sub

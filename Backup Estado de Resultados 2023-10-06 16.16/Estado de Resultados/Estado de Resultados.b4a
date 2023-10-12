@@ -1,0 +1,160 @@
+﻿Build1=Default,b4a.example
+File1=Pantalla1.bal
+File2=Pantalla2.bal
+FileGroup1=Default Group
+FileGroup2=Default Group
+Group=Default Group
+Library1=core
+Library2=dialogs
+Library3=xui
+Library4=apoi
+ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="33"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~CreateResourceFromFile(Macro, Themes.LightTheme)~\n~'End of default text.~\n~
+Module1=Starter
+NumberOfFiles=2
+NumberOfLibraries=4
+NumberOfModules=1
+Version=12.5
+@EndOfDesignText@
+#Region  Project Attributes 
+	#ApplicationLabel: B4A Example
+	#VersionCode: 1
+	#VersionName: 
+	'SupportedOrientations possible values: unspecified, landscape or portrait.
+	#SupportedOrientations: unspecified
+	#CanInstallToExternalStorage: False
+#End Region
+
+#Region  Activity Attributes 
+	#FullScreen: False
+	#IncludeTitle: True
+#End Region
+
+
+#AdditionalJar: poi-3.12-android-a
+#AdditionalJar: poi-ooxml-schemas-3.12-20150511-a
+#MultiDex: true
+Sub Process_Globals
+	'These global variables will be declared once when the application starts.
+	'These variables can be accessed from all modules.
+	Private xui As XUI
+	Dim xls As XSSFWorkbook
+	
+End Sub
+
+
+Sub Globals
+	'These global variables will be redeclared each time the activity is created.
+	Private INICIAR As Button
+	
+	Private info As Button
+	Dim Usuario As String
+	Dim archivo As String
+	Dim path As String
+	
+	
+	Private Nombre As EditText
+	
+	Usuario = Nombre 
+	'Estamos guardando el texto ingresado en Nombre a la variable USUARIO
+	
+	Private HiUsuario As Label
+	
+	Private Boton As Button
+	
+	Private Label1 As Label
+	Private Label2 As Label
+	Private Analisis As Button
+End Sub
+
+
+Sub Activity_Create(FirstTime As Boolean)
+	'Activity.LoadLayout("Layout")
+	
+	Activity.LoadLayout("Pantalla1")
+	
+	
+End Sub
+
+Sub Activity_Resume
+
+End Sub
+
+Sub Activity_Pause (UserClosed As Boolean)
+
+End Sub
+
+Private Sub INICIAR_Click
+	Usuario = Nombre.Text
+	Activity.RemoveAllViews
+	Activity.LoadLayout("Pantalla2")
+	HiUsuario.Text= "Hola " & Usuario
+
+	
+End Sub
+
+Private Sub info_Click
+MsgboxAsync("Recuerda verificar que el archivo elegido es el correcto", "INFORMACIÓN")
+
+	
+End Sub
+
+Private Sub Boton_Click
+	Dim fd As FileDialog
+	fd.FastScroll = True
+	fd.ShowOnlyFolders=False
+	fd.TextColor=Colors.Black
+	fd.FilePath = File.DirInternal
+	Dim sf As Object = fd.ShowAsync("Select file", "Yes", "Cancel", "No", Null, False)
+	Wait For (sf) Dialog_Result(Result As Int)
+	If Result = DialogResponse.POSITIVE Then
+		Log("File path: " & fd.FilePath)
+		Log("File name: " & fd.ChosenName)
+	End If
+	Label1.Text = "Ruta = " & fd.FilePath
+	Label2.Text = "Archivo = " & fd.ChosenName
+ 	archivo = fd.ChosenName
+	
+End Sub
+
+Private Sub Analisis_Click
+	'Código para tomar datos de la plantilla de Excel "Plantilla"
+	File.Copy(File.DirAssets,archivo,File.DirInternal,archivo)
+	xls.Initialize("",File.Combine(File.DirInternal,archivo))
+	Log($"ActiveSheetIndex=${xls.ActiveSheetIndex}"$)
+	Dim sheet As XLSSheet = xls.getSheetAt(xls.ActiveSheetIndex)
+	Log($"ActiveSheet.ActiveCell=${sheet.ActiveCell}"$)
+	Log($"ActiveSheet.hasComments=${sheet.hasComments}"$)
+	Dim firstrow As Int = sheet.FirstRowNum
+	Dim lastrow As Int = sheet.LastRowNum
+	Log($"Row FirstRow=${firstrow}, LastRow=${lastrow}"$)
+	
+	For i= firstrow To lastrow
+		Dim row As XSSFRow =sheet.getRow(i)
+		'Log(row)
+		Dim firstcell As Int = row.FirstCellNum
+		Dim lastcell As Int = row.LastCellNum
+		Log($"Row #${i} FirstCell=${row.FirstCellNum}, LastCell=${row.LastCellNum}"$)
+'		If i = 1 Then
+'			Dim cell As XSSFCell =row.getCell(13)
+'			cell.StringCellValue = "Test.pdf"
+'		End If
+		For o= firstcell To lastcell-1
+			Dim Cell As XSSFCell =row.getCell(o)
+			Log($"Cell #${o}"$)
+			'Log(cell.IsInitialized)
+			If Cell.IsInitialized Then
+				Log($"CellValueType=${Cell.CellType}"$)
+				Log("Raw:"&Cell.RawValue)
+				If Cell.CellType = 1 Then
+					Log(Cell.StringCellValue)
+				else if Cell.CellType = 0 Then
+					Log(Cell.NumericCellValue)
+				End If
+				'	Log(cell)
+			End If
+			'Log(row)
+
+		Next
+	Next
+	
+End Sub

@@ -1,0 +1,62 @@
+﻿Build1=Default,b4a.example
+File1=Layout.bal
+FileGroup1=Default Group
+Group=Default Group
+Library1=core
+Library2=xui
+Library3=dialogs
+ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="33"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~CreateResourceFromFile(Macro, Themes.LightTheme)~\n~'End of default text.~\n~
+Module1=Starter
+NumberOfFiles=1
+NumberOfLibraries=3
+NumberOfModules=1
+Version=12.5
+@EndOfDesignText@
+'Activity module
+Sub Process_Globals
+
+End Sub
+
+Sub Globals
+	Dim boton As Button
+	Dim Label1, Label2 As Label
+End Sub
+
+Sub Activity_Create(FirstTime As Boolean)
+	' Crea Botón
+	boton.Initialize("boton")
+	Activity.AddView(boton, 5, 50, 260, 55) ' Posicion, ancho y alto
+	boton.Text = "Pulsa para elegir archivos"
+       
+	' Crea etiqueta Ruta
+	Label1.Initialize("Label1")
+	Label1.TextColor = Colors.Red
+	Label1.Text = "Ruta = "
+	Activity.AddView(Label1, 10, 180, 400, 100) ' Posicion, ancho y alto
+       
+	' Crea etiqueta Archivo
+	Label2.Initialize("Label2")
+	Label2.TextColor = Colors.Red
+	Label2.Text = "Archivo = "
+	Activity.AddView(Label2, 5, 250, 400, 150) ' Posicion, ancho y alto
+                    
+End Sub
+
+Sub Activity_Resume
+
+End Sub
+
+Sub Activity_Pause (UserClosed As Boolean)
+
+End Sub
+
+Sub boton_Click
+	Dim fd As FileDialog
+	fd.FastScroll = True
+	fd.FilePath = File.DirRootExternal ' Para ir a la raiz del SD Card
+	' fd.FilePath = File.Combine(File.DirRootExternal, "/Android/") ' Para ir a esa carpeta del SD Card
+	' fd.FileFilter = ".pdf" ' Para filtrar pdf
+	ret = fd.Show("Elige archivo", "Sí", "No", "Tal vez", Null)
+	Label1.Text = "Ruta = " & fd.FilePath
+	Label2.Text = "Archivo = " & fd.ChosenName
+End Sub

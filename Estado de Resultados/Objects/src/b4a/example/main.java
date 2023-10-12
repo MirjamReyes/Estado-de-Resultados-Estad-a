@@ -437,13 +437,9 @@ if (Debug.shouldDelegate(mostCurrent.activityBA, "analisis_click", false))
 de.donmanfred.XLSSheetwrapper _sheet = null;
 int _firstrow = 0;
 int _lastrow = 0;
-int _i = 0;
 de.donmanfred.XSSFRowwrapper _row = null;
-int _firstcell = 0;
-int _lastcell = 0;
-int _o = 0;
 de.donmanfred.XSSFCellwrapper _cell = null;
-String _texto = "";
+String _texto1 = "";
 RDebugUtils.currentLine=524288;
  //BA.debugLineNum = 524288;BA.debugLine="Private Sub Analisis_Click";
 RDebugUtils.currentLine=524290;
@@ -454,17 +450,28 @@ RDebugUtils.currentLine=524291;
 _xls.Initialize(processBA,"",anywheresoftware.b4a.keywords.Common.File.Combine(anywheresoftware.b4a.keywords.Common.File.getDirInternal(),mostCurrent._archivo));
 RDebugUtils.currentLine=524292;
  //BA.debugLineNum = 524292;BA.debugLine="Log($\"ActiveSheetIndex=${xls.ActiveSheetIndex}\"$)";
-anywheresoftware.b4a.keywords.Common.LogImpl("0524292",("ActiveSheetIndex="+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_xls.getActiveSheetIndex()))+""),0);
+<<<<<<< Updated upstream
+anywheresoftware.b4a.keywords.Common.LogImpl("2524292",("ActiveSheetIndex="+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_xls.getActiveSheetIndex()))+""),0);
+=======
+anywheresoftware.b4a.keywords.Common.LogImpl("7524292",("ActiveSheetIndex="+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_xls.getActiveSheetIndex()))+""),0);
+>>>>>>> Stashed changes
 RDebugUtils.currentLine=524293;
  //BA.debugLineNum = 524293;BA.debugLine="Dim sheet As XLSSheet = xls.getSheetAt(xls.Active";
 _sheet = new de.donmanfred.XLSSheetwrapper();
 _sheet = _xls.getSheetAt(_xls.getActiveSheetIndex());
 RDebugUtils.currentLine=524294;
  //BA.debugLineNum = 524294;BA.debugLine="Log($\"ActiveSheet.ActiveCell=${sheet.ActiveCell}\"";
-anywheresoftware.b4a.keywords.Common.LogImpl("0524294",("ActiveSheet.ActiveCell="+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_sheet.getActiveCell()))+""),0);
+<<<<<<< Updated upstream
+anywheresoftware.b4a.keywords.Common.LogImpl("2524294",("ActiveSheet.ActiveCell="+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_sheet.getActiveCell()))+""),0);
 RDebugUtils.currentLine=524295;
  //BA.debugLineNum = 524295;BA.debugLine="Log($\"ActiveSheet.hasComments=${sheet.hasComments";
-anywheresoftware.b4a.keywords.Common.LogImpl("0524295",("ActiveSheet.hasComments="+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_sheet.hasComments()))+""),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("2524295",("ActiveSheet.hasComments="+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_sheet.hasComments()))+""),0);
+=======
+anywheresoftware.b4a.keywords.Common.LogImpl("7524294",("ActiveSheet.ActiveCell="+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_sheet.getActiveCell()))+""),0);
+RDebugUtils.currentLine=524295;
+ //BA.debugLineNum = 524295;BA.debugLine="Log($\"ActiveSheet.hasComments=${sheet.hasComments";
+anywheresoftware.b4a.keywords.Common.LogImpl("7524295",("ActiveSheet.hasComments="+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_sheet.hasComments()))+""),0);
+>>>>>>> Stashed changes
 RDebugUtils.currentLine=524296;
  //BA.debugLineNum = 524296;BA.debugLine="Dim firstrow As Int = sheet.FirstRowNum";
 _firstrow = _sheet.getFirstRowNum();
@@ -473,7 +480,10 @@ RDebugUtils.currentLine=524297;
 _lastrow = _sheet.getLastRowNum();
 RDebugUtils.currentLine=524298;
  //BA.debugLineNum = 524298;BA.debugLine="Log($\"Row FirstRow=${firstrow}, LastRow=${lastrow";
-anywheresoftware.b4a.keywords.Common.LogImpl("0524298",("Row FirstRow="+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_firstrow))+", LastRow="+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_lastrow))+""),0);
+<<<<<<< Updated upstream
+anywheresoftware.b4a.keywords.Common.LogImpl("2524298",("Row FirstRow="+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_firstrow))+", LastRow="+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_lastrow))+""),0);
+=======
+anywheresoftware.b4a.keywords.Common.LogImpl("7524298",("Row FirstRow="+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_firstrow))+", LastRow="+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_lastrow))+""),0);
 RDebugUtils.currentLine=524300;
  //BA.debugLineNum = 524300;BA.debugLine="For i= firstrow To lastrow";
 {
@@ -493,7 +503,7 @@ RDebugUtils.currentLine=524304;
 _lastcell = (int) (_row.getLastCellNum());
 RDebugUtils.currentLine=524305;
  //BA.debugLineNum = 524305;BA.debugLine="Log($\"Row #${i} FirstCell=${row.FirstCellNum}, L";
-anywheresoftware.b4a.keywords.Common.LogImpl("0524305",("Row #"+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_i))+" FirstCell="+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_row.getFirstCellNum()))+", LastCell="+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_row.getLastCellNum()))+""),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("7524305",("Row #"+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_i))+" FirstCell="+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_row.getFirstCellNum()))+", LastCell="+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_row.getLastCellNum()))+""),0);
 RDebugUtils.currentLine=524310;
  //BA.debugLineNum = 524310;BA.debugLine="For o= firstcell To lastcell-1";
 {
@@ -507,29 +517,29 @@ _cell = new de.donmanfred.XSSFCellwrapper();
 _cell = _row.getCell(_o);
 RDebugUtils.currentLine=524312;
  //BA.debugLineNum = 524312;BA.debugLine="Log($\"Cell #${o}\"$)";
-anywheresoftware.b4a.keywords.Common.LogImpl("0524312",("Cell #"+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_o))+""),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("7524312",("Cell #"+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_o))+""),0);
 RDebugUtils.currentLine=524314;
  //BA.debugLineNum = 524314;BA.debugLine="If Cell.IsInitialized Then";
 if (_cell.IsInitialized()) { 
 RDebugUtils.currentLine=524315;
  //BA.debugLineNum = 524315;BA.debugLine="Log($\"CellValueType=${Cell.CellType}\"$)";
-anywheresoftware.b4a.keywords.Common.LogImpl("0524315",("CellValueType="+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_cell.getCellType()))+""),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("7524315",("CellValueType="+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_cell.getCellType()))+""),0);
 RDebugUtils.currentLine=524316;
  //BA.debugLineNum = 524316;BA.debugLine="Log(\"Raw:\"&Cell.RawValue)";
-anywheresoftware.b4a.keywords.Common.LogImpl("0524316","Raw:"+_cell.getRawValue(),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("7524316","Raw:"+_cell.getRawValue(),0);
 RDebugUtils.currentLine=524317;
  //BA.debugLineNum = 524317;BA.debugLine="If Cell.CellType = 1 Then";
 if (_cell.getCellType()==1) { 
 RDebugUtils.currentLine=524318;
  //BA.debugLineNum = 524318;BA.debugLine="Log(Cell.StringCellValue)";
-anywheresoftware.b4a.keywords.Common.LogImpl("0524318",_cell.getStringCellValue(),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("7524318",_cell.getStringCellValue(),0);
  }else 
 {RDebugUtils.currentLine=524319;
  //BA.debugLineNum = 524319;BA.debugLine="else if Cell.CellType = 0 Then";
 if (_cell.getCellType()==0) { 
 RDebugUtils.currentLine=524320;
  //BA.debugLineNum = 524320;BA.debugLine="Log(Cell.NumericCellValue)";
-anywheresoftware.b4a.keywords.Common.LogImpl("0524320",BA.NumberToString(_cell.getNumericCellValue()),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("7524320",BA.NumberToString(_cell.getNumericCellValue()),0);
  }}
 ;
  };
@@ -537,6 +547,7 @@ anywheresoftware.b4a.keywords.Common.LogImpl("0524320",BA.NumberToString(_cell.g
 };
  }
 };
+>>>>>>> Stashed changes
 RDebugUtils.currentLine=524331;
  //BA.debugLineNum = 524331;BA.debugLine="Activity.RemoveAllViews";
 mostCurrent._activity.RemoveAllViews();
@@ -544,6 +555,30 @@ RDebugUtils.currentLine=524332;
  //BA.debugLineNum = 524332;BA.debugLine="Activity.LoadLayout(\"EstadoResultados\")";
 mostCurrent._activity.LoadLayout("EstadoResultados",mostCurrent.activityBA);
 RDebugUtils.currentLine=524333;
+<<<<<<< Updated upstream
+ //BA.debugLineNum = 524333;BA.debugLine="Dim row As XSSFRow =sheet.getRow(0)";
+_row = new de.donmanfred.XSSFRowwrapper();
+_row = (de.donmanfred.XSSFRowwrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new de.donmanfred.XSSFRowwrapper(), (org.apache.poi.xssf.usermodel.XSSFRow)(_sheet.getRow((int) (0))));
+RDebugUtils.currentLine=524334;
+ //BA.debugLineNum = 524334;BA.debugLine="Dim Cell As XSSFCell =row.getCell(0)";
+_cell = new de.donmanfred.XSSFCellwrapper();
+_cell = _row.getCell((int) (0));
+RDebugUtils.currentLine=524336;
+ //BA.debugLineNum = 524336;BA.debugLine="Log(\"valor pelon:\"&Cell.RawValue)";
+anywheresoftware.b4a.keywords.Common.LogImpl("2524336","valor pelon:"+_cell.getRawValue(),0);
+RDebugUtils.currentLine=524337;
+ //BA.debugLineNum = 524337;BA.debugLine="Dim Texto1 As String = Cell.StringCellValue";
+_texto1 = _cell.getStringCellValue();
+RDebugUtils.currentLine=524338;
+ //BA.debugLineNum = 524338;BA.debugLine="Log(Cell.StringCellValue)";
+anywheresoftware.b4a.keywords.Common.LogImpl("2524338",_cell.getStringCellValue(),0);
+RDebugUtils.currentLine=524339;
+ //BA.debugLineNum = 524339;BA.debugLine="Concepto.text= Texto1";
+mostCurrent._concepto.setText(BA.ObjectToCharSequence(_texto1));
+RDebugUtils.currentLine=524340;
+ //BA.debugLineNum = 524340;BA.debugLine="Log(Concepto.text)";
+anywheresoftware.b4a.keywords.Common.LogImpl("2524340",mostCurrent._concepto.getText(),0);
+=======
  //BA.debugLineNum = 524333;BA.debugLine="Dim row As XSSFRow =sheet.getRow(1)";
 _row = new de.donmanfred.XSSFRowwrapper();
 _row = (de.donmanfred.XSSFRowwrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new de.donmanfred.XSSFRowwrapper(), (org.apache.poi.xssf.usermodel.XSSFRow)(_sheet.getRow((int) (1))));
@@ -556,13 +591,14 @@ RDebugUtils.currentLine=524335;
 _cell.IsInitialized();
 RDebugUtils.currentLine=524336;
  //BA.debugLineNum = 524336;BA.debugLine="Log(Cell.StringCellValue)";
-anywheresoftware.b4a.keywords.Common.LogImpl("0524336",_cell.getStringCellValue(),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("7524336",_cell.getStringCellValue(),0);
 RDebugUtils.currentLine=524337;
  //BA.debugLineNum = 524337;BA.debugLine="Dim Texto As String = Cell.StringCellValue";
 _texto = _cell.getStringCellValue();
 RDebugUtils.currentLine=524339;
  //BA.debugLineNum = 524339;BA.debugLine="Concepto.text= Texto";
 mostCurrent._concepto.setText(BA.ObjectToCharSequence(_texto));
+>>>>>>> Stashed changes
 RDebugUtils.currentLine=524343;
  //BA.debugLineNum = 524343;BA.debugLine="End Sub";
 return "";
@@ -639,10 +675,17 @@ case 3:
 this.state = 4;
 RDebugUtils.currentLine=458761;
  //BA.debugLineNum = 458761;BA.debugLine="Log(\"File path: \" & fd.FilePath)";
-anywheresoftware.b4a.keywords.Common.LogImpl("0458761","File path: "+_fd.getFilePath(),0);
+<<<<<<< Updated upstream
+anywheresoftware.b4a.keywords.Common.LogImpl("2458761","File path: "+_fd.getFilePath(),0);
 RDebugUtils.currentLine=458762;
  //BA.debugLineNum = 458762;BA.debugLine="Log(\"File name: \" & fd.ChosenName)";
-anywheresoftware.b4a.keywords.Common.LogImpl("0458762","File name: "+_fd.getChosenName(),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("2458762","File name: "+_fd.getChosenName(),0);
+=======
+anywheresoftware.b4a.keywords.Common.LogImpl("7458761","File path: "+_fd.getFilePath(),0);
+RDebugUtils.currentLine=458762;
+ //BA.debugLineNum = 458762;BA.debugLine="Log(\"File name: \" & fd.ChosenName)";
+anywheresoftware.b4a.keywords.Common.LogImpl("7458762","File name: "+_fd.getChosenName(),0);
+>>>>>>> Stashed changes
  if (true) break;
 
 case 4:

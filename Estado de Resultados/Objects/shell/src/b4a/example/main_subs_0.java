@@ -66,13 +66,13 @@ if (RapidSub.canDelegate("analisis_click")) { return b4a.example.main.remoteMe.r
 RemoteObject _sheet = RemoteObject.declareNull("de.donmanfred.XLSSheetwrapper");
 RemoteObject _firstrow = RemoteObject.createImmutable(0);
 RemoteObject _lastrow = RemoteObject.createImmutable(0);
-int _i = 0;
 RemoteObject _row = RemoteObject.declareNull("de.donmanfred.XSSFRowwrapper");
-RemoteObject _firstcell = RemoteObject.createImmutable(0);
-RemoteObject _lastcell = RemoteObject.createImmutable(0);
-int _o = 0;
 RemoteObject _cell = RemoteObject.declareNull("de.donmanfred.XSSFCellwrapper");
+<<<<<<< Updated upstream
+RemoteObject _texto1 = RemoteObject.createImmutable("");
+=======
 RemoteObject _texto = RemoteObject.createImmutable("");
+>>>>>>> Stashed changes
  BA.debugLineNum = 110;BA.debugLine="Private Sub Analisis_Click";
 Debug.ShouldStop(8192);
  BA.debugLineNum = 112;BA.debugLine="File.Copy(File.DirAssets,archivo,File.DirInternal";
@@ -83,17 +83,28 @@ Debug.ShouldStop(65536);
 main._xls.runVoidMethod ("Initialize",main.processBA,(Object)(BA.ObjectToString("")),(Object)(main.mostCurrent.__c.getField(false,"File").runMethod(true,"Combine",(Object)(main.mostCurrent.__c.getField(false,"File").runMethod(true,"getDirInternal")),(Object)(main.mostCurrent._archivo))));
  BA.debugLineNum = 114;BA.debugLine="Log($\"ActiveSheetIndex=${xls.ActiveSheetIndex}\"$)";
 Debug.ShouldStop(131072);
-main.mostCurrent.__c.runVoidMethod ("LogImpl","0524292",(RemoteObject.concat(RemoteObject.createImmutable("ActiveSheetIndex="),main.mostCurrent.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("")),(Object)((main._xls.runMethod(true,"getActiveSheetIndex")))),RemoteObject.createImmutable(""))),0);
+<<<<<<< Updated upstream
+main.mostCurrent.__c.runVoidMethod ("LogImpl","2524292",(RemoteObject.concat(RemoteObject.createImmutable("ActiveSheetIndex="),main.mostCurrent.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("")),(Object)((main._xls.runMethod(true,"getActiveSheetIndex")))),RemoteObject.createImmutable(""))),0);
+=======
+main.mostCurrent.__c.runVoidMethod ("LogImpl","7524292",(RemoteObject.concat(RemoteObject.createImmutable("ActiveSheetIndex="),main.mostCurrent.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("")),(Object)((main._xls.runMethod(true,"getActiveSheetIndex")))),RemoteObject.createImmutable(""))),0);
+>>>>>>> Stashed changes
  BA.debugLineNum = 115;BA.debugLine="Dim sheet As XLSSheet = xls.getSheetAt(xls.Active";
 Debug.ShouldStop(262144);
 _sheet = RemoteObject.createNew ("de.donmanfred.XLSSheetwrapper");
 _sheet = main._xls.runMethod(false,"getSheetAt",(Object)(main._xls.runMethod(true,"getActiveSheetIndex")));Debug.locals.put("sheet", _sheet);Debug.locals.put("sheet", _sheet);
  BA.debugLineNum = 116;BA.debugLine="Log($\"ActiveSheet.ActiveCell=${sheet.ActiveCell}\"";
 Debug.ShouldStop(524288);
-main.mostCurrent.__c.runVoidMethod ("LogImpl","0524294",(RemoteObject.concat(RemoteObject.createImmutable("ActiveSheet.ActiveCell="),main.mostCurrent.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("")),(Object)((_sheet.runMethod(true,"getActiveCell")))),RemoteObject.createImmutable(""))),0);
+<<<<<<< Updated upstream
+main.mostCurrent.__c.runVoidMethod ("LogImpl","2524294",(RemoteObject.concat(RemoteObject.createImmutable("ActiveSheet.ActiveCell="),main.mostCurrent.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("")),(Object)((_sheet.runMethod(true,"getActiveCell")))),RemoteObject.createImmutable(""))),0);
  BA.debugLineNum = 117;BA.debugLine="Log($\"ActiveSheet.hasComments=${sheet.hasComments";
 Debug.ShouldStop(1048576);
-main.mostCurrent.__c.runVoidMethod ("LogImpl","0524295",(RemoteObject.concat(RemoteObject.createImmutable("ActiveSheet.hasComments="),main.mostCurrent.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("")),(Object)((_sheet.runMethod(true,"hasComments")))),RemoteObject.createImmutable(""))),0);
+main.mostCurrent.__c.runVoidMethod ("LogImpl","2524295",(RemoteObject.concat(RemoteObject.createImmutable("ActiveSheet.hasComments="),main.mostCurrent.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("")),(Object)((_sheet.runMethod(true,"hasComments")))),RemoteObject.createImmutable(""))),0);
+=======
+main.mostCurrent.__c.runVoidMethod ("LogImpl","7524294",(RemoteObject.concat(RemoteObject.createImmutable("ActiveSheet.ActiveCell="),main.mostCurrent.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("")),(Object)((_sheet.runMethod(true,"getActiveCell")))),RemoteObject.createImmutable(""))),0);
+ BA.debugLineNum = 117;BA.debugLine="Log($\"ActiveSheet.hasComments=${sheet.hasComments";
+Debug.ShouldStop(1048576);
+main.mostCurrent.__c.runVoidMethod ("LogImpl","7524295",(RemoteObject.concat(RemoteObject.createImmutable("ActiveSheet.hasComments="),main.mostCurrent.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("")),(Object)((_sheet.runMethod(true,"hasComments")))),RemoteObject.createImmutable(""))),0);
+>>>>>>> Stashed changes
  BA.debugLineNum = 118;BA.debugLine="Dim firstrow As Int = sheet.FirstRowNum";
 Debug.ShouldStop(2097152);
 _firstrow = _sheet.runMethod(true,"getFirstRowNum");Debug.locals.put("firstrow", _firstrow);Debug.locals.put("firstrow", _firstrow);
@@ -102,7 +113,10 @@ Debug.ShouldStop(4194304);
 _lastrow = _sheet.runMethod(true,"getLastRowNum");Debug.locals.put("lastrow", _lastrow);Debug.locals.put("lastrow", _lastrow);
  BA.debugLineNum = 120;BA.debugLine="Log($\"Row FirstRow=${firstrow}, LastRow=${lastrow";
 Debug.ShouldStop(8388608);
-main.mostCurrent.__c.runVoidMethod ("LogImpl","0524298",(RemoteObject.concat(RemoteObject.createImmutable("Row FirstRow="),main.mostCurrent.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("")),(Object)((_firstrow))),RemoteObject.createImmutable(", LastRow="),main.mostCurrent.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("")),(Object)((_lastrow))),RemoteObject.createImmutable(""))),0);
+<<<<<<< Updated upstream
+main.mostCurrent.__c.runVoidMethod ("LogImpl","2524298",(RemoteObject.concat(RemoteObject.createImmutable("Row FirstRow="),main.mostCurrent.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("")),(Object)((_firstrow))),RemoteObject.createImmutable(", LastRow="),main.mostCurrent.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("")),(Object)((_lastrow))),RemoteObject.createImmutable(""))),0);
+=======
+main.mostCurrent.__c.runVoidMethod ("LogImpl","7524298",(RemoteObject.concat(RemoteObject.createImmutable("Row FirstRow="),main.mostCurrent.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("")),(Object)((_firstrow))),RemoteObject.createImmutable(", LastRow="),main.mostCurrent.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("")),(Object)((_lastrow))),RemoteObject.createImmutable(""))),0);
  BA.debugLineNum = 122;BA.debugLine="For i= firstrow To lastrow";
 Debug.ShouldStop(33554432);
 {
@@ -123,7 +137,7 @@ Debug.ShouldStop(536870912);
 _lastcell = BA.numberCast(int.class, _row.runMethod(true,"getLastCellNum"));Debug.locals.put("lastcell", _lastcell);Debug.locals.put("lastcell", _lastcell);
  BA.debugLineNum = 127;BA.debugLine="Log($\"Row #${i} FirstCell=${row.FirstCellNum}, L";
 Debug.ShouldStop(1073741824);
-main.mostCurrent.__c.runVoidMethod ("LogImpl","0524305",(RemoteObject.concat(RemoteObject.createImmutable("Row #"),main.mostCurrent.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("")),(Object)(RemoteObject.createImmutable((_i)))),RemoteObject.createImmutable(" FirstCell="),main.mostCurrent.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("")),(Object)((_row.runMethod(true,"getFirstCellNum")))),RemoteObject.createImmutable(", LastCell="),main.mostCurrent.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("")),(Object)((_row.runMethod(true,"getLastCellNum")))),RemoteObject.createImmutable(""))),0);
+main.mostCurrent.__c.runVoidMethod ("LogImpl","7524305",(RemoteObject.concat(RemoteObject.createImmutable("Row #"),main.mostCurrent.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("")),(Object)(RemoteObject.createImmutable((_i)))),RemoteObject.createImmutable(" FirstCell="),main.mostCurrent.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("")),(Object)((_row.runMethod(true,"getFirstCellNum")))),RemoteObject.createImmutable(", LastCell="),main.mostCurrent.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("")),(Object)((_row.runMethod(true,"getLastCellNum")))),RemoteObject.createImmutable(""))),0);
  BA.debugLineNum = 132;BA.debugLine="For o= firstcell To lastcell-1";
 Debug.ShouldStop(8);
 {
@@ -138,29 +152,29 @@ _cell = RemoteObject.createNew ("de.donmanfred.XSSFCellwrapper");
 _cell = _row.runMethod(false,"getCell",(Object)(BA.numberCast(int.class, _o)));Debug.locals.put("Cell", _cell);Debug.locals.put("Cell", _cell);
  BA.debugLineNum = 134;BA.debugLine="Log($\"Cell #${o}\"$)";
 Debug.ShouldStop(32);
-main.mostCurrent.__c.runVoidMethod ("LogImpl","0524312",(RemoteObject.concat(RemoteObject.createImmutable("Cell #"),main.mostCurrent.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("")),(Object)(RemoteObject.createImmutable((_o)))),RemoteObject.createImmutable(""))),0);
+main.mostCurrent.__c.runVoidMethod ("LogImpl","7524312",(RemoteObject.concat(RemoteObject.createImmutable("Cell #"),main.mostCurrent.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("")),(Object)(RemoteObject.createImmutable((_o)))),RemoteObject.createImmutable(""))),0);
  BA.debugLineNum = 136;BA.debugLine="If Cell.IsInitialized Then";
 Debug.ShouldStop(128);
 if (_cell.runMethod(true,"IsInitialized").<Boolean>get().booleanValue()) { 
  BA.debugLineNum = 137;BA.debugLine="Log($\"CellValueType=${Cell.CellType}\"$)";
 Debug.ShouldStop(256);
-main.mostCurrent.__c.runVoidMethod ("LogImpl","0524315",(RemoteObject.concat(RemoteObject.createImmutable("CellValueType="),main.mostCurrent.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("")),(Object)((_cell.runMethod(true,"getCellType")))),RemoteObject.createImmutable(""))),0);
+main.mostCurrent.__c.runVoidMethod ("LogImpl","7524315",(RemoteObject.concat(RemoteObject.createImmutable("CellValueType="),main.mostCurrent.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("")),(Object)((_cell.runMethod(true,"getCellType")))),RemoteObject.createImmutable(""))),0);
  BA.debugLineNum = 138;BA.debugLine="Log(\"Raw:\"&Cell.RawValue)";
 Debug.ShouldStop(512);
-main.mostCurrent.__c.runVoidMethod ("LogImpl","0524316",RemoteObject.concat(RemoteObject.createImmutable("Raw:"),_cell.runMethod(true,"getRawValue")),0);
+main.mostCurrent.__c.runVoidMethod ("LogImpl","7524316",RemoteObject.concat(RemoteObject.createImmutable("Raw:"),_cell.runMethod(true,"getRawValue")),0);
  BA.debugLineNum = 139;BA.debugLine="If Cell.CellType = 1 Then";
 Debug.ShouldStop(1024);
 if (RemoteObject.solveBoolean("=",_cell.runMethod(true,"getCellType"),BA.numberCast(double.class, 1))) { 
  BA.debugLineNum = 140;BA.debugLine="Log(Cell.StringCellValue)";
 Debug.ShouldStop(2048);
-main.mostCurrent.__c.runVoidMethod ("LogImpl","0524318",_cell.runMethod(true,"getStringCellValue"),0);
+main.mostCurrent.__c.runVoidMethod ("LogImpl","7524318",_cell.runMethod(true,"getStringCellValue"),0);
  }else 
 { BA.debugLineNum = 141;BA.debugLine="else if Cell.CellType = 0 Then";
 Debug.ShouldStop(4096);
 if (RemoteObject.solveBoolean("=",_cell.runMethod(true,"getCellType"),BA.numberCast(double.class, 0))) { 
  BA.debugLineNum = 142;BA.debugLine="Log(Cell.NumericCellValue)";
 Debug.ShouldStop(8192);
-main.mostCurrent.__c.runVoidMethod ("LogImpl","0524320",BA.NumberToString(_cell.runMethod(true,"getNumericCellValue")),0);
+main.mostCurrent.__c.runVoidMethod ("LogImpl","7524320",BA.NumberToString(_cell.runMethod(true,"getNumericCellValue")),0);
  }}
 ;
  };
@@ -170,12 +184,38 @@ main.mostCurrent.__c.runVoidMethod ("LogImpl","0524320",BA.NumberToString(_cell.
  }
 }Debug.locals.put("i", _i);
 ;
+>>>>>>> Stashed changes
  BA.debugLineNum = 153;BA.debugLine="Activity.RemoveAllViews";
 Debug.ShouldStop(16777216);
 main.mostCurrent._activity.runVoidMethod ("RemoveAllViews");
  BA.debugLineNum = 154;BA.debugLine="Activity.LoadLayout(\"EstadoResultados\")";
 Debug.ShouldStop(33554432);
 main.mostCurrent._activity.runMethodAndSync(false,"LoadLayout",(Object)(RemoteObject.createImmutable("EstadoResultados")),main.mostCurrent.activityBA);
+<<<<<<< Updated upstream
+ BA.debugLineNum = 155;BA.debugLine="Dim row As XSSFRow =sheet.getRow(0)";
+Debug.ShouldStop(67108864);
+_row = RemoteObject.createNew ("de.donmanfred.XSSFRowwrapper");
+_row = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("de.donmanfred.XSSFRowwrapper"), _sheet.runMethod(false,"getRow",(Object)(BA.numberCast(int.class, 0))));Debug.locals.put("row", _row);Debug.locals.put("row", _row);
+ BA.debugLineNum = 156;BA.debugLine="Dim Cell As XSSFCell =row.getCell(0)";
+Debug.ShouldStop(134217728);
+_cell = RemoteObject.createNew ("de.donmanfred.XSSFCellwrapper");
+_cell = _row.runMethod(false,"getCell",(Object)(BA.numberCast(int.class, 0)));Debug.locals.put("Cell", _cell);Debug.locals.put("Cell", _cell);
+ BA.debugLineNum = 158;BA.debugLine="Log(\"valor pelon:\"&Cell.RawValue)";
+Debug.ShouldStop(536870912);
+main.mostCurrent.__c.runVoidMethod ("LogImpl","2524336",RemoteObject.concat(RemoteObject.createImmutable("valor pelon:"),_cell.runMethod(true,"getRawValue")),0);
+ BA.debugLineNum = 159;BA.debugLine="Dim Texto1 As String = Cell.StringCellValue";
+Debug.ShouldStop(1073741824);
+_texto1 = _cell.runMethod(true,"getStringCellValue");Debug.locals.put("Texto1", _texto1);Debug.locals.put("Texto1", _texto1);
+ BA.debugLineNum = 160;BA.debugLine="Log(Cell.StringCellValue)";
+Debug.ShouldStop(-2147483648);
+main.mostCurrent.__c.runVoidMethod ("LogImpl","2524338",_cell.runMethod(true,"getStringCellValue"),0);
+ BA.debugLineNum = 161;BA.debugLine="Concepto.text= Texto1";
+Debug.ShouldStop(1);
+main.mostCurrent._concepto.runMethod(true,"setText",BA.ObjectToCharSequence(_texto1));
+ BA.debugLineNum = 162;BA.debugLine="Log(Concepto.text)";
+Debug.ShouldStop(2);
+main.mostCurrent.__c.runVoidMethod ("LogImpl","2524340",main.mostCurrent._concepto.runMethod(true,"getText"),0);
+=======
  BA.debugLineNum = 155;BA.debugLine="Dim row As XSSFRow =sheet.getRow(1)";
 Debug.ShouldStop(67108864);
 _row = RemoteObject.createNew ("de.donmanfred.XSSFRowwrapper");
@@ -189,13 +229,14 @@ Debug.ShouldStop(268435456);
 _cell.runVoidMethod ("IsInitialized");
  BA.debugLineNum = 158;BA.debugLine="Log(Cell.StringCellValue)";
 Debug.ShouldStop(536870912);
-main.mostCurrent.__c.runVoidMethod ("LogImpl","0524336",_cell.runMethod(true,"getStringCellValue"),0);
+main.mostCurrent.__c.runVoidMethod ("LogImpl","7524336",_cell.runMethod(true,"getStringCellValue"),0);
  BA.debugLineNum = 159;BA.debugLine="Dim Texto As String = Cell.StringCellValue";
 Debug.ShouldStop(1073741824);
 _texto = _cell.runMethod(true,"getStringCellValue");Debug.locals.put("Texto", _texto);Debug.locals.put("Texto", _texto);
  BA.debugLineNum = 161;BA.debugLine="Concepto.text= Texto";
 Debug.ShouldStop(1);
 main.mostCurrent._concepto.runMethod(true,"setText",BA.ObjectToCharSequence(_texto));
+>>>>>>> Stashed changes
  BA.debugLineNum = 165;BA.debugLine="End Sub";
 Debug.ShouldStop(16);
 return RemoteObject.createImmutable("");
@@ -287,10 +328,17 @@ case 3:
 this.state = 4;
  BA.debugLineNum = 101;BA.debugLine="Log(\"File path: \" & fd.FilePath)";
 Debug.ShouldStop(16);
-parent.mostCurrent.__c.runVoidMethod ("LogImpl","0458761",RemoteObject.concat(RemoteObject.createImmutable("File path: "),_fd.runMethod(true,"getFilePath")),0);
+<<<<<<< Updated upstream
+parent.mostCurrent.__c.runVoidMethod ("LogImpl","2458761",RemoteObject.concat(RemoteObject.createImmutable("File path: "),_fd.runMethod(true,"getFilePath")),0);
  BA.debugLineNum = 102;BA.debugLine="Log(\"File name: \" & fd.ChosenName)";
 Debug.ShouldStop(32);
-parent.mostCurrent.__c.runVoidMethod ("LogImpl","0458762",RemoteObject.concat(RemoteObject.createImmutable("File name: "),_fd.runMethod(true,"getChosenName")),0);
+parent.mostCurrent.__c.runVoidMethod ("LogImpl","2458762",RemoteObject.concat(RemoteObject.createImmutable("File name: "),_fd.runMethod(true,"getChosenName")),0);
+=======
+parent.mostCurrent.__c.runVoidMethod ("LogImpl","7458761",RemoteObject.concat(RemoteObject.createImmutable("File path: "),_fd.runMethod(true,"getFilePath")),0);
+ BA.debugLineNum = 102;BA.debugLine="Log(\"File name: \" & fd.ChosenName)";
+Debug.ShouldStop(32);
+parent.mostCurrent.__c.runVoidMethod ("LogImpl","7458762",RemoteObject.concat(RemoteObject.createImmutable("File name: "),_fd.runMethod(true,"getChosenName")),0);
+>>>>>>> Stashed changes
  if (true) break;
 
 case 4:
@@ -336,8 +384,11 @@ main.mostCurrent._archivo = RemoteObject.createImmutable("");
 main.mostCurrent._path = RemoteObject.createImmutable("");
  //BA.debugLineNum = 38;BA.debugLine="Private Nombre As EditText";
 main.mostCurrent._nombre = RemoteObject.createNew ("anywheresoftware.b4a.objects.EditTextWrapper");
- //BA.debugLineNum = 40;BA.debugLine="Usuario = Nombre";
-main.mostCurrent._usuario = BA.ObjectToString(main.mostCurrent._nombre);
+<<<<<<< Updated upstream
+=======
+ //BA.debugLineNum = 40;BA.debugLine="Usuario = Nombre.Text";
+main.mostCurrent._usuario = main.mostCurrent._nombre.runMethod(true,"getText");
+>>>>>>> Stashed changes
  //BA.debugLineNum = 43;BA.debugLine="Private HiUsuario As Label";
 main.mostCurrent._hiusuario = RemoteObject.createNew ("anywheresoftware.b4a.objects.LabelWrapper");
  //BA.debugLineNum = 45;BA.debugLine="Private Boton As Button";

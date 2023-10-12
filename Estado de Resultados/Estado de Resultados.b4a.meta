@@ -4,6 +4,10 @@ ModuleBreakpoints0=
 ModuleBreakpoints1=
 ModuleClosedNodes0=1
 ModuleClosedNodes1=1
-NavigationStack=Main,info_Click,70,6,Main,Process_Globals,18,4,Diseñador Visual,Pantalla2.bal,-100,6,Main,Activity_Create,58,6,Main,Boton_Click,85,6,Diseñador Visual,EstadoResultados.bal,-100,1,Main,INICIAR_Click,78,6,Main,Activity_Resume,68,0,Main,Globals,39,6,Main,Analisis_Click,137,6
+<<<<<<< Updated upstream
+NavigationStack=Main,info_Click,70,6,Main,Process_Globals,18,4,Diseñador Visual,Pantalla2.bal,-100,6,Main,Activity_Create,58,6,Main,Boton_Click,85,6,Main,INICIAR_Click,78,6,Main,Activity_Resume,68,0,Main,Globals,34,6,Diseñador Visual,estadoresultados.bal,-100,3,Main,Analisis_Click,120,6
+=======
+NavigationStack=Main,Boton_Click,85,6,Diseñador Visual,EstadoResultados.bal,-100,1,Main,INICIAR_Click,78,6,Main,Activity_Resume,68,0,Main,Analisis_Click,142,6,Starter,Process_Globals,7,0,Main,Globals,33,6,Main,Process_Globals,19,6,Starter,Service_Destroy,34,0,Starter,Service_Start,18,6
+>>>>>>> Stashed changes
 SelectedBuild=0
 VisibleModules=1

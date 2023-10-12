@@ -14,7 +14,11 @@ main,activity_resume,0,0,69,71
 
 
 
+<<<<<<< Updated upstream
 main,analisis_click,1,1,110,165
+=======
+main,analisis_click,1,0,110,165
+>>>>>>> Stashed changes
 ,archivo,,xls,,concepto,,concepto1,,concepto2,,concepto3,,concepto4,,concepto5,,concepto6,,concepto7
 ,concepto,,concepto1,,concepto2,,concepto3,,concepto4,,concepto5,,concepto6,,concepto7
 
@@ -23,6 +27,15 @@ main,boton_click,0,0,92,108
 ,archivo
 
 main,globals,0,1,28,58
+<<<<<<< Updated upstream
+
+
+
+main,info_click,0,0,86,90
+
+
+
+=======
 ,usuario,,nombre
 ,usuario
 
@@ -30,6 +43,7 @@ main,info_click,0,0,86,90
 
 
 
+>>>>>>> Stashed changes
 main,iniciar_click,1,0,77,84
 ,usuario,,nombre,,analisis,,boton,,hiusuario,,info,,label1,,label2
 ,usuario,,analisis,,boton,,hiusuario,,info,,label1,,label2

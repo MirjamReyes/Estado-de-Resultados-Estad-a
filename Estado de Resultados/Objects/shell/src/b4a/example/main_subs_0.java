@@ -8,16 +8,16 @@ public class main_subs_0 {
 
 public static RemoteObject  _activity_create(RemoteObject _firsttime) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Create (main) ","main",0,main.mostCurrent.activityBA,main.mostCurrent,61);
+		Debug.PushSubsStack("Activity_Create (main) ","main",0,main.mostCurrent.activityBA,main.mostCurrent,63);
 if (RapidSub.canDelegate("activity_create")) { return b4a.example.main.remoteMe.runUserSub(false, "main","activity_create", _firsttime);}
 Debug.locals.put("FirstTime", _firsttime);
- BA.debugLineNum = 61;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
-Debug.ShouldStop(268435456);
- BA.debugLineNum = 64;BA.debugLine="Activity.LoadLayout(\"Pantalla1\")";
-Debug.ShouldStop(-2147483648);
+ BA.debugLineNum = 63;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
+Debug.ShouldStop(1073741824);
+ BA.debugLineNum = 66;BA.debugLine="Activity.LoadLayout(\"Pantalla1\")";
+Debug.ShouldStop(2);
 main.mostCurrent._activity.runMethodAndSync(false,"LoadLayout",(Object)(RemoteObject.createImmutable("Pantalla1")),main.mostCurrent.activityBA);
- BA.debugLineNum = 67;BA.debugLine="End Sub";
-Debug.ShouldStop(4);
+ BA.debugLineNum = 69;BA.debugLine="End Sub";
+Debug.ShouldStop(16);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -28,13 +28,13 @@ finally {
 		}}
 public static RemoteObject  _activity_pause(RemoteObject _userclosed) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Pause (main) ","main",0,main.mostCurrent.activityBA,main.mostCurrent,73);
+		Debug.PushSubsStack("Activity_Pause (main) ","main",0,main.mostCurrent.activityBA,main.mostCurrent,75);
 if (RapidSub.canDelegate("activity_pause")) { return b4a.example.main.remoteMe.runUserSub(false, "main","activity_pause", _userclosed);}
 Debug.locals.put("UserClosed", _userclosed);
- BA.debugLineNum = 73;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
-Debug.ShouldStop(256);
- BA.debugLineNum = 75;BA.debugLine="End Sub";
+ BA.debugLineNum = 75;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
 Debug.ShouldStop(1024);
+ BA.debugLineNum = 77;BA.debugLine="End Sub";
+Debug.ShouldStop(4096);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -45,12 +45,12 @@ finally {
 		}}
 public static RemoteObject  _activity_resume() throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Resume (main) ","main",0,main.mostCurrent.activityBA,main.mostCurrent,69);
+		Debug.PushSubsStack("Activity_Resume (main) ","main",0,main.mostCurrent.activityBA,main.mostCurrent,71);
 if (RapidSub.canDelegate("activity_resume")) { return b4a.example.main.remoteMe.runUserSub(false, "main","activity_resume");}
- BA.debugLineNum = 69;BA.debugLine="Sub Activity_Resume";
-Debug.ShouldStop(16);
- BA.debugLineNum = 71;BA.debugLine="End Sub";
+ BA.debugLineNum = 71;BA.debugLine="Sub Activity_Resume";
 Debug.ShouldStop(64);
+ BA.debugLineNum = 73;BA.debugLine="End Sub";
+Debug.ShouldStop(256);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -61,7 +61,7 @@ finally {
 		}}
 public static RemoteObject  _analisis_click() throws Exception{
 try {
-		Debug.PushSubsStack("Analisis_Click (main) ","main",0,main.mostCurrent.activityBA,main.mostCurrent,110);
+		Debug.PushSubsStack("Analisis_Click (main) ","main",0,main.mostCurrent.activityBA,main.mostCurrent,112);
 if (RapidSub.canDelegate("analisis_click")) { return b4a.example.main.remoteMe.runUserSub(false, "main","analisis_click");}
 RemoteObject _sheet = RemoteObject.declareNull("de.donmanfred.XLSSheetwrapper");
 RemoteObject _firstrow = RemoteObject.createImmutable(0);
@@ -73,94 +73,97 @@ RemoteObject _lastcell = RemoteObject.createImmutable(0);
 int _o = 0;
 RemoteObject _cell = RemoteObject.declareNull("de.donmanfred.XSSFCellwrapper");
 RemoteObject _texto = RemoteObject.createImmutable("");
- BA.debugLineNum = 110;BA.debugLine="Private Sub Analisis_Click";
-Debug.ShouldStop(8192);
- BA.debugLineNum = 112;BA.debugLine="File.Copy(File.DirAssets,archivo,File.DirInternal";
+ BA.debugLineNum = 112;BA.debugLine="Private Sub Analisis_Click";
 Debug.ShouldStop(32768);
-main.mostCurrent.__c.getField(false,"File").runVoidMethod ("Copy",(Object)(main.mostCurrent.__c.getField(false,"File").runMethod(true,"getDirAssets")),(Object)(main.mostCurrent._archivo),(Object)(main.mostCurrent.__c.getField(false,"File").runMethod(true,"getDirInternal")),(Object)(main.mostCurrent._archivo));
- BA.debugLineNum = 113;BA.debugLine="xls.Initialize(\"\",File.Combine(File.DirInternal,a";
-Debug.ShouldStop(65536);
-main._xls.runVoidMethod ("Initialize",main.processBA,(Object)(BA.ObjectToString("")),(Object)(main.mostCurrent.__c.getField(false,"File").runMethod(true,"Combine",(Object)(main.mostCurrent.__c.getField(false,"File").runMethod(true,"getDirInternal")),(Object)(main.mostCurrent._archivo))));
- BA.debugLineNum = 114;BA.debugLine="Log($\"ActiveSheetIndex=${xls.ActiveSheetIndex}\"$)";
+ BA.debugLineNum = 114;BA.debugLine="File.Copy(File.DirAssets,archivo,File.DirInternal";
 Debug.ShouldStop(131072);
-main.mostCurrent.__c.runVoidMethod ("LogImpl","0524292",(RemoteObject.concat(RemoteObject.createImmutable("ActiveSheetIndex="),main.mostCurrent.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("")),(Object)((main._xls.runMethod(true,"getActiveSheetIndex")))),RemoteObject.createImmutable(""))),0);
- BA.debugLineNum = 115;BA.debugLine="Dim sheet As XLSSheet = xls.getSheetAt(xls.Active";
+main.mostCurrent.__c.getField(false,"File").runVoidMethod ("Copy",(Object)(main.mostCurrent.__c.getField(false,"File").runMethod(true,"getDirAssets")),(Object)(main.mostCurrent._archivo),(Object)(main.mostCurrent.__c.getField(false,"File").runMethod(true,"getDirInternal")),(Object)(main.mostCurrent._archivo));
+ BA.debugLineNum = 115;BA.debugLine="xls.Initialize(\"\",File.Combine(File.DirInternal,a";
 Debug.ShouldStop(262144);
+main._xls.runVoidMethod ("Initialize",main.processBA,(Object)(BA.ObjectToString("")),(Object)(main.mostCurrent.__c.getField(false,"File").runMethod(true,"Combine",(Object)(main.mostCurrent.__c.getField(false,"File").runMethod(true,"getDirInternal")),(Object)(main.mostCurrent._archivo))));
+ BA.debugLineNum = 116;BA.debugLine="Log($\"ActiveSheetIndex=${xls.ActiveSheetIndex}\"$)";
+Debug.ShouldStop(524288);
+main.mostCurrent.__c.runVoidMethod ("LogImpl","3524292",(RemoteObject.concat(RemoteObject.createImmutable("ActiveSheetIndex="),main.mostCurrent.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("")),(Object)((main._xls.runMethod(true,"getActiveSheetIndex")))),RemoteObject.createImmutable(""))),0);
+ BA.debugLineNum = 117;BA.debugLine="Dim sheet As XLSSheet = xls.getSheetAt(xls.Active";
+Debug.ShouldStop(1048576);
 _sheet = RemoteObject.createNew ("de.donmanfred.XLSSheetwrapper");
 _sheet = main._xls.runMethod(false,"getSheetAt",(Object)(main._xls.runMethod(true,"getActiveSheetIndex")));Debug.locals.put("sheet", _sheet);Debug.locals.put("sheet", _sheet);
- BA.debugLineNum = 116;BA.debugLine="Log($\"ActiveSheet.ActiveCell=${sheet.ActiveCell}\"";
-Debug.ShouldStop(524288);
-main.mostCurrent.__c.runVoidMethod ("LogImpl","0524294",(RemoteObject.concat(RemoteObject.createImmutable("ActiveSheet.ActiveCell="),main.mostCurrent.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("")),(Object)((_sheet.runMethod(true,"getActiveCell")))),RemoteObject.createImmutable(""))),0);
- BA.debugLineNum = 117;BA.debugLine="Log($\"ActiveSheet.hasComments=${sheet.hasComments";
-Debug.ShouldStop(1048576);
-main.mostCurrent.__c.runVoidMethod ("LogImpl","0524295",(RemoteObject.concat(RemoteObject.createImmutable("ActiveSheet.hasComments="),main.mostCurrent.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("")),(Object)((_sheet.runMethod(true,"hasComments")))),RemoteObject.createImmutable(""))),0);
- BA.debugLineNum = 118;BA.debugLine="Dim firstrow As Int = sheet.FirstRowNum";
+ BA.debugLineNum = 118;BA.debugLine="Log($\"ActiveSheet.ActiveCell=${sheet.ActiveCell}\"";
 Debug.ShouldStop(2097152);
-_firstrow = _sheet.runMethod(true,"getFirstRowNum");Debug.locals.put("firstrow", _firstrow);Debug.locals.put("firstrow", _firstrow);
- BA.debugLineNum = 119;BA.debugLine="Dim lastrow As Int = sheet.LastRowNum";
+main.mostCurrent.__c.runVoidMethod ("LogImpl","3524294",(RemoteObject.concat(RemoteObject.createImmutable("ActiveSheet.ActiveCell="),main.mostCurrent.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("")),(Object)((_sheet.runMethod(true,"getActiveCell")))),RemoteObject.createImmutable(""))),0);
+ BA.debugLineNum = 119;BA.debugLine="Log($\"ActiveSheet.hasComments=${sheet.hasComments";
 Debug.ShouldStop(4194304);
-_lastrow = _sheet.runMethod(true,"getLastRowNum");Debug.locals.put("lastrow", _lastrow);Debug.locals.put("lastrow", _lastrow);
- BA.debugLineNum = 120;BA.debugLine="Log($\"Row FirstRow=${firstrow}, LastRow=${lastrow";
+main.mostCurrent.__c.runVoidMethod ("LogImpl","3524295",(RemoteObject.concat(RemoteObject.createImmutable("ActiveSheet.hasComments="),main.mostCurrent.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("")),(Object)((_sheet.runMethod(true,"hasComments")))),RemoteObject.createImmutable(""))),0);
+ BA.debugLineNum = 120;BA.debugLine="Dim firstrow As Int = sheet.FirstRowNum";
 Debug.ShouldStop(8388608);
-main.mostCurrent.__c.runVoidMethod ("LogImpl","0524298",(RemoteObject.concat(RemoteObject.createImmutable("Row FirstRow="),main.mostCurrent.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("")),(Object)((_firstrow))),RemoteObject.createImmutable(", LastRow="),main.mostCurrent.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("")),(Object)((_lastrow))),RemoteObject.createImmutable(""))),0);
- BA.debugLineNum = 122;BA.debugLine="For i= firstrow To lastrow";
+_firstrow = _sheet.runMethod(true,"getFirstRowNum");Debug.locals.put("firstrow", _firstrow);Debug.locals.put("firstrow", _firstrow);
+ BA.debugLineNum = 121;BA.debugLine="Dim lastrow As Int = sheet.LastRowNum";
+Debug.ShouldStop(16777216);
+_lastrow = _sheet.runMethod(true,"getLastRowNum");Debug.locals.put("lastrow", _lastrow);Debug.locals.put("lastrow", _lastrow);
+ BA.debugLineNum = 122;BA.debugLine="Log($\"Row FirstRow=${firstrow}, LastRow=${lastrow";
 Debug.ShouldStop(33554432);
+main.mostCurrent.__c.runVoidMethod ("LogImpl","3524298",(RemoteObject.concat(RemoteObject.createImmutable("Row FirstRow="),main.mostCurrent.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("")),(Object)((_firstrow))),RemoteObject.createImmutable(", LastRow="),main.mostCurrent.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("")),(Object)((_lastrow))),RemoteObject.createImmutable(""))),0);
+ BA.debugLineNum = 124;BA.debugLine="For i= firstrow To lastrow";
+Debug.ShouldStop(134217728);
 {
 final int step10 = 1;
 final int limit10 = _lastrow.<Integer>get().intValue();
 _i = _firstrow.<Integer>get().intValue() ;
 for (;(step10 > 0 && _i <= limit10) || (step10 < 0 && _i >= limit10) ;_i = ((int)(0 + _i + step10))  ) {
 Debug.locals.put("i", _i);
- BA.debugLineNum = 123;BA.debugLine="Dim row As XSSFRow =sheet.getRow(i)";
-Debug.ShouldStop(67108864);
+ BA.debugLineNum = 125;BA.debugLine="Dim row As XSSFRow =sheet.getRow(i)";
+Debug.ShouldStop(268435456);
 _row = RemoteObject.createNew ("de.donmanfred.XSSFRowwrapper");
 _row = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("de.donmanfred.XSSFRowwrapper"), _sheet.runMethod(false,"getRow",(Object)(BA.numberCast(int.class, _i))));Debug.locals.put("row", _row);Debug.locals.put("row", _row);
- BA.debugLineNum = 125;BA.debugLine="Dim firstcell As Int = row.FirstCellNum";
-Debug.ShouldStop(268435456);
-_firstcell = BA.numberCast(int.class, _row.runMethod(true,"getFirstCellNum"));Debug.locals.put("firstcell", _firstcell);Debug.locals.put("firstcell", _firstcell);
- BA.debugLineNum = 126;BA.debugLine="Dim lastcell As Int = row.LastCellNum";
-Debug.ShouldStop(536870912);
-_lastcell = BA.numberCast(int.class, _row.runMethod(true,"getLastCellNum"));Debug.locals.put("lastcell", _lastcell);Debug.locals.put("lastcell", _lastcell);
- BA.debugLineNum = 127;BA.debugLine="Log($\"Row #${i} FirstCell=${row.FirstCellNum}, L";
+ BA.debugLineNum = 127;BA.debugLine="Dim firstcell As Int = row.FirstCellNum";
 Debug.ShouldStop(1073741824);
-main.mostCurrent.__c.runVoidMethod ("LogImpl","0524305",(RemoteObject.concat(RemoteObject.createImmutable("Row #"),main.mostCurrent.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("")),(Object)(RemoteObject.createImmutable((_i)))),RemoteObject.createImmutable(" FirstCell="),main.mostCurrent.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("")),(Object)((_row.runMethod(true,"getFirstCellNum")))),RemoteObject.createImmutable(", LastCell="),main.mostCurrent.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("")),(Object)((_row.runMethod(true,"getLastCellNum")))),RemoteObject.createImmutable(""))),0);
- BA.debugLineNum = 132;BA.debugLine="For o= firstcell To lastcell-1";
-Debug.ShouldStop(8);
+_firstcell = BA.numberCast(int.class, _row.runMethod(true,"getFirstCellNum"));Debug.locals.put("firstcell", _firstcell);Debug.locals.put("firstcell", _firstcell);
+ BA.debugLineNum = 128;BA.debugLine="Dim lastcell As Int = row.LastCellNum";
+Debug.ShouldStop(-2147483648);
+_lastcell = BA.numberCast(int.class, _row.runMethod(true,"getLastCellNum"));Debug.locals.put("lastcell", _lastcell);Debug.locals.put("lastcell", _lastcell);
+ BA.debugLineNum = 129;BA.debugLine="Log($\"Row #${i} FirstCell=${row.FirstCellNum}, L";
+Debug.ShouldStop(1);
+main.mostCurrent.__c.runVoidMethod ("LogImpl","3524305",(RemoteObject.concat(RemoteObject.createImmutable("Row #"),main.mostCurrent.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("")),(Object)(RemoteObject.createImmutable((_i)))),RemoteObject.createImmutable(" FirstCell="),main.mostCurrent.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("")),(Object)((_row.runMethod(true,"getFirstCellNum")))),RemoteObject.createImmutable(", LastCell="),main.mostCurrent.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("")),(Object)((_row.runMethod(true,"getLastCellNum")))),RemoteObject.createImmutable(""))),0);
+ BA.debugLineNum = 134;BA.debugLine="For o= firstcell To lastcell-1";
+Debug.ShouldStop(32);
 {
 final int step15 = 1;
 final int limit15 = RemoteObject.solve(new RemoteObject[] {_lastcell,RemoteObject.createImmutable(1)}, "-",1, 1).<Integer>get().intValue();
 _o = _firstcell.<Integer>get().intValue() ;
 for (;(step15 > 0 && _o <= limit15) || (step15 < 0 && _o >= limit15) ;_o = ((int)(0 + _o + step15))  ) {
 Debug.locals.put("o", _o);
- BA.debugLineNum = 133;BA.debugLine="Dim Cell As XSSFCell =row.getCell(o)";
-Debug.ShouldStop(16);
+ BA.debugLineNum = 135;BA.debugLine="Dim Cell As XSSFCell =row.getCell(o)";
+Debug.ShouldStop(64);
 _cell = RemoteObject.createNew ("de.donmanfred.XSSFCellwrapper");
 _cell = _row.runMethod(false,"getCell",(Object)(BA.numberCast(int.class, _o)));Debug.locals.put("Cell", _cell);Debug.locals.put("Cell", _cell);
- BA.debugLineNum = 134;BA.debugLine="Log($\"Cell #${o}\"$)";
-Debug.ShouldStop(32);
-main.mostCurrent.__c.runVoidMethod ("LogImpl","0524312",(RemoteObject.concat(RemoteObject.createImmutable("Cell #"),main.mostCurrent.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("")),(Object)(RemoteObject.createImmutable((_o)))),RemoteObject.createImmutable(""))),0);
- BA.debugLineNum = 136;BA.debugLine="If Cell.IsInitialized Then";
+ BA.debugLineNum = 136;BA.debugLine="Log($\"Cell #${o}\"$)";
 Debug.ShouldStop(128);
-if (_cell.runMethod(true,"IsInitialized").<Boolean>get().booleanValue()) { 
- BA.debugLineNum = 137;BA.debugLine="Log($\"CellValueType=${Cell.CellType}\"$)";
-Debug.ShouldStop(256);
-main.mostCurrent.__c.runVoidMethod ("LogImpl","0524315",(RemoteObject.concat(RemoteObject.createImmutable("CellValueType="),main.mostCurrent.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("")),(Object)((_cell.runMethod(true,"getCellType")))),RemoteObject.createImmutable(""))),0);
- BA.debugLineNum = 138;BA.debugLine="Log(\"Raw:\"&Cell.RawValue)";
+main.mostCurrent.__c.runVoidMethod ("LogImpl","3524312",(RemoteObject.concat(RemoteObject.createImmutable("Cell #"),main.mostCurrent.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("")),(Object)(RemoteObject.createImmutable((_o)))),RemoteObject.createImmutable(""))),0);
+ BA.debugLineNum = 138;BA.debugLine="If Cell.IsInitialized Then";
 Debug.ShouldStop(512);
-main.mostCurrent.__c.runVoidMethod ("LogImpl","0524316",RemoteObject.concat(RemoteObject.createImmutable("Raw:"),_cell.runMethod(true,"getRawValue")),0);
- BA.debugLineNum = 139;BA.debugLine="If Cell.CellType = 1 Then";
+if (_cell.runMethod(true,"IsInitialized").<Boolean>get().booleanValue()) { 
+ BA.debugLineNum = 139;BA.debugLine="Log($\"CellValueType=${Cell.CellType}\"$)";
 Debug.ShouldStop(1024);
-if (RemoteObject.solveBoolean("=",_cell.runMethod(true,"getCellType"),BA.numberCast(double.class, 1))) { 
- BA.debugLineNum = 140;BA.debugLine="Log(Cell.StringCellValue)";
+main.mostCurrent.__c.runVoidMethod ("LogImpl","3524315",(RemoteObject.concat(RemoteObject.createImmutable("CellValueType="),main.mostCurrent.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("")),(Object)((_cell.runMethod(true,"getCellType")))),RemoteObject.createImmutable(""))),0);
+ BA.debugLineNum = 140;BA.debugLine="Log(\"Raw:\"&Cell.RawValue)";
 Debug.ShouldStop(2048);
-main.mostCurrent.__c.runVoidMethod ("LogImpl","0524318",_cell.runMethod(true,"getStringCellValue"),0);
- }else 
-{ BA.debugLineNum = 141;BA.debugLine="else if Cell.CellType = 0 Then";
+main.mostCurrent.__c.runVoidMethod ("LogImpl","3524316",RemoteObject.concat(RemoteObject.createImmutable("Raw:"),_cell.runMethod(true,"getRawValue")),0);
+ BA.debugLineNum = 141;BA.debugLine="If Cell.CellType = 1 Then";
 Debug.ShouldStop(4096);
-if (RemoteObject.solveBoolean("=",_cell.runMethod(true,"getCellType"),BA.numberCast(double.class, 0))) { 
- BA.debugLineNum = 142;BA.debugLine="Log(Cell.NumericCellValue)";
+if (RemoteObject.solveBoolean("=",_cell.runMethod(true,"getCellType"),BA.numberCast(double.class, 1))) { 
+ BA.debugLineNum = 142;BA.debugLine="Log(Cell.StringCellValue)";
 Debug.ShouldStop(8192);
-main.mostCurrent.__c.runVoidMethod ("LogImpl","0524320",BA.NumberToString(_cell.runMethod(true,"getNumericCellValue")),0);
+main.mostCurrent.__c.runVoidMethod ("LogImpl","3524318",_cell.runMethod(true,"getStringCellValue"),0);
+ BA.debugLineNum = 143;BA.debugLine="Dim Texto As String = Cell.StringCellValue";
+Debug.ShouldStop(16384);
+_texto = _cell.runMethod(true,"getStringCellValue");Debug.locals.put("Texto", _texto);Debug.locals.put("Texto", _texto);
+ }else 
+{ BA.debugLineNum = 146;BA.debugLine="else if Cell.CellType = 0 Then";
+Debug.ShouldStop(131072);
+if (RemoteObject.solveBoolean("=",_cell.runMethod(true,"getCellType"),BA.numberCast(double.class, 0))) { 
+ BA.debugLineNum = 147;BA.debugLine="Log(Cell.NumericCellValue)";
+Debug.ShouldStop(262144);
+main.mostCurrent.__c.runVoidMethod ("LogImpl","3524323",BA.NumberToString(_cell.runMethod(true,"getNumericCellValue")),0);
  }}
 ;
  };
@@ -170,34 +173,28 @@ main.mostCurrent.__c.runVoidMethod ("LogImpl","0524320",BA.NumberToString(_cell.
  }
 }Debug.locals.put("i", _i);
 ;
- BA.debugLineNum = 153;BA.debugLine="Activity.RemoveAllViews";
-Debug.ShouldStop(16777216);
-main.mostCurrent._activity.runVoidMethod ("RemoveAllViews");
- BA.debugLineNum = 154;BA.debugLine="Activity.LoadLayout(\"EstadoResultados\")";
-Debug.ShouldStop(33554432);
-main.mostCurrent._activity.runMethodAndSync(false,"LoadLayout",(Object)(RemoteObject.createImmutable("EstadoResultados")),main.mostCurrent.activityBA);
- BA.debugLineNum = 155;BA.debugLine="Dim row As XSSFRow =sheet.getRow(1)";
-Debug.ShouldStop(67108864);
-_row = RemoteObject.createNew ("de.donmanfred.XSSFRowwrapper");
-_row = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("de.donmanfred.XSSFRowwrapper"), _sheet.runMethod(false,"getRow",(Object)(BA.numberCast(int.class, 1))));Debug.locals.put("row", _row);Debug.locals.put("row", _row);
- BA.debugLineNum = 156;BA.debugLine="Dim Cell As XSSFCell =row.getCell(1)";
-Debug.ShouldStop(134217728);
-_cell = RemoteObject.createNew ("de.donmanfred.XSSFCellwrapper");
-_cell = _row.runMethod(false,"getCell",(Object)(BA.numberCast(int.class, 1)));Debug.locals.put("Cell", _cell);Debug.locals.put("Cell", _cell);
- BA.debugLineNum = 157;BA.debugLine="Cell.IsInitialized";
-Debug.ShouldStop(268435456);
-_cell.runVoidMethod ("IsInitialized");
- BA.debugLineNum = 158;BA.debugLine="Log(Cell.StringCellValue)";
+ BA.debugLineNum = 158;BA.debugLine="Activity.RemoveAllViews";
 Debug.ShouldStop(536870912);
-main.mostCurrent.__c.runVoidMethod ("LogImpl","0524336",_cell.runMethod(true,"getStringCellValue"),0);
- BA.debugLineNum = 159;BA.debugLine="Dim Texto As String = Cell.StringCellValue";
+main.mostCurrent._activity.runVoidMethod ("RemoveAllViews");
+ BA.debugLineNum = 159;BA.debugLine="Activity.LoadLayout(\"EstadoResultados\")";
 Debug.ShouldStop(1073741824);
-_texto = _cell.runMethod(true,"getStringCellValue");Debug.locals.put("Texto", _texto);Debug.locals.put("Texto", _texto);
- BA.debugLineNum = 161;BA.debugLine="Concepto.text= Texto";
+main.mostCurrent._activity.runMethodAndSync(false,"LoadLayout",(Object)(RemoteObject.createImmutable("EstadoResultados")),main.mostCurrent.activityBA);
+ BA.debugLineNum = 160;BA.debugLine="Dim row As XSSFRow =sheet.getRow(2)";
+Debug.ShouldStop(-2147483648);
+_row = RemoteObject.createNew ("de.donmanfred.XSSFRowwrapper");
+_row = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("de.donmanfred.XSSFRowwrapper"), _sheet.runMethod(false,"getRow",(Object)(BA.numberCast(int.class, 2))));Debug.locals.put("row", _row);Debug.locals.put("row", _row);
+ BA.debugLineNum = 161;BA.debugLine="Dim Cell As XSSFCell =row.getCell(12)";
 Debug.ShouldStop(1);
-main.mostCurrent._concepto.runMethod(true,"setText",BA.ObjectToCharSequence(_texto));
- BA.debugLineNum = 165;BA.debugLine="End Sub";
-Debug.ShouldStop(16);
+_cell = RemoteObject.createNew ("de.donmanfred.XSSFCellwrapper");
+_cell = _row.runMethod(false,"getCell",(Object)(BA.numberCast(int.class, 12)));Debug.locals.put("Cell", _cell);Debug.locals.put("Cell", _cell);
+ BA.debugLineNum = 162;BA.debugLine="Cell.IsInitialized";
+Debug.ShouldStop(2);
+_cell.runVoidMethod ("IsInitialized");
+ BA.debugLineNum = 163;BA.debugLine="Log(Cell.StringCellValue)";
+Debug.ShouldStop(4);
+main.mostCurrent.__c.runVoidMethod ("LogImpl","3524339",_cell.runMethod(true,"getStringCellValue"),0);
+ BA.debugLineNum = 168;BA.debugLine="End Sub";
+Debug.ShouldStop(128);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -208,7 +205,7 @@ finally {
 		}}
 public static void  _boton_click() throws Exception{
 try {
-		Debug.PushSubsStack("Boton_Click (main) ","main",0,main.mostCurrent.activityBA,main.mostCurrent,92);
+		Debug.PushSubsStack("Boton_Click (main) ","main",0,main.mostCurrent.activityBA,main.mostCurrent,94);
 if (RapidSub.canDelegate("boton_click")) { b4a.example.main.remoteMe.runUserSub(false, "main","boton_click"); return;}
 ResumableSub_Boton_Click rsub = new ResumableSub_Boton_Click(null);
 rsub.resume(null, null);
@@ -232,7 +229,7 @@ RemoteObject _result = RemoteObject.createImmutable(0);
 @Override
 public void resume(BA ba, RemoteObject result) throws Exception{
 try {
-		Debug.PushSubsStack("Boton_Click (main) ","main",0,main.mostCurrent.activityBA,main.mostCurrent,92);
+		Debug.PushSubsStack("Boton_Click (main) ","main",0,main.mostCurrent.activityBA,main.mostCurrent,94);
 Debug.locals = rsLocals;Debug.currentSubFrame.locals = rsLocals;
 
     while (true) {
@@ -243,26 +240,26 @@ return;
 case 0:
 //C
 this.state = 1;
- BA.debugLineNum = 93;BA.debugLine="Dim fd As FileDialog";
-Debug.ShouldStop(268435456);
-_fd = RemoteObject.createNew ("anywheresoftware.b4a.agraham.dialogs.InputDialog.FileDialog");Debug.locals.put("fd", _fd);
- BA.debugLineNum = 94;BA.debugLine="fd.FastScroll = True";
-Debug.ShouldStop(536870912);
-_fd.runMethod(true,"setFastScroll",parent.mostCurrent.__c.getField(true,"True"));
- BA.debugLineNum = 95;BA.debugLine="fd.ShowOnlyFolders=False";
+ BA.debugLineNum = 95;BA.debugLine="Dim fd As FileDialog";
 Debug.ShouldStop(1073741824);
-_fd.runMethod(true,"setShowOnlyFolders",parent.mostCurrent.__c.getField(true,"False"));
- BA.debugLineNum = 96;BA.debugLine="fd.TextColor=Colors.Black";
+_fd = RemoteObject.createNew ("anywheresoftware.b4a.agraham.dialogs.InputDialog.FileDialog");Debug.locals.put("fd", _fd);
+ BA.debugLineNum = 96;BA.debugLine="fd.FastScroll = True";
 Debug.ShouldStop(-2147483648);
-_fd.setField ("TextColor",parent.mostCurrent.__c.getField(false,"Colors").getField(true,"Black"));
- BA.debugLineNum = 97;BA.debugLine="fd.FilePath = File.DirInternal";
+_fd.runMethod(true,"setFastScroll",parent.mostCurrent.__c.getField(true,"True"));
+ BA.debugLineNum = 97;BA.debugLine="fd.ShowOnlyFolders=False";
 Debug.ShouldStop(1);
-_fd.runMethod(true,"setFilePath",parent.mostCurrent.__c.getField(false,"File").runMethod(true,"getDirInternal"));
- BA.debugLineNum = 98;BA.debugLine="Dim sf As Object = fd.ShowAsync(\"Select file\", \"Y";
+_fd.runMethod(true,"setShowOnlyFolders",parent.mostCurrent.__c.getField(true,"False"));
+ BA.debugLineNum = 98;BA.debugLine="fd.TextColor=Colors.Black";
 Debug.ShouldStop(2);
-_sf = _fd.runMethod(false,"ShowAsync",(Object)(BA.ObjectToCharSequence("Select file")),(Object)(BA.ObjectToString("Yes")),(Object)(BA.ObjectToString("Cancel")),(Object)(BA.ObjectToString("No")),main.mostCurrent.activityBA,(Object)((parent.mostCurrent.__c.getField(false,"Null"))),(Object)(parent.mostCurrent.__c.getField(true,"False")));Debug.locals.put("sf", _sf);Debug.locals.put("sf", _sf);
- BA.debugLineNum = 99;BA.debugLine="Wait For (sf) Dialog_Result(Result As Int)";
+_fd.setField ("TextColor",parent.mostCurrent.__c.getField(false,"Colors").getField(true,"Black"));
+ BA.debugLineNum = 99;BA.debugLine="fd.FilePath = File.DirInternal";
 Debug.ShouldStop(4);
+_fd.runMethod(true,"setFilePath",parent.mostCurrent.__c.getField(false,"File").runMethod(true,"getDirInternal"));
+ BA.debugLineNum = 100;BA.debugLine="Dim sf As Object = fd.ShowAsync(\"Select file\", \"Y";
+Debug.ShouldStop(8);
+_sf = _fd.runMethod(false,"ShowAsync",(Object)(BA.ObjectToCharSequence("Select file")),(Object)(BA.ObjectToString("Yes")),(Object)(BA.ObjectToString("Cancel")),(Object)(BA.ObjectToString("No")),main.mostCurrent.activityBA,(Object)((parent.mostCurrent.__c.getField(false,"Null"))),(Object)(parent.mostCurrent.__c.getField(true,"False")));Debug.locals.put("sf", _sf);Debug.locals.put("sf", _sf);
+ BA.debugLineNum = 101;BA.debugLine="Wait For (sf) Dialog_Result(Result As Int)";
+Debug.ShouldStop(16);
 parent.mostCurrent.__c.runVoidMethod ("WaitFor","dialog_result", main.processBA, anywheresoftware.b4a.pc.PCResumableSub.createDebugResumeSub(this, "main", "boton_click"), _sf);
 this.state = 5;
 return;
@@ -271,8 +268,8 @@ case 5:
 this.state = 1;
 _result = (RemoteObject) result.getArrayElement(true,RemoteObject.createImmutable(0));Debug.locals.put("Result", _result);
 ;
- BA.debugLineNum = 100;BA.debugLine="If Result = DialogResponse.POSITIVE Then";
-Debug.ShouldStop(8);
+ BA.debugLineNum = 102;BA.debugLine="If Result = DialogResponse.POSITIVE Then";
+Debug.ShouldStop(32);
 if (true) break;
 
 case 1:
@@ -285,29 +282,29 @@ this.state = 3;
 case 3:
 //C
 this.state = 4;
- BA.debugLineNum = 101;BA.debugLine="Log(\"File path: \" & fd.FilePath)";
-Debug.ShouldStop(16);
-parent.mostCurrent.__c.runVoidMethod ("LogImpl","0458761",RemoteObject.concat(RemoteObject.createImmutable("File path: "),_fd.runMethod(true,"getFilePath")),0);
- BA.debugLineNum = 102;BA.debugLine="Log(\"File name: \" & fd.ChosenName)";
-Debug.ShouldStop(32);
-parent.mostCurrent.__c.runVoidMethod ("LogImpl","0458762",RemoteObject.concat(RemoteObject.createImmutable("File name: "),_fd.runMethod(true,"getChosenName")),0);
+ BA.debugLineNum = 103;BA.debugLine="Log(\"File path: \" & fd.FilePath)";
+Debug.ShouldStop(64);
+parent.mostCurrent.__c.runVoidMethod ("LogImpl","3458761",RemoteObject.concat(RemoteObject.createImmutable("File path: "),_fd.runMethod(true,"getFilePath")),0);
+ BA.debugLineNum = 104;BA.debugLine="Log(\"File name: \" & fd.ChosenName)";
+Debug.ShouldStop(128);
+parent.mostCurrent.__c.runVoidMethod ("LogImpl","3458762",RemoteObject.concat(RemoteObject.createImmutable("File name: "),_fd.runMethod(true,"getChosenName")),0);
  if (true) break;
 
 case 4:
 //C
 this.state = -1;
 ;
- BA.debugLineNum = 104;BA.debugLine="Label1.Text = \"Ruta = \" & fd.FilePath";
-Debug.ShouldStop(128);
-parent.mostCurrent._label1.runMethod(true,"setText",BA.ObjectToCharSequence(RemoteObject.concat(RemoteObject.createImmutable("Ruta = "),_fd.runMethod(true,"getFilePath"))));
- BA.debugLineNum = 105;BA.debugLine="Label2.Text = \"Archivo = \" & fd.ChosenName";
-Debug.ShouldStop(256);
-parent.mostCurrent._label2.runMethod(true,"setText",BA.ObjectToCharSequence(RemoteObject.concat(RemoteObject.createImmutable("Archivo = "),_fd.runMethod(true,"getChosenName"))));
- BA.debugLineNum = 106;BA.debugLine="archivo = fd.ChosenName";
+ BA.debugLineNum = 106;BA.debugLine="Label1.Text = \"Ruta = \" & fd.FilePath";
 Debug.ShouldStop(512);
-parent.mostCurrent._archivo = _fd.runMethod(true,"getChosenName");
- BA.debugLineNum = 108;BA.debugLine="End Sub";
+parent.mostCurrent._label1.runMethod(true,"setText",BA.ObjectToCharSequence(RemoteObject.concat(RemoteObject.createImmutable("Ruta = "),_fd.runMethod(true,"getFilePath"))));
+ BA.debugLineNum = 107;BA.debugLine="Label2.Text = \"Archivo = \" & fd.ChosenName";
+Debug.ShouldStop(1024);
+parent.mostCurrent._label2.runMethod(true,"setText",BA.ObjectToCharSequence(RemoteObject.concat(RemoteObject.createImmutable("Archivo = "),_fd.runMethod(true,"getChosenName"))));
+ BA.debugLineNum = 108;BA.debugLine="archivo = fd.ChosenName";
 Debug.ShouldStop(2048);
+parent.mostCurrent._archivo = _fd.runMethod(true,"getChosenName");
+ BA.debugLineNum = 110;BA.debugLine="End Sub";
+Debug.ShouldStop(8192);
 if (true) break;
 
             }
@@ -332,52 +329,50 @@ main.mostCurrent._info = RemoteObject.createNew ("anywheresoftware.b4a.objects.B
 main.mostCurrent._usuario = RemoteObject.createImmutable("");
  //BA.debugLineNum = 34;BA.debugLine="Dim archivo As String";
 main.mostCurrent._archivo = RemoteObject.createImmutable("");
- //BA.debugLineNum = 35;BA.debugLine="Dim path As String";
-main.mostCurrent._path = RemoteObject.createImmutable("");
- //BA.debugLineNum = 38;BA.debugLine="Private Nombre As EditText";
+ //BA.debugLineNum = 39;BA.debugLine="Private Nombre As EditText";
 main.mostCurrent._nombre = RemoteObject.createNew ("anywheresoftware.b4a.objects.EditTextWrapper");
- //BA.debugLineNum = 40;BA.debugLine="Usuario = Nombre";
-main.mostCurrent._usuario = BA.ObjectToString(main.mostCurrent._nombre);
- //BA.debugLineNum = 43;BA.debugLine="Private HiUsuario As Label";
+ //BA.debugLineNum = 41;BA.debugLine="Usuario = Nombre.text";
+main.mostCurrent._usuario = main.mostCurrent._nombre.runMethod(true,"getText");
+ //BA.debugLineNum = 44;BA.debugLine="Private HiUsuario As Label";
 main.mostCurrent._hiusuario = RemoteObject.createNew ("anywheresoftware.b4a.objects.LabelWrapper");
- //BA.debugLineNum = 45;BA.debugLine="Private Boton As Button";
+ //BA.debugLineNum = 46;BA.debugLine="Private Boton As Button";
 main.mostCurrent._boton = RemoteObject.createNew ("anywheresoftware.b4a.objects.ButtonWrapper");
- //BA.debugLineNum = 47;BA.debugLine="Private Label1 As Label";
+ //BA.debugLineNum = 48;BA.debugLine="Private Label1 As Label";
 main.mostCurrent._label1 = RemoteObject.createNew ("anywheresoftware.b4a.objects.LabelWrapper");
- //BA.debugLineNum = 48;BA.debugLine="Private Label2 As Label";
+ //BA.debugLineNum = 49;BA.debugLine="Private Label2 As Label";
 main.mostCurrent._label2 = RemoteObject.createNew ("anywheresoftware.b4a.objects.LabelWrapper");
- //BA.debugLineNum = 49;BA.debugLine="Private Analisis As Button";
+ //BA.debugLineNum = 50;BA.debugLine="Private Analisis As Button";
 main.mostCurrent._analisis = RemoteObject.createNew ("anywheresoftware.b4a.objects.ButtonWrapper");
- //BA.debugLineNum = 50;BA.debugLine="Private Concepto As Label";
+ //BA.debugLineNum = 51;BA.debugLine="Private Concepto As Label";
 main.mostCurrent._concepto = RemoteObject.createNew ("anywheresoftware.b4a.objects.LabelWrapper");
- //BA.debugLineNum = 51;BA.debugLine="Private Concepto1 As Label";
+ //BA.debugLineNum = 53;BA.debugLine="Private Concepto1 As Label";
 main.mostCurrent._concepto1 = RemoteObject.createNew ("anywheresoftware.b4a.objects.LabelWrapper");
- //BA.debugLineNum = 52;BA.debugLine="Private Concepto2 As Label";
+ //BA.debugLineNum = 54;BA.debugLine="Private Concepto2 As Label";
 main.mostCurrent._concepto2 = RemoteObject.createNew ("anywheresoftware.b4a.objects.LabelWrapper");
- //BA.debugLineNum = 53;BA.debugLine="Private Concepto3 As Label";
+ //BA.debugLineNum = 55;BA.debugLine="Private Concepto3 As Label";
 main.mostCurrent._concepto3 = RemoteObject.createNew ("anywheresoftware.b4a.objects.LabelWrapper");
- //BA.debugLineNum = 54;BA.debugLine="Private Concepto4 As Label";
+ //BA.debugLineNum = 56;BA.debugLine="Private Concepto4 As Label";
 main.mostCurrent._concepto4 = RemoteObject.createNew ("anywheresoftware.b4a.objects.LabelWrapper");
- //BA.debugLineNum = 55;BA.debugLine="Private Concepto5 As Label";
+ //BA.debugLineNum = 57;BA.debugLine="Private Concepto5 As Label";
 main.mostCurrent._concepto5 = RemoteObject.createNew ("anywheresoftware.b4a.objects.LabelWrapper");
- //BA.debugLineNum = 56;BA.debugLine="Private Concepto6 As Label";
+ //BA.debugLineNum = 58;BA.debugLine="Private Concepto6 As Label";
 main.mostCurrent._concepto6 = RemoteObject.createNew ("anywheresoftware.b4a.objects.LabelWrapper");
- //BA.debugLineNum = 57;BA.debugLine="Private Concepto7 As Label";
+ //BA.debugLineNum = 59;BA.debugLine="Private Concepto7 As Label";
 main.mostCurrent._concepto7 = RemoteObject.createNew ("anywheresoftware.b4a.objects.LabelWrapper");
- //BA.debugLineNum = 58;BA.debugLine="End Sub";
+ //BA.debugLineNum = 60;BA.debugLine="End Sub";
 return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _info_click() throws Exception{
 try {
-		Debug.PushSubsStack("info_Click (main) ","main",0,main.mostCurrent.activityBA,main.mostCurrent,86);
+		Debug.PushSubsStack("info_Click (main) ","main",0,main.mostCurrent.activityBA,main.mostCurrent,88);
 if (RapidSub.canDelegate("info_click")) { return b4a.example.main.remoteMe.runUserSub(false, "main","info_click");}
- BA.debugLineNum = 86;BA.debugLine="Private Sub info_Click";
-Debug.ShouldStop(2097152);
- BA.debugLineNum = 87;BA.debugLine="MsgboxAsync(\"Recuerda verificar que el archivo ele";
-Debug.ShouldStop(4194304);
+ BA.debugLineNum = 88;BA.debugLine="Private Sub info_Click";
+Debug.ShouldStop(8388608);
+ BA.debugLineNum = 89;BA.debugLine="MsgboxAsync(\"Recuerda verificar que el archivo ele";
+Debug.ShouldStop(16777216);
 main.mostCurrent.__c.runVoidMethod ("MsgboxAsync",(Object)(BA.ObjectToCharSequence("Recuerda verificar que el archivo elegido es el correcto")),(Object)(BA.ObjectToCharSequence(RemoteObject.createImmutable("INFORMACIÓN"))),main.processBA);
- BA.debugLineNum = 90;BA.debugLine="End Sub";
-Debug.ShouldStop(33554432);
+ BA.debugLineNum = 92;BA.debugLine="End Sub";
+Debug.ShouldStop(134217728);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -388,24 +383,24 @@ finally {
 		}}
 public static RemoteObject  _iniciar_click() throws Exception{
 try {
-		Debug.PushSubsStack("INICIAR_Click (main) ","main",0,main.mostCurrent.activityBA,main.mostCurrent,77);
+		Debug.PushSubsStack("INICIAR_Click (main) ","main",0,main.mostCurrent.activityBA,main.mostCurrent,79);
 if (RapidSub.canDelegate("iniciar_click")) { return b4a.example.main.remoteMe.runUserSub(false, "main","iniciar_click");}
- BA.debugLineNum = 77;BA.debugLine="Private Sub INICIAR_Click";
-Debug.ShouldStop(4096);
- BA.debugLineNum = 78;BA.debugLine="Usuario = Nombre.Text";
-Debug.ShouldStop(8192);
-main.mostCurrent._usuario = main.mostCurrent._nombre.runMethod(true,"getText");
- BA.debugLineNum = 79;BA.debugLine="Activity.RemoveAllViews";
+ BA.debugLineNum = 79;BA.debugLine="Private Sub INICIAR_Click";
 Debug.ShouldStop(16384);
-main.mostCurrent._activity.runVoidMethod ("RemoveAllViews");
- BA.debugLineNum = 80;BA.debugLine="Activity.LoadLayout(\"Pantalla2\")";
+ BA.debugLineNum = 80;BA.debugLine="Usuario = Nombre.Text";
 Debug.ShouldStop(32768);
-main.mostCurrent._activity.runMethodAndSync(false,"LoadLayout",(Object)(RemoteObject.createImmutable("Pantalla2")),main.mostCurrent.activityBA);
- BA.debugLineNum = 81;BA.debugLine="HiUsuario.Text= \"Hola \" & Usuario";
+main.mostCurrent._usuario = main.mostCurrent._nombre.runMethod(true,"getText");
+ BA.debugLineNum = 81;BA.debugLine="Activity.RemoveAllViews";
 Debug.ShouldStop(65536);
+main.mostCurrent._activity.runVoidMethod ("RemoveAllViews");
+ BA.debugLineNum = 82;BA.debugLine="Activity.LoadLayout(\"Pantalla2\")";
+Debug.ShouldStop(131072);
+main.mostCurrent._activity.runMethodAndSync(false,"LoadLayout",(Object)(RemoteObject.createImmutable("Pantalla2")),main.mostCurrent.activityBA);
+ BA.debugLineNum = 83;BA.debugLine="HiUsuario.Text= \"Hola \" & Usuario";
+Debug.ShouldStop(262144);
 main.mostCurrent._hiusuario.runMethod(true,"setText",BA.ObjectToCharSequence(RemoteObject.concat(RemoteObject.createImmutable("Hola "),main.mostCurrent._usuario)));
- BA.debugLineNum = 84;BA.debugLine="End Sub";
-Debug.ShouldStop(524288);
+ BA.debugLineNum = 86;BA.debugLine="End Sub";
+Debug.ShouldStop(2097152);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {

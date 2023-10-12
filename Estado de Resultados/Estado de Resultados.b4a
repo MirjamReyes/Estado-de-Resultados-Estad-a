@@ -30,7 +30,7 @@ Version=12.5
 	#FullScreen: False
 	#IncludeTitle: True
 #End Region
-
+'este es un cambio necesario
 
 #AdditionalJar: poi-3.12-android-a
 #AdditionalJar: poi-ooxml-schemas-3.12-20150511-a
@@ -56,7 +56,7 @@ Sub Globals
 	
 	Private Nombre As EditText
 	
-	Usuario = Nombre 
+	Usuario = Nombre.Text 
 	'Estamos guardando el texto ingresado en Nombre a la variable USUARIO
 	
 	Private HiUsuario As Label

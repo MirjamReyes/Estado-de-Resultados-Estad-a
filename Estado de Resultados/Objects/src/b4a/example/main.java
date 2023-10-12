@@ -34,7 +34,7 @@ public class main extends Activity implements B4AActivity{
 		super.onCreate(savedInstanceState);
         mostCurrent = this;
 		if (processBA == null) {
-			processBA = new anywheresoftware.b4a.ShellBA(this.getApplicationContext(), null, null, "b4a.example", "b4a.example.main");
+			processBA = new BA(this.getApplicationContext(), null, null, "b4a.example", "b4a.example.main");
 			processBA.loadHtSubs(this.getClass());
 	        float deviceScale = getApplicationContext().getResources().getDisplayMetrics().density;
 	        BALayout.setDeviceScale(deviceScale);
@@ -335,47 +335,6 @@ public class main extends Activity implements B4AActivity{
             
     }
 
-
-
-public static void initializeProcessGlobals() {
-    
-    if (main.processGlobalsRun == false) {
-	    main.processGlobalsRun = true;
-		try {
-		        		
-        } catch (Exception e) {
-			throw new RuntimeException(e);
-		}
-    }
-}
-public static boolean isAnyActivityVisible() {
-    boolean vis = false;
-vis = vis | (main.mostCurrent != null);
-return vis;}
-
-private static BA killProgramHelper(BA ba) {
-    if (ba == null)
-        return null;
-    anywheresoftware.b4a.BA.SharedProcessBA sharedProcessBA = ba.sharedProcessBA;
-    if (sharedProcessBA == null || sharedProcessBA.activityBA == null)
-        return null;
-    return sharedProcessBA.activityBA.get();
-}
-public static void killProgram() {
-     {
-            Activity __a = null;
-            if (main.previousOne != null) {
-				__a = main.previousOne.get();
-			}
-            else {
-                BA ba = killProgramHelper(main.mostCurrent == null ? null : main.mostCurrent.processBA);
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
-BA.applicationContext.stopService(new android.content.Intent(BA.applicationContext, starter.class));
-}
 public anywheresoftware.b4a.keywords.Common __c = null;
 public static anywheresoftware.b4a.objects.B4XViewWrapper.XUI _xui = null;
 public static de.donmanfred.XSSFWorkbookwrapper _xls = null;
@@ -399,41 +358,29 @@ public anywheresoftware.b4a.objects.LabelWrapper _concepto5 = null;
 public anywheresoftware.b4a.objects.LabelWrapper _concepto6 = null;
 public anywheresoftware.b4a.objects.LabelWrapper _concepto7 = null;
 public b4a.example.starter _starter = null;
+
+public static boolean isAnyActivityVisible() {
+    boolean vis = false;
+vis = vis | (main.mostCurrent != null);
+return vis;}
 public static String  _activity_create(boolean _firsttime) throws Exception{
-RDebugUtils.currentModule="main";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_create", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_create", new Object[] {_firsttime}));}
-RDebugUtils.currentLine=131072;
- //BA.debugLineNum = 131072;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
-RDebugUtils.currentLine=131075;
- //BA.debugLineNum = 131075;BA.debugLine="Activity.LoadLayout(\"Pantalla1\")";
+ //BA.debugLineNum = 61;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
+ //BA.debugLineNum = 64;BA.debugLine="Activity.LoadLayout(\"Pantalla1\")";
 mostCurrent._activity.LoadLayout("Pantalla1",mostCurrent.activityBA);
-RDebugUtils.currentLine=131078;
- //BA.debugLineNum = 131078;BA.debugLine="End Sub";
+ //BA.debugLineNum = 67;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{
-RDebugUtils.currentModule="main";
-RDebugUtils.currentLine=262144;
- //BA.debugLineNum = 262144;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
-RDebugUtils.currentLine=262146;
- //BA.debugLineNum = 262146;BA.debugLine="End Sub";
+ //BA.debugLineNum = 73;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+ //BA.debugLineNum = 75;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_resume() throws Exception{
-RDebugUtils.currentModule="main";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_resume", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_resume", null));}
-RDebugUtils.currentLine=196608;
- //BA.debugLineNum = 196608;BA.debugLine="Sub Activity_Resume";
-RDebugUtils.currentLine=196610;
- //BA.debugLineNum = 196610;BA.debugLine="End Sub";
+ //BA.debugLineNum = 69;BA.debugLine="Sub Activity_Resume";
+ //BA.debugLineNum = 71;BA.debugLine="End Sub";
 return "";
 }
 public static String  _analisis_click() throws Exception{
-RDebugUtils.currentModule="main";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "analisis_click", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "analisis_click", null));}
 de.donmanfred.XLSSheetwrapper _sheet = null;
 int _firstrow = 0;
 int _lastrow = 0;
@@ -444,133 +391,93 @@ int _lastcell = 0;
 int _o = 0;
 de.donmanfred.XSSFCellwrapper _cell = null;
 String _texto = "";
-RDebugUtils.currentLine=524288;
- //BA.debugLineNum = 524288;BA.debugLine="Private Sub Analisis_Click";
-RDebugUtils.currentLine=524290;
- //BA.debugLineNum = 524290;BA.debugLine="File.Copy(File.DirAssets,archivo,File.DirInternal";
+ //BA.debugLineNum = 110;BA.debugLine="Private Sub Analisis_Click";
+ //BA.debugLineNum = 112;BA.debugLine="File.Copy(File.DirAssets,archivo,File.DirInternal";
 anywheresoftware.b4a.keywords.Common.File.Copy(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),mostCurrent._archivo,anywheresoftware.b4a.keywords.Common.File.getDirInternal(),mostCurrent._archivo);
-RDebugUtils.currentLine=524291;
- //BA.debugLineNum = 524291;BA.debugLine="xls.Initialize(\"\",File.Combine(File.DirInternal,a";
+ //BA.debugLineNum = 113;BA.debugLine="xls.Initialize(\"\",File.Combine(File.DirInternal,a";
 _xls.Initialize(processBA,"",anywheresoftware.b4a.keywords.Common.File.Combine(anywheresoftware.b4a.keywords.Common.File.getDirInternal(),mostCurrent._archivo));
-RDebugUtils.currentLine=524292;
- //BA.debugLineNum = 524292;BA.debugLine="Log($\"ActiveSheetIndex=${xls.ActiveSheetIndex}\"$)";
-anywheresoftware.b4a.keywords.Common.LogImpl("0524292",("ActiveSheetIndex="+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_xls.getActiveSheetIndex()))+""),0);
-RDebugUtils.currentLine=524293;
- //BA.debugLineNum = 524293;BA.debugLine="Dim sheet As XLSSheet = xls.getSheetAt(xls.Active";
+ //BA.debugLineNum = 114;BA.debugLine="Log($\"ActiveSheetIndex=${xls.ActiveSheetIndex}\"$)";
+anywheresoftware.b4a.keywords.Common.LogImpl("1524292",("ActiveSheetIndex="+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_xls.getActiveSheetIndex()))+""),0);
+ //BA.debugLineNum = 115;BA.debugLine="Dim sheet As XLSSheet = xls.getSheetAt(xls.Active";
 _sheet = new de.donmanfred.XLSSheetwrapper();
 _sheet = _xls.getSheetAt(_xls.getActiveSheetIndex());
-RDebugUtils.currentLine=524294;
- //BA.debugLineNum = 524294;BA.debugLine="Log($\"ActiveSheet.ActiveCell=${sheet.ActiveCell}\"";
-anywheresoftware.b4a.keywords.Common.LogImpl("0524294",("ActiveSheet.ActiveCell="+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_sheet.getActiveCell()))+""),0);
-RDebugUtils.currentLine=524295;
- //BA.debugLineNum = 524295;BA.debugLine="Log($\"ActiveSheet.hasComments=${sheet.hasComments";
-anywheresoftware.b4a.keywords.Common.LogImpl("0524295",("ActiveSheet.hasComments="+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_sheet.hasComments()))+""),0);
-RDebugUtils.currentLine=524296;
- //BA.debugLineNum = 524296;BA.debugLine="Dim firstrow As Int = sheet.FirstRowNum";
+ //BA.debugLineNum = 116;BA.debugLine="Log($\"ActiveSheet.ActiveCell=${sheet.ActiveCell}\"";
+anywheresoftware.b4a.keywords.Common.LogImpl("1524294",("ActiveSheet.ActiveCell="+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_sheet.getActiveCell()))+""),0);
+ //BA.debugLineNum = 117;BA.debugLine="Log($\"ActiveSheet.hasComments=${sheet.hasComments";
+anywheresoftware.b4a.keywords.Common.LogImpl("1524295",("ActiveSheet.hasComments="+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_sheet.hasComments()))+""),0);
+ //BA.debugLineNum = 118;BA.debugLine="Dim firstrow As Int = sheet.FirstRowNum";
 _firstrow = _sheet.getFirstRowNum();
-RDebugUtils.currentLine=524297;
- //BA.debugLineNum = 524297;BA.debugLine="Dim lastrow As Int = sheet.LastRowNum";
+ //BA.debugLineNum = 119;BA.debugLine="Dim lastrow As Int = sheet.LastRowNum";
 _lastrow = _sheet.getLastRowNum();
-RDebugUtils.currentLine=524298;
- //BA.debugLineNum = 524298;BA.debugLine="Log($\"Row FirstRow=${firstrow}, LastRow=${lastrow";
-anywheresoftware.b4a.keywords.Common.LogImpl("0524298",("Row FirstRow="+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_firstrow))+", LastRow="+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_lastrow))+""),0);
-RDebugUtils.currentLine=524300;
- //BA.debugLineNum = 524300;BA.debugLine="For i= firstrow To lastrow";
+ //BA.debugLineNum = 120;BA.debugLine="Log($\"Row FirstRow=${firstrow}, LastRow=${lastrow";
+anywheresoftware.b4a.keywords.Common.LogImpl("1524298",("Row FirstRow="+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_firstrow))+", LastRow="+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_lastrow))+""),0);
+ //BA.debugLineNum = 122;BA.debugLine="For i= firstrow To lastrow";
 {
 final int step10 = 1;
 final int limit10 = _lastrow;
 _i = _firstrow ;
 for (;_i <= limit10 ;_i = _i + step10 ) {
-RDebugUtils.currentLine=524301;
- //BA.debugLineNum = 524301;BA.debugLine="Dim row As XSSFRow =sheet.getRow(i)";
+ //BA.debugLineNum = 123;BA.debugLine="Dim row As XSSFRow =sheet.getRow(i)";
 _row = new de.donmanfred.XSSFRowwrapper();
 _row = (de.donmanfred.XSSFRowwrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new de.donmanfred.XSSFRowwrapper(), (org.apache.poi.xssf.usermodel.XSSFRow)(_sheet.getRow(_i)));
-RDebugUtils.currentLine=524303;
- //BA.debugLineNum = 524303;BA.debugLine="Dim firstcell As Int = row.FirstCellNum";
+ //BA.debugLineNum = 125;BA.debugLine="Dim firstcell As Int = row.FirstCellNum";
 _firstcell = (int) (_row.getFirstCellNum());
-RDebugUtils.currentLine=524304;
- //BA.debugLineNum = 524304;BA.debugLine="Dim lastcell As Int = row.LastCellNum";
+ //BA.debugLineNum = 126;BA.debugLine="Dim lastcell As Int = row.LastCellNum";
 _lastcell = (int) (_row.getLastCellNum());
-RDebugUtils.currentLine=524305;
- //BA.debugLineNum = 524305;BA.debugLine="Log($\"Row #${i} FirstCell=${row.FirstCellNum}, L";
-anywheresoftware.b4a.keywords.Common.LogImpl("0524305",("Row #"+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_i))+" FirstCell="+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_row.getFirstCellNum()))+", LastCell="+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_row.getLastCellNum()))+""),0);
-RDebugUtils.currentLine=524310;
- //BA.debugLineNum = 524310;BA.debugLine="For o= firstcell To lastcell-1";
+ //BA.debugLineNum = 127;BA.debugLine="Log($\"Row #${i} FirstCell=${row.FirstCellNum}, L";
+anywheresoftware.b4a.keywords.Common.LogImpl("1524305",("Row #"+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_i))+" FirstCell="+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_row.getFirstCellNum()))+", LastCell="+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_row.getLastCellNum()))+""),0);
+ //BA.debugLineNum = 132;BA.debugLine="For o= firstcell To lastcell-1";
 {
 final int step15 = 1;
 final int limit15 = (int) (_lastcell-1);
 _o = _firstcell ;
 for (;_o <= limit15 ;_o = _o + step15 ) {
-RDebugUtils.currentLine=524311;
- //BA.debugLineNum = 524311;BA.debugLine="Dim Cell As XSSFCell =row.getCell(o)";
+ //BA.debugLineNum = 133;BA.debugLine="Dim Cell As XSSFCell =row.getCell(o)";
 _cell = new de.donmanfred.XSSFCellwrapper();
 _cell = _row.getCell(_o);
-RDebugUtils.currentLine=524312;
- //BA.debugLineNum = 524312;BA.debugLine="Log($\"Cell #${o}\"$)";
-anywheresoftware.b4a.keywords.Common.LogImpl("0524312",("Cell #"+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_o))+""),0);
-RDebugUtils.currentLine=524314;
- //BA.debugLineNum = 524314;BA.debugLine="If Cell.IsInitialized Then";
+ //BA.debugLineNum = 134;BA.debugLine="Log($\"Cell #${o}\"$)";
+anywheresoftware.b4a.keywords.Common.LogImpl("1524312",("Cell #"+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_o))+""),0);
+ //BA.debugLineNum = 136;BA.debugLine="If Cell.IsInitialized Then";
 if (_cell.IsInitialized()) { 
-RDebugUtils.currentLine=524315;
- //BA.debugLineNum = 524315;BA.debugLine="Log($\"CellValueType=${Cell.CellType}\"$)";
-anywheresoftware.b4a.keywords.Common.LogImpl("0524315",("CellValueType="+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_cell.getCellType()))+""),0);
-RDebugUtils.currentLine=524316;
- //BA.debugLineNum = 524316;BA.debugLine="Log(\"Raw:\"&Cell.RawValue)";
-anywheresoftware.b4a.keywords.Common.LogImpl("0524316","Raw:"+_cell.getRawValue(),0);
-RDebugUtils.currentLine=524317;
- //BA.debugLineNum = 524317;BA.debugLine="If Cell.CellType = 1 Then";
+ //BA.debugLineNum = 137;BA.debugLine="Log($\"CellValueType=${Cell.CellType}\"$)";
+anywheresoftware.b4a.keywords.Common.LogImpl("1524315",("CellValueType="+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_cell.getCellType()))+""),0);
+ //BA.debugLineNum = 138;BA.debugLine="Log(\"Raw:\"&Cell.RawValue)";
+anywheresoftware.b4a.keywords.Common.LogImpl("1524316","Raw:"+_cell.getRawValue(),0);
+ //BA.debugLineNum = 139;BA.debugLine="If Cell.CellType = 1 Then";
 if (_cell.getCellType()==1) { 
-RDebugUtils.currentLine=524318;
- //BA.debugLineNum = 524318;BA.debugLine="Log(Cell.StringCellValue)";
-anywheresoftware.b4a.keywords.Common.LogImpl("0524318",_cell.getStringCellValue(),0);
- }else 
-{RDebugUtils.currentLine=524319;
- //BA.debugLineNum = 524319;BA.debugLine="else if Cell.CellType = 0 Then";
-if (_cell.getCellType()==0) { 
-RDebugUtils.currentLine=524320;
- //BA.debugLineNum = 524320;BA.debugLine="Log(Cell.NumericCellValue)";
-anywheresoftware.b4a.keywords.Common.LogImpl("0524320",BA.NumberToString(_cell.getNumericCellValue()),0);
- }}
-;
+ //BA.debugLineNum = 140;BA.debugLine="Log(Cell.StringCellValue)";
+anywheresoftware.b4a.keywords.Common.LogImpl("1524318",_cell.getStringCellValue(),0);
+ }else if(_cell.getCellType()==0) { 
+ //BA.debugLineNum = 142;BA.debugLine="Log(Cell.NumericCellValue)";
+anywheresoftware.b4a.keywords.Common.LogImpl("1524320",BA.NumberToString(_cell.getNumericCellValue()),0);
+ };
  };
  }
 };
  }
 };
-RDebugUtils.currentLine=524331;
- //BA.debugLineNum = 524331;BA.debugLine="Activity.RemoveAllViews";
+ //BA.debugLineNum = 153;BA.debugLine="Activity.RemoveAllViews";
 mostCurrent._activity.RemoveAllViews();
-RDebugUtils.currentLine=524332;
- //BA.debugLineNum = 524332;BA.debugLine="Activity.LoadLayout(\"EstadoResultados\")";
+ //BA.debugLineNum = 154;BA.debugLine="Activity.LoadLayout(\"EstadoResultados\")";
 mostCurrent._activity.LoadLayout("EstadoResultados",mostCurrent.activityBA);
-RDebugUtils.currentLine=524333;
- //BA.debugLineNum = 524333;BA.debugLine="Dim row As XSSFRow =sheet.getRow(1)";
+ //BA.debugLineNum = 155;BA.debugLine="Dim row As XSSFRow =sheet.getRow(1)";
 _row = new de.donmanfred.XSSFRowwrapper();
 _row = (de.donmanfred.XSSFRowwrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new de.donmanfred.XSSFRowwrapper(), (org.apache.poi.xssf.usermodel.XSSFRow)(_sheet.getRow((int) (1))));
-RDebugUtils.currentLine=524334;
- //BA.debugLineNum = 524334;BA.debugLine="Dim Cell As XSSFCell =row.getCell(1)";
+ //BA.debugLineNum = 156;BA.debugLine="Dim Cell As XSSFCell =row.getCell(1)";
 _cell = new de.donmanfred.XSSFCellwrapper();
 _cell = _row.getCell((int) (1));
-RDebugUtils.currentLine=524335;
- //BA.debugLineNum = 524335;BA.debugLine="Cell.IsInitialized";
+ //BA.debugLineNum = 157;BA.debugLine="Cell.IsInitialized";
 _cell.IsInitialized();
-RDebugUtils.currentLine=524336;
- //BA.debugLineNum = 524336;BA.debugLine="Log(Cell.StringCellValue)";
-anywheresoftware.b4a.keywords.Common.LogImpl("0524336",_cell.getStringCellValue(),0);
-RDebugUtils.currentLine=524337;
- //BA.debugLineNum = 524337;BA.debugLine="Dim Texto As String = Cell.StringCellValue";
+ //BA.debugLineNum = 158;BA.debugLine="Log(Cell.StringCellValue)";
+anywheresoftware.b4a.keywords.Common.LogImpl("1524336",_cell.getStringCellValue(),0);
+ //BA.debugLineNum = 159;BA.debugLine="Dim Texto As String = Cell.StringCellValue";
 _texto = _cell.getStringCellValue();
-RDebugUtils.currentLine=524339;
- //BA.debugLineNum = 524339;BA.debugLine="Concepto.text= Texto";
+ //BA.debugLineNum = 161;BA.debugLine="Concepto.text= Texto";
 mostCurrent._concepto.setText(BA.ObjectToCharSequence(_texto));
-RDebugUtils.currentLine=524343;
- //BA.debugLineNum = 524343;BA.debugLine="End Sub";
+ //BA.debugLineNum = 165;BA.debugLine="End Sub";
 return "";
 }
 public static void  _boton_click() throws Exception{
-RDebugUtils.currentModule="main";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "boton_click", false))
-	 {Debug.delegate(mostCurrent.activityBA, "boton_click", null); return;}
 ResumableSub_Boton_Click rsub = new ResumableSub_Boton_Click(null);
 rsub.resume(processBA, null);
 }
@@ -585,7 +492,6 @@ int _result = 0;
 
 @Override
 public void resume(BA ba, Object[] result) throws Exception{
-RDebugUtils.currentModule="main";
 
     while (true) {
         switch (state) {
@@ -595,27 +501,20 @@ return;
 case 0:
 //C
 this.state = 1;
-RDebugUtils.currentLine=458753;
- //BA.debugLineNum = 458753;BA.debugLine="Dim fd As FileDialog";
+ //BA.debugLineNum = 93;BA.debugLine="Dim fd As FileDialog";
 _fd = new anywheresoftware.b4a.agraham.dialogs.InputDialog.FileDialog();
-RDebugUtils.currentLine=458754;
- //BA.debugLineNum = 458754;BA.debugLine="fd.FastScroll = True";
+ //BA.debugLineNum = 94;BA.debugLine="fd.FastScroll = True";
 _fd.setFastScroll(anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=458755;
- //BA.debugLineNum = 458755;BA.debugLine="fd.ShowOnlyFolders=False";
+ //BA.debugLineNum = 95;BA.debugLine="fd.ShowOnlyFolders=False";
 _fd.setShowOnlyFolders(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=458756;
- //BA.debugLineNum = 458756;BA.debugLine="fd.TextColor=Colors.Black";
+ //BA.debugLineNum = 96;BA.debugLine="fd.TextColor=Colors.Black";
 _fd.TextColor = anywheresoftware.b4a.keywords.Common.Colors.Black;
-RDebugUtils.currentLine=458757;
- //BA.debugLineNum = 458757;BA.debugLine="fd.FilePath = File.DirInternal";
+ //BA.debugLineNum = 97;BA.debugLine="fd.FilePath = File.DirInternal";
 _fd.setFilePath(anywheresoftware.b4a.keywords.Common.File.getDirInternal());
-RDebugUtils.currentLine=458758;
- //BA.debugLineNum = 458758;BA.debugLine="Dim sf As Object = fd.ShowAsync(\"Select file\", \"Y";
+ //BA.debugLineNum = 98;BA.debugLine="Dim sf As Object = fd.ShowAsync(\"Select file\", \"Y";
 _sf = _fd.ShowAsync(BA.ObjectToCharSequence("Select file"),"Yes","Cancel","No",mostCurrent.activityBA,(android.graphics.Bitmap)(anywheresoftware.b4a.keywords.Common.Null),anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=458759;
- //BA.debugLineNum = 458759;BA.debugLine="Wait For (sf) Dialog_Result(Result As Int)";
-anywheresoftware.b4a.keywords.Common.WaitFor("dialog_result", processBA, new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "main", "boton_click"), _sf);
+ //BA.debugLineNum = 99;BA.debugLine="Wait For (sf) Dialog_Result(Result As Int)";
+anywheresoftware.b4a.keywords.Common.WaitFor("dialog_result", processBA, this, _sf);
 this.state = 5;
 return;
 case 5:
@@ -623,8 +522,7 @@ case 5:
 this.state = 1;
 _result = (Integer) result[0];
 ;
-RDebugUtils.currentLine=458760;
- //BA.debugLineNum = 458760;BA.debugLine="If Result = DialogResponse.POSITIVE Then";
+ //BA.debugLineNum = 100;BA.debugLine="If Result = DialogResponse.POSITIVE Then";
 if (true) break;
 
 case 1:
@@ -637,68 +535,116 @@ this.state = 3;
 case 3:
 //C
 this.state = 4;
-RDebugUtils.currentLine=458761;
- //BA.debugLineNum = 458761;BA.debugLine="Log(\"File path: \" & fd.FilePath)";
-anywheresoftware.b4a.keywords.Common.LogImpl("0458761","File path: "+_fd.getFilePath(),0);
-RDebugUtils.currentLine=458762;
- //BA.debugLineNum = 458762;BA.debugLine="Log(\"File name: \" & fd.ChosenName)";
-anywheresoftware.b4a.keywords.Common.LogImpl("0458762","File name: "+_fd.getChosenName(),0);
+ //BA.debugLineNum = 101;BA.debugLine="Log(\"File path: \" & fd.FilePath)";
+anywheresoftware.b4a.keywords.Common.LogImpl("1458761","File path: "+_fd.getFilePath(),0);
+ //BA.debugLineNum = 102;BA.debugLine="Log(\"File name: \" & fd.ChosenName)";
+anywheresoftware.b4a.keywords.Common.LogImpl("1458762","File name: "+_fd.getChosenName(),0);
  if (true) break;
 
 case 4:
 //C
 this.state = -1;
 ;
-RDebugUtils.currentLine=458764;
- //BA.debugLineNum = 458764;BA.debugLine="Label1.Text = \"Ruta = \" & fd.FilePath";
+ //BA.debugLineNum = 104;BA.debugLine="Label1.Text = \"Ruta = \" & fd.FilePath";
 parent.mostCurrent._label1.setText(BA.ObjectToCharSequence("Ruta = "+_fd.getFilePath()));
-RDebugUtils.currentLine=458765;
- //BA.debugLineNum = 458765;BA.debugLine="Label2.Text = \"Archivo = \" & fd.ChosenName";
+ //BA.debugLineNum = 105;BA.debugLine="Label2.Text = \"Archivo = \" & fd.ChosenName";
 parent.mostCurrent._label2.setText(BA.ObjectToCharSequence("Archivo = "+_fd.getChosenName()));
-RDebugUtils.currentLine=458766;
- //BA.debugLineNum = 458766;BA.debugLine="archivo = fd.ChosenName";
+ //BA.debugLineNum = 106;BA.debugLine="archivo = fd.ChosenName";
 parent.mostCurrent._archivo = _fd.getChosenName();
-RDebugUtils.currentLine=458768;
- //BA.debugLineNum = 458768;BA.debugLine="End Sub";
+ //BA.debugLineNum = 108;BA.debugLine="End Sub";
 if (true) break;
 
             }
         }
     }
 }
+public static void  _dialog_result(int _result) throws Exception{
+}
+public static String  _globals() throws Exception{
+ //BA.debugLineNum = 28;BA.debugLine="Sub Globals";
+ //BA.debugLineNum = 30;BA.debugLine="Private INICIAR As Button";
+mostCurrent._iniciar = new anywheresoftware.b4a.objects.ButtonWrapper();
+ //BA.debugLineNum = 32;BA.debugLine="Private info As Button";
+mostCurrent._info = new anywheresoftware.b4a.objects.ButtonWrapper();
+ //BA.debugLineNum = 33;BA.debugLine="Dim Usuario As String";
+mostCurrent._usuario = "";
+ //BA.debugLineNum = 34;BA.debugLine="Dim archivo As String";
+mostCurrent._archivo = "";
+ //BA.debugLineNum = 35;BA.debugLine="Dim path As String";
+mostCurrent._path = "";
+ //BA.debugLineNum = 38;BA.debugLine="Private Nombre As EditText";
+mostCurrent._nombre = new anywheresoftware.b4a.objects.EditTextWrapper();
+ //BA.debugLineNum = 40;BA.debugLine="Usuario = Nombre.Text";
+mostCurrent._usuario = mostCurrent._nombre.getText();
+ //BA.debugLineNum = 43;BA.debugLine="Private HiUsuario As Label";
+mostCurrent._hiusuario = new anywheresoftware.b4a.objects.LabelWrapper();
+ //BA.debugLineNum = 45;BA.debugLine="Private Boton As Button";
+mostCurrent._boton = new anywheresoftware.b4a.objects.ButtonWrapper();
+ //BA.debugLineNum = 47;BA.debugLine="Private Label1 As Label";
+mostCurrent._label1 = new anywheresoftware.b4a.objects.LabelWrapper();
+ //BA.debugLineNum = 48;BA.debugLine="Private Label2 As Label";
+mostCurrent._label2 = new anywheresoftware.b4a.objects.LabelWrapper();
+ //BA.debugLineNum = 49;BA.debugLine="Private Analisis As Button";
+mostCurrent._analisis = new anywheresoftware.b4a.objects.ButtonWrapper();
+ //BA.debugLineNum = 50;BA.debugLine="Private Concepto As Label";
+mostCurrent._concepto = new anywheresoftware.b4a.objects.LabelWrapper();
+ //BA.debugLineNum = 51;BA.debugLine="Private Concepto1 As Label";
+mostCurrent._concepto1 = new anywheresoftware.b4a.objects.LabelWrapper();
+ //BA.debugLineNum = 52;BA.debugLine="Private Concepto2 As Label";
+mostCurrent._concepto2 = new anywheresoftware.b4a.objects.LabelWrapper();
+ //BA.debugLineNum = 53;BA.debugLine="Private Concepto3 As Label";
+mostCurrent._concepto3 = new anywheresoftware.b4a.objects.LabelWrapper();
+ //BA.debugLineNum = 54;BA.debugLine="Private Concepto4 As Label";
+mostCurrent._concepto4 = new anywheresoftware.b4a.objects.LabelWrapper();
+ //BA.debugLineNum = 55;BA.debugLine="Private Concepto5 As Label";
+mostCurrent._concepto5 = new anywheresoftware.b4a.objects.LabelWrapper();
+ //BA.debugLineNum = 56;BA.debugLine="Private Concepto6 As Label";
+mostCurrent._concepto6 = new anywheresoftware.b4a.objects.LabelWrapper();
+ //BA.debugLineNum = 57;BA.debugLine="Private Concepto7 As Label";
+mostCurrent._concepto7 = new anywheresoftware.b4a.objects.LabelWrapper();
+ //BA.debugLineNum = 58;BA.debugLine="End Sub";
+return "";
+}
 public static String  _info_click() throws Exception{
-RDebugUtils.currentModule="main";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "info_click", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "info_click", null));}
-RDebugUtils.currentLine=393216;
- //BA.debugLineNum = 393216;BA.debugLine="Private Sub info_Click";
-RDebugUtils.currentLine=393217;
- //BA.debugLineNum = 393217;BA.debugLine="MsgboxAsync(\"Recuerda verificar que el archivo ele";
+ //BA.debugLineNum = 86;BA.debugLine="Private Sub info_Click";
+ //BA.debugLineNum = 87;BA.debugLine="MsgboxAsync(\"Recuerda verificar que el archivo ele";
 anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("Recuerda verificar que el archivo elegido es el correcto"),BA.ObjectToCharSequence("INFORMACIÓN"),processBA);
-RDebugUtils.currentLine=393220;
- //BA.debugLineNum = 393220;BA.debugLine="End Sub";
+ //BA.debugLineNum = 90;BA.debugLine="End Sub";
 return "";
 }
 public static String  _iniciar_click() throws Exception{
-RDebugUtils.currentModule="main";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "iniciar_click", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "iniciar_click", null));}
-RDebugUtils.currentLine=327680;
- //BA.debugLineNum = 327680;BA.debugLine="Private Sub INICIAR_Click";
-RDebugUtils.currentLine=327681;
- //BA.debugLineNum = 327681;BA.debugLine="Usuario = Nombre.Text";
+ //BA.debugLineNum = 77;BA.debugLine="Private Sub INICIAR_Click";
+ //BA.debugLineNum = 78;BA.debugLine="Usuario = Nombre.Text";
 mostCurrent._usuario = mostCurrent._nombre.getText();
-RDebugUtils.currentLine=327682;
- //BA.debugLineNum = 327682;BA.debugLine="Activity.RemoveAllViews";
+ //BA.debugLineNum = 79;BA.debugLine="Activity.RemoveAllViews";
 mostCurrent._activity.RemoveAllViews();
-RDebugUtils.currentLine=327683;
- //BA.debugLineNum = 327683;BA.debugLine="Activity.LoadLayout(\"Pantalla2\")";
+ //BA.debugLineNum = 80;BA.debugLine="Activity.LoadLayout(\"Pantalla2\")";
 mostCurrent._activity.LoadLayout("Pantalla2",mostCurrent.activityBA);
-RDebugUtils.currentLine=327684;
- //BA.debugLineNum = 327684;BA.debugLine="HiUsuario.Text= \"Hola \" & Usuario";
+ //BA.debugLineNum = 81;BA.debugLine="HiUsuario.Text= \"Hola \" & Usuario";
 mostCurrent._hiusuario.setText(BA.ObjectToCharSequence("Hola "+mostCurrent._usuario));
-RDebugUtils.currentLine=327687;
- //BA.debugLineNum = 327687;BA.debugLine="End Sub";
+ //BA.debugLineNum = 84;BA.debugLine="End Sub";
+return "";
+}
+
+public static void initializeProcessGlobals() {
+    
+    if (main.processGlobalsRun == false) {
+	    main.processGlobalsRun = true;
+		try {
+		        main._process_globals();
+starter._process_globals();
+		
+        } catch (Exception e) {
+			throw new RuntimeException(e);
+		}
+    }
+}public static String  _process_globals() throws Exception{
+ //BA.debugLineNum = 19;BA.debugLine="Sub Process_Globals";
+ //BA.debugLineNum = 22;BA.debugLine="Private xui As XUI";
+_xui = new anywheresoftware.b4a.objects.B4XViewWrapper.XUI();
+ //BA.debugLineNum = 23;BA.debugLine="Dim xls As XSSFWorkbook";
+_xls = new de.donmanfred.XSSFWorkbookwrapper();
+ //BA.debugLineNum = 25;BA.debugLine="End Sub";
 return "";
 }
 }

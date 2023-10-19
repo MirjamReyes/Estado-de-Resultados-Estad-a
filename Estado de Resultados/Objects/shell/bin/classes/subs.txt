@@ -1,5 +1,6 @@
 b4a.example
 0
+<<<<<<< Updated upstream
 0
 0
 main,activity_create,1,0,61,67
@@ -49,6 +50,57 @@ main,iniciar_click,1,0,77,84
 ,usuario,,analisis,,boton,,hiusuario,,info,,label1,,label2
 
 main,process_globals,0,1,19,25
+=======
+1
+b4xformatter
+1
+b4xformatter
+main,activity_create,1,0,82,100
+,iniciar,,nombre,,formatter,,xui
+,iniciar,,nombre
+b4xformatter,initialize,b4xformatter,getdefaultformat,b4xformatter,copyformatdata,b4xformatter,addformatdata,b4xformatter,createdefaultformat
+main,activity_pause,0,0,106,108
+
+
+
+main,activity_resume,0,0,102,104
+
+
+
+main,analisis_click,1,1,144,171
+,er,,ingresos,,nómina,,panel2,,archivo,,xls,,ingresos_,,gadm,,gop
+,er,,ingresos,,nómina,,panel2,,ingresos_,,gadm,,gop
+
+main,boton_click,0,0,126,142
+,label1,,label2,,archivo
+,archivo
+
+main,er_click,1,1,173,282
+,archivo,,xls,,concepto,,concepto1,,concepto2,,concepto3,,concepto4,,concepto5,,concepto6,,concepto7,,datos,,datos1,,datos2,,datos3,,datos4,,datos5,,datos6,,datos7,,formatter
+,concepto,,concepto1,,concepto2,,concepto3,,concepto4,,concepto5,,concepto6,,concepto7,,datos,,datos1,,datos2,,datos3,,datos4,,datos5,,datos6,,datos7
+b4xformatter,format,b4xformatter,getformatdata
+main,globals,0,1,30,79
+,usuario,,nombre
+,usuario
+
+main,info_click,0,0,120,124
+
+
+
+main,ingresos_click,1,1,290,332
+,mbc1,,ingresos_,,gadm,,gop
+,mbc1
+
+main,iniciar_click,1,0,110,118
+,usuario,,nombre,,analisis,,boton,,hiusuario,,info,,label1,,label2,,panel1
+,usuario,,analisis,,boton,,hiusuario,,info,,label1,,label2,,panel1
+
+main,process_globals,0,1,19,27
+
+
+
+main,regresar_click,0,0,284,288
+>>>>>>> Stashed changes
 
 
 

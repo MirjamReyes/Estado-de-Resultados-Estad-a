@@ -65,7 +65,6 @@ Sub Globals
 	Private info As Button
 	Dim Usuario As String
 	Dim archivo As String
-	Dim path As String
 	
 	
 	Private Nombre As EditText
@@ -319,6 +318,7 @@ Private Sub Regresar_Click
 End Sub
 
 Private Sub Ingresos_Click
+	Activity.RemoveAllViews
 	Activity.LoadLayout("Ingresos_gastos")
 	'SetActivityAttribute (Ingresos_gastos, android:screenOrientation, "unspecified")
 	
@@ -334,7 +334,7 @@ Private Sub Ingresos_Click
 	mbc1.TheLegendTextSize = 20.0
 	mbc1.LegendTitle = ""
 
-	mbc1.ChartDescription = "TITLE : INGRESOS VS GASTOS"
+	mbc1.ChartDescription = "INGRESOS VS GASTOS"
 	mbc1.ChartDescriptionColor = 0XFFFFA500                 'ORANGE
 	mbc1.ChartDescriptionTextSize = 19
 
@@ -348,7 +348,7 @@ Private Sub Ingresos_Click
 	
 	mbc1.DoubleTapToZoomEnabled = True
 	mbc1.DrawBarShadow = False
-	mbc1.GridBackgroundColor = Colors.white
+	mbc1.GridBackgroundColor = Colors.Black
 	mbc1.ValueTextColor = 0XFFFFA500
 	mbc1.DrawBorders = True
 	mbc1.DrawGridBackground = True

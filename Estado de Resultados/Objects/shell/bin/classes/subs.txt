@@ -4,43 +4,43 @@ b4a.example
 b4xformatter
 1
 b4xformatter
-main,activity_create,1,0,84,102
+main,activity_create,1,0,83,101
 ,iniciar,,nombre,,formatter,,xui
 ,iniciar,,nombre
 b4xformatter,initialize,b4xformatter,getdefaultformat,b4xformatter,copyformatdata,b4xformatter,addformatdata,b4xformatter,createdefaultformat
-main,activity_pause,0,0,108,110
+main,activity_pause,0,0,107,109
 
 
 
-main,activity_resume,0,0,104,106
+main,activity_resume,0,0,103,105
 
 
 
-main,analisis_click,1,0,146,173
+main,analisis_click,1,0,145,172
 ,er,,ingresos,,nómina,,panel2,,archivo,,xls,,ingresos_,,gadm,,gop
 ,er,,ingresos,,nómina,,panel2,,ingresos_,,gadm,,gop
 
-main,boton_click,0,0,128,144
+main,boton_click,0,0,127,143
 ,label1,,label2,,archivo
 ,archivo
 
-main,er_click,1,0,175,284
+main,er_click,1,0,174,283
 ,archivo,,xls,,concepto,,concepto1,,concepto2,,concepto3,,concepto4,,concepto5,,concepto6,,concepto7,,datos,,datos1,,datos2,,datos3,,datos4,,datos5,,datos6,,datos7,,formatter
 ,concepto,,concepto1,,concepto2,,concepto3,,concepto4,,concepto5,,concepto6,,concepto7,,datos,,datos1,,datos2,,datos3,,datos4,,datos5,,datos6,,datos7
 b4xformatter,format,b4xformatter,getformatdata
-main,globals,0,1,31,81
+main,globals,0,1,31,80
 ,usuario,,nombre
 ,usuario
 
-main,info_click,0,0,122,126
+main,info_click,0,0,121,125
 
 
 
-main,ingresos_click,1,0,292,335
+main,ingresos_click,1,1,291,335
 ,mbc1,,regresar2,,ingresos_,,gadm,,gop
 ,mbc1,,regresar2
 
-main,iniciar_click,1,0,112,120
+main,iniciar_click,1,0,111,119
 ,usuario,,nombre,,analisis,,boton,,hiusuario,,info,,label1,,label2,,panel1
 ,usuario,,analisis,,boton,,hiusuario,,info,,label1,,label2,,panel1
 
@@ -48,7 +48,7 @@ main,process_globals,0,1,20,28
 
 
 
-main,regresar_click,1,0,286,290
+main,regresar_click,1,0,285,289
 ,er,,ingresos,,nómina,,panel2
 ,er,,ingresos,,nómina,,panel2
 

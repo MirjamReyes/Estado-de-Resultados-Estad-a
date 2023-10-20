@@ -14,27 +14,16 @@ FileGroup5=Default Group
 FileGroup6=Default Group
 FileGroup7=Default Group
 Group=Default Group
-<<<<<<< Updated upstream
-Library1=core
-Library2=dialogs
-Library3=xui
-Library4=apoi
-ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="33"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~CreateResourceFromFile(Macro, Themes.LightTheme)~\n~'End of default text.~\n~
-Module1=Starter
-NumberOfFiles=4
-NumberOfLibraries=4
-=======
 Library1=apoi
 Library2=b4xformatter
 Library3=core
 Library4=dialogs
 Library5=xui
 Library6=mpchartlib
-ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="33"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~CreateResourceFromFile(Macro, Themes.LightTheme)~\n~'SetActivityAttribute(Ingresos_gastos, android:screenOrientation, "portrait")~\n~'End of default text.~\n~
+ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="33"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~CreateResourceFromFile(Macro, Themes.LightTheme)~\n~'SetActivityAttribute(main, android:screenOrientation, "portrait")~\n~'End of default text.~\n~
 Module1=Starter
 NumberOfFiles=7
 NumberOfLibraries=6
->>>>>>> Stashed changes
 NumberOfModules=1
 Version=12.5
 @EndOfDesignText@
@@ -52,10 +41,7 @@ Version=12.5
 	#IncludeTitle: True
 	
 #End Region
-<<<<<<< Updated upstream
-'este es un cambio necesario
-=======
->>>>>>> Stashed changes
+
 
 #AdditionalJar: poi-3.12-android-a
 #AdditionalJar: poi-ooxml-schemas-3.12-20150511-a
@@ -65,12 +51,14 @@ Sub Process_Globals
 	'These variables can be accessed from all modules.
 	Private xui As XUI
 	Dim xls As XSSFWorkbook
+	Private formatter As B4XFormatter
 	
 	
 End Sub
 
 
 Sub Globals
+	
 	'These global variables will be redeclared each time the activity is created.
 	Private INICIAR As Button
 	
@@ -82,11 +70,7 @@ Sub Globals
 	
 	Private Nombre As EditText
 	
-<<<<<<< Updated upstream
-'	Usuario = Nombre 
-=======
-	Usuario = Nombre.Text 
->>>>>>> Stashed changes
+	Usuario = Nombre 
 	'Estamos guardando el texto ingresado en Nombre a la variable USUARIO
 	Dim Ingresos As Button
 	Dim Gadm As Float
@@ -110,8 +94,6 @@ Sub Globals
 	Private Concepto5 As Label
 	Private Concepto6 As Label
 	Private Concepto7 As Label
-<<<<<<< Updated upstream
-=======
 	Private Datos As Label
 	Private Datos1 As Label
 	Private Datos2 As Label
@@ -124,7 +106,7 @@ Sub Globals
 	Private Panel1 As Panel
 	Private Panel2 As Panel
 	Private Nómina As Button
->>>>>>> Stashed changes
+	Private Regresar2 As Button
 End Sub
 
 
@@ -132,6 +114,19 @@ Sub Activity_Create(FirstTime As Boolean)
 		
 	Activity.LoadLayout("Pantalla1")
 	
+	If FirstTime Then
+		formatter.Initialize
+		Dim DefaultFormat As B4XFormatData = formatter.GetDefaultFormat
+		DefaultFormat.MaximumFractions = 2
+		DefaultFormat.MinimumFractions = 2
+		DefaultFormat.Prefix = "$ "
+		Dim NegativeFormat As B4XFormatData = formatter.CopyFormatData(DefaultFormat)
+		NegativeFormat.TextColor = xui.Color_Red
+		NegativeFormat.Prefix = "$ ("
+		NegativeFormat.Postfix = ")"
+		NegativeFormat.FormatFont = xui.CreateDefaultBoldFont(15)
+		formatter.AddFormatData(NegativeFormat, formatter.MIN_VALUE, 0, False)
+	End If
 	
 End Sub
 
@@ -165,11 +160,7 @@ Private Sub Boton_Click
 	fd.ShowOnlyFolders=False
 	fd.TextColor=Colors.Black
 	fd.FilePath = File.DirInternal
-<<<<<<< Updated upstream
-	Dim sf As Object = fd.ShowAsync("Select file", "Yes", "Cancel", "No", Null, False)
-=======
 	Dim sf As Object = fd.ShowAsync("Seleccionar Archivo", "SELECCIONAR", "Cancelar", "", Null, False)
->>>>>>> Stashed changes
 	Wait For (sf) Dialog_Result(Result As Int)
 	If Result = DialogResponse.POSITIVE Then
 		Log("File path: " & fd.FilePath)
@@ -190,77 +181,6 @@ Private Sub Analisis_Click
 	xls.Initialize("",File.Combine(File.DirInternal,archivo))
 	Log($"ActiveSheetIndex=${xls.ActiveSheetIndex}"$)
 	Dim sheet As XLSSheet = xls.getSheetAt(xls.ActiveSheetIndex)
-<<<<<<< Updated upstream
-	Log($"ActiveSheet.ActiveCell=${sheet.ActiveCell}"$)
-	Log($"ActiveSheet.hasComments=${sheet.hasComments}"$)
-	Dim firstrow As Int = sheet.FirstRowNum
-	Dim lastrow As Int = sheet.LastRowNum
-	Log($"Row FirstRow=${firstrow}, LastRow=${lastrow}"$)
-<<<<<<< Updated upstream
-'	
-'	For i= firstrow To lastrow
-'		Dim row As XSSFRow =sheet.getRow(i)
-'		'Log(row)
-'		Dim firstcell As Int = row.FirstCellNum
-'		Dim lastcell As Int = row.LastCellNum
-'		Log($"Row #${i} FirstCell=${row.FirstCellNum}, LastCell=${row.LastCellNum}"$)
-''		If i = 1 Then
-''			Dim cell As XSSFCell =row.getCell(13)
-''			cell.StringCellValue = "Test.pdf"
-''		End If
-'		For o= firstcell To lastcell-1
-'			Dim Cell As XSSFCell =row.getCell(o)
-'			Log($"Cell #${o}"$)
-'			'Log(cell.IsInitialized)
-'			If Cell.IsInitialized Then
-'				Log($"CellValueType=${Cell.CellType}"$)
-'				Log("Raw:"&Cell.RawValue)
-'				If Cell.CellType = 1 Then
-'					Log(Cell.StringCellValue)
-'				else if Cell.CellType = 0 Then
-'					Log(Cell.NumericCellValue)
-'				End If
-'				'	Log(cell)
-'			End If
-'			'Log(row)
-'
-'		Next
-'	Next
-=======
-	
-	For i= firstrow To lastrow
-		Dim row As XSSFRow =sheet.getRow(i)
-		'Log(row)
-		Dim firstcell As Int = row.FirstCellNum
-		Dim lastcell As Int = row.LastCellNum
-		Log($"Row #${i} FirstCell=${row.FirstCellNum}, LastCell=${row.LastCellNum}"$)
-'		If i = 1 Then
-'			Dim cell As XSSFCell =row.getCell(13)
-'			cell.StringCellValue = "Test.pdf"
-'		End If
-		For o= firstcell To lastcell-1
-			Dim Cell As XSSFCell =row.getCell(o)
-			Log($"Cell #${o}"$)
-			'Log(cell.IsInitialized)
-			If Cell.IsInitialized Then
-				Log($"CellValueType=${Cell.CellType}"$)
- 				Log("Raw:"&Cell.RawValue)
-				If Cell.CellType = 1 Then
-					Log(Cell.StringCellValue)
-				else if Cell.CellType = 0 Then
-					Log(Cell.NumericCellValue)
-				End If
-				'	Log(cell)
-			End If
-			'Log(row)
-
-		Next
-	Next
->>>>>>> Stashed changes
-	'Dim celda As XSSFCell
-	
-	'Cell.StringCellValue = ACEditText1.Text
-=======
 	
 	
 	Dim row As XSSFRow =sheet.getRow(0)
@@ -289,31 +209,36 @@ Private Sub ER_Click
 	
 	
 
->>>>>>> Stashed changes
 	Activity.RemoveAllViews
 	Activity.LoadLayout("EstadoResultados")
-<<<<<<< Updated upstream
 	Dim row As XSSFRow =sheet.getRow(0)
 	Dim Cell As XSSFCell =row.getCell(0)
 	
 	Log("valor pelon:"&Cell.RawValue)
-	Dim Texto1 As String = Cell.StringCellValue
+	Dim Texto1 As String = NumberFormat2(0, 1, 2, 2, False)
+	Texto1 = Cell.StringCellValue
 	Log(Cell.StringCellValue)
 	Concepto.text= Texto1
 	Log(Concepto.text)
-=======
-	Dim row As XSSFRow =sheet.getRow(1)
-	Dim Cell As XSSFCell =row.getCell(1)
-	Cell.IsInitialized
+	
+	row=sheet.getRow(1)
+	Cell=row.getCell(0)
+	Texto1 = Cell.StringCellValue
 	Log(Cell.StringCellValue)
-	Dim Texto As String = Cell.StringCellValue
+	Concepto1.text= Texto1
 	
-	Concepto.text= Texto
+	row=sheet.getRow(2)
+	Cell=row.getCell(0)
+	Texto1 = Cell.StringCellValue
+	Log(Cell.StringCellValue)
+	Concepto2.text= Texto1
 	
->>>>>>> Stashed changes
+	row=sheet.getRow(3)
+	Cell=row.getCell(0)
+	Texto1 = Cell.StringCellValue
+	Log(Cell.StringCellValue)
+	Concepto3.text= Texto1
 	
-<<<<<<< Updated upstream
-=======
 	row=sheet.getRow(4)
 	Cell=row.getCell(0)
 	Texto1 = Cell.StringCellValue
@@ -388,13 +313,14 @@ Private Sub ER_Click
 End Sub
 
 Private Sub Regresar_Click
-'	Activity.RemoveAllViews
-'	Activity.LoadLayout("Pantalla2")
-'	Panel2.Visible=True
+	Activity.RemoveAllViews
+	Activity.LoadLayout("Analisis")
+	Panel2.Visible=True
 End Sub
 
 Private Sub Ingresos_Click
 	Activity.LoadLayout("Ingresos_gastos")
+	'SetActivityAttribute (Ingresos_gastos, android:screenOrientation, "unspecified")
 	
 	'    RIGHT_OF_CHART, RIGHT_OF_CHART_CENTER, RIGHT_OF_CHART_INSIDE,
 	'    LEFT_OF_CHART, LEFT_OF_CHART_CENTER, LEFT_OF_CHART_INSIDE,
@@ -434,6 +360,10 @@ Private Sub Ingresos_Click
 	mbc1.BorderWidth = 3.0
     
 	mbc1.BarData = 3   'this number must be the same as the number of elements in the above arrays
->>>>>>> Stashed changes
 	
+End Sub
+
+Private Sub Regresar2_Click
+	Activity.RemoveAllViews
+	Activity.LoadLayout("Analisis")
 End Sub

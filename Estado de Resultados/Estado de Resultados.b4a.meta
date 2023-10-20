@@ -2,16 +2,8 @@
 ModuleBookmarks1=
 ModuleBreakpoints0=
 ModuleBreakpoints1=
-ModuleClosedNodes0=1
+ModuleClosedNodes0=
 ModuleClosedNodes1=1
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-NavigationStack=Main,info_Click,70,6,Main,Process_Globals,18,4,Diseñador Visual,Pantalla2.bal,-100,6,Main,Activity_Create,58,6,Main,Boton_Click,85,6,Main,INICIAR_Click,78,6,Main,Activity_Resume,68,0,Main,Globals,34,6,Diseñador Visual,estadoresultados.bal,-100,3,Main,Analisis_Click,120,6
-=======
-NavigationStack=Main,Boton_Click,85,6,Diseñador Visual,EstadoResultados.bal,-100,1,Main,INICIAR_Click,78,6,Main,Activity_Resume,68,0,Main,Analisis_Click,142,6,Starter,Process_Globals,7,0,Main,Globals,33,6,Main,Process_Globals,19,6,Starter,Service_Destroy,34,0,Starter,Service_Start,18,6
->>>>>>> Stashed changes
-=======
-NavigationStack=Main,Activity_Create,81,0,Main,INICIAR_Click,109,1,Diseñador Visual,analisis1.bal,-100,1,Diseñador Visual,Analisis.bal,-100,6,Main,Globals,47,4,Main,Process_Globals,24,0,Main,Analisis_Click,164,6,Main,ER_Click,247,6,Diseñador Visual,Ingresos_gastos.bal,-100,6,Main,Ingresos_Click,291,6
->>>>>>> Stashed changes
+NavigationStack=Main,Process_Globals,24,0,Main,ER_Click,244,6,Main,Activity_Create,86,0,Diseñador Visual,Pantalla2.bal,-100,1,Main,Analisis_Click,164,6,Main,Globals,80,4,Diseñador Visual,Ingresos_gastos.bal,-100,6,Main,Regresar_Click,286,2,Main,Regresar2_Click,338,0,Main,Ingresos_Click,328,6
 SelectedBuild=0
 VisibleModules=1

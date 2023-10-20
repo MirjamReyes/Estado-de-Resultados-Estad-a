@@ -57,6 +57,7 @@ public boolean isSingleton() {
 public static RemoteObject __c = RemoteObject.declareNull("anywheresoftware.b4a.keywords.Common");
 public static RemoteObject _xui = RemoteObject.declareNull("anywheresoftware.b4a.objects.B4XViewWrapper.XUI");
 public static RemoteObject _xls = RemoteObject.declareNull("de.donmanfred.XSSFWorkbookwrapper");
+public static RemoteObject _formatter = RemoteObject.declareNull("b4a.example.b4xformatter");
 public static RemoteObject _iniciar = RemoteObject.declareNull("anywheresoftware.b4a.objects.ButtonWrapper");
 public static RemoteObject _info = RemoteObject.declareNull("anywheresoftware.b4a.objects.ButtonWrapper");
 public static RemoteObject _usuario = RemoteObject.createImmutable("");
@@ -81,11 +82,6 @@ public static RemoteObject _concepto4 = RemoteObject.declareNull("anywheresoftwa
 public static RemoteObject _concepto5 = RemoteObject.declareNull("anywheresoftware.b4a.objects.LabelWrapper");
 public static RemoteObject _concepto6 = RemoteObject.declareNull("anywheresoftware.b4a.objects.LabelWrapper");
 public static RemoteObject _concepto7 = RemoteObject.declareNull("anywheresoftware.b4a.objects.LabelWrapper");
-<<<<<<< Updated upstream
-public static b4a.example.starter _starter = null;
-  public Object[] GetGlobals() {
-		return new Object[] {"Activity",main.mostCurrent._activity,"Analisis",main.mostCurrent._analisis,"archivo",main.mostCurrent._archivo,"Boton",main.mostCurrent._boton,"Concepto",main.mostCurrent._concepto,"Concepto1",main.mostCurrent._concepto1,"Concepto2",main.mostCurrent._concepto2,"Concepto3",main.mostCurrent._concepto3,"Concepto4",main.mostCurrent._concepto4,"Concepto5",main.mostCurrent._concepto5,"Concepto6",main.mostCurrent._concepto6,"Concepto7",main.mostCurrent._concepto7,"HiUsuario",main.mostCurrent._hiusuario,"info",main.mostCurrent._info,"INICIAR",main.mostCurrent._iniciar,"Label1",main.mostCurrent._label1,"Label2",main.mostCurrent._label2,"Nombre",main.mostCurrent._nombre,"path",main.mostCurrent._path,"Starter",Debug.moduleToString(b4a.example.starter.class),"Usuario",main.mostCurrent._usuario,"xls",main._xls,"xui",main._xui};
-=======
 public static RemoteObject _datos = RemoteObject.declareNull("anywheresoftware.b4a.objects.LabelWrapper");
 public static RemoteObject _datos1 = RemoteObject.declareNull("anywheresoftware.b4a.objects.LabelWrapper");
 public static RemoteObject _datos2 = RemoteObject.declareNull("anywheresoftware.b4a.objects.LabelWrapper");
@@ -98,9 +94,9 @@ public static RemoteObject _er = RemoteObject.declareNull("anywheresoftware.b4a.
 public static RemoteObject _panel1 = RemoteObject.declareNull("anywheresoftware.b4a.objects.PanelWrapper");
 public static RemoteObject _panel2 = RemoteObject.declareNull("anywheresoftware.b4a.objects.PanelWrapper");
 public static RemoteObject _nómina = RemoteObject.declareNull("anywheresoftware.b4a.objects.ButtonWrapper");
+public static RemoteObject _regresar2 = RemoteObject.declareNull("anywheresoftware.b4a.objects.ButtonWrapper");
 public static b4a.example.starter _starter = null;
   public Object[] GetGlobals() {
-		return new Object[] {"Activity",main.mostCurrent._activity,"Analisis",main.mostCurrent._analisis,"archivo",main.mostCurrent._archivo,"Boton",main.mostCurrent._boton,"Concepto",main.mostCurrent._concepto,"Concepto1",main.mostCurrent._concepto1,"Concepto2",main.mostCurrent._concepto2,"Concepto3",main.mostCurrent._concepto3,"Concepto4",main.mostCurrent._concepto4,"Concepto5",main.mostCurrent._concepto5,"Concepto6",main.mostCurrent._concepto6,"Concepto7",main.mostCurrent._concepto7,"Datos",main.mostCurrent._datos,"Datos1",main.mostCurrent._datos1,"Datos2",main.mostCurrent._datos2,"Datos3",main.mostCurrent._datos3,"Datos4",main.mostCurrent._datos4,"Datos5",main.mostCurrent._datos5,"Datos6",main.mostCurrent._datos6,"Datos7",main.mostCurrent._datos7,"ER",main.mostCurrent._er,"formatter",main._formatter,"Gadm",main._gadm,"GOp",main._gop,"HiUsuario",main.mostCurrent._hiusuario,"info",main.mostCurrent._info,"Ingresos",main.mostCurrent._ingresos,"Ingresos_",main._ingresos_,"INICIAR",main.mostCurrent._iniciar,"Label1",main.mostCurrent._label1,"Label2",main.mostCurrent._label2,"mbc1",main.mostCurrent._mbc1,"Nombre",main.mostCurrent._nombre,"Nómina",main.mostCurrent._nómina,"Panel1",main.mostCurrent._panel1,"Panel2",main.mostCurrent._panel2,"path",main.mostCurrent._path,"Starter",Debug.moduleToString(b4a.example.starter.class),"Usuario",main.mostCurrent._usuario,"xls",main._xls,"xui",main._xui};
->>>>>>> Stashed changes
+		return new Object[] {"Activity",main.mostCurrent._activity,"Analisis",main.mostCurrent._analisis,"archivo",main.mostCurrent._archivo,"Boton",main.mostCurrent._boton,"Concepto",main.mostCurrent._concepto,"Concepto1",main.mostCurrent._concepto1,"Concepto2",main.mostCurrent._concepto2,"Concepto3",main.mostCurrent._concepto3,"Concepto4",main.mostCurrent._concepto4,"Concepto5",main.mostCurrent._concepto5,"Concepto6",main.mostCurrent._concepto6,"Concepto7",main.mostCurrent._concepto7,"Datos",main.mostCurrent._datos,"Datos1",main.mostCurrent._datos1,"Datos2",main.mostCurrent._datos2,"Datos3",main.mostCurrent._datos3,"Datos4",main.mostCurrent._datos4,"Datos5",main.mostCurrent._datos5,"Datos6",main.mostCurrent._datos6,"Datos7",main.mostCurrent._datos7,"ER",main.mostCurrent._er,"formatter",main._formatter,"Gadm",main._gadm,"GOp",main._gop,"HiUsuario",main.mostCurrent._hiusuario,"info",main.mostCurrent._info,"Ingresos",main.mostCurrent._ingresos,"Ingresos_",main._ingresos_,"INICIAR",main.mostCurrent._iniciar,"Label1",main.mostCurrent._label1,"Label2",main.mostCurrent._label2,"mbc1",main.mostCurrent._mbc1,"Nombre",main.mostCurrent._nombre,"Nómina",main.mostCurrent._nómina,"Panel1",main.mostCurrent._panel1,"Panel2",main.mostCurrent._panel2,"path",main.mostCurrent._path,"Regresar2",main.mostCurrent._regresar2,"Starter",Debug.moduleToString(b4a.example.starter.class),"Usuario",main.mostCurrent._usuario,"xls",main._xls,"xui",main._xui};
 }
 }

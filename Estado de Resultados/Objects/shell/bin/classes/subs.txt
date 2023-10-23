@@ -16,15 +16,15 @@ main,activity_resume,0,0,103,105
 
 
 
-main,analisis_click,1,0,145,172
+main,analisis_click,1,1,147,174
 ,er,,ingresos,,nómina,,panel2,,archivo,,xls,,ingresos_,,gadm,,gop
 ,er,,ingresos,,nómina,,panel2,,ingresos_,,gadm,,gop
 
-main,boton_click,0,0,127,143
-,label1,,label2,,archivo
+main,boton_click,0,1,127,145
+,archivo,,label1,,label2
 ,archivo
 
-main,er_click,1,0,174,283
+main,er_click,1,1,176,268
 ,archivo,,xls,,concepto,,concepto1,,concepto2,,concepto3,,concepto4,,concepto5,,concepto6,,concepto7,,datos,,datos1,,datos2,,datos3,,datos4,,datos5,,datos6,,datos7,,formatter
 ,concepto,,concepto1,,concepto2,,concepto3,,concepto4,,concepto5,,concepto6,,concepto7,,datos,,datos1,,datos2,,datos3,,datos4,,datos5,,datos6,,datos7
 b4xformatter,format,b4xformatter,getformatdata
@@ -36,7 +36,7 @@ main,info_click,0,0,121,125
 
 
 
-main,ingresos_click,1,1,291,335
+main,ingresos_click,1,0,276,319
 ,mbc1,,regresar2,,ingresos_,,gadm,,gop
 ,mbc1,,regresar2
 
@@ -48,11 +48,11 @@ main,process_globals,0,1,20,28
 
 
 
-main,regresar_click,1,0,285,289
+main,regresar_click,1,0,270,274
 ,er,,ingresos,,nómina,,panel2
 ,er,,ingresos,,nómina,,panel2
 
-main,regresar2_click,1,0,337,340
+main,regresar2_click,1,0,321,324
 ,er,,ingresos,,nómina,,panel2
 ,er,,ingresos,,nómina,,panel2
 

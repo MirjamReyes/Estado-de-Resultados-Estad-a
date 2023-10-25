@@ -23,12 +23,12 @@ views.get("panelbarras").vw.setLeft((int)(0d));
 views.get("regresar2").vw.setLeft((int)(0d));
 //BA.debugLineNum = 9;BA.debugLine="titulo.Left=12.5%x"[Ingresos_gastos/General script]
 views.get("titulo").vw.setLeft((int)((12.5d / 100 * width)));
-//BA.debugLineNum = 11;BA.debugLine="mbc1.Width=140%x"[Ingresos_gastos/General script]
-views.get("mbc1").vw.setWidth((int)((140d / 100 * width)));
+//BA.debugLineNum = 11;BA.debugLine="mbc1.Width=100%x"[Ingresos_gastos/General script]
+views.get("mbc1").vw.setWidth((int)((100d / 100 * width)));
 //BA.debugLineNum = 12;BA.debugLine="mbc1.Height=70%y"[Ingresos_gastos/General script]
 views.get("mbc1").vw.setHeight((int)((70d / 100 * height)));
-//BA.debugLineNum = 13;BA.debugLine="mbc1.Left=5%x"[Ingresos_gastos/General script]
-views.get("mbc1").vw.setLeft((int)((5d / 100 * width)));
+//BA.debugLineNum = 13;BA.debugLine="mbc1.Left=0"[Ingresos_gastos/General script]
+views.get("mbc1").vw.setLeft((int)(0d));
 
 }
 }

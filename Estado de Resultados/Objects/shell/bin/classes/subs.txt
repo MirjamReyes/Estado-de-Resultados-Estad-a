@@ -4,51 +4,51 @@ b4a.example
 b4xformatter
 1
 b4xformatter
-main,activity_create,1,0,88,106
+main,activity_create,1,0,89,107
 ,iniciar,,nombre,,formatter,,xui
 ,iniciar,,nombre
 b4xformatter,initialize,b4xformatter,getdefaultformat,b4xformatter,copyformatdata,b4xformatter,addformatdata,b4xformatter,createdefaultformat
-main,activity_pause,0,0,112,114
+main,activity_pause,0,0,113,115
 
 
 
-main,activity_resume,0,0,108,110
+main,activity_resume,0,0,109,111
 
 
 
-main,analisis_click,1,0,152,195
+main,analisis_click,1,0,153,196
 ,er,,ingresos,,nómina,,panel2,,archivo,,xls,,ingresos_,,gop,,utilidadb,,gadm,,utilidadoai,,impuestos,,uoperativadesp_imp
 ,er,,ingresos,,nómina,,panel2,,ingresos_,,gop,,utilidadb,,gadm,,utilidadoai,,impuestos,,uoperativadesp_imp
 
-main,boton_click,0,0,132,150
+main,boton_click,0,0,133,151
 ,archivo,,label1,,label2
 ,archivo
 
-main,er_click,1,0,197,289
+main,er_click,1,0,198,290
 ,archivo,,xls,,concepto,,concepto1,,concepto2,,concepto3,,concepto4,,concepto5,,concepto6,,concepto7,,datos,,datos1,,datos2,,datos3,,datos4,,datos5,,datos6,,datos7,,infoub,,infoum,,formatter
 ,concepto,,concepto1,,concepto2,,concepto3,,concepto4,,concepto5,,concepto6,,concepto7,,datos,,datos1,,datos2,,datos3,,datos4,,datos5,,datos6,,datos7,,infoub,,infoum
 b4xformatter,format,b4xformatter,getformatdata
-main,globals,0,1,31,85
+main,globals,0,1,31,86
 ,usuario,,nombre
 ,usuario
 
-main,info_click,0,0,126,130
+main,info_click,0,0,127,131
 
 
 
-main,infoub_click,0,0,353,355
+main,infoub_click,0,0,356,358
 
 
 
-main,infoum_click,0,0,357,359
+main,infoum_click,0,0,360,362
 
 
 
-main,ingresos_click,1,0,297,346
-,scrollview1,,mbc1,,panelbarras,,regresar2,,ingresos_,,gop,,utilidadb,,gadm,,utilidadoai,,impuestos,,uoperativadesp_imp
-,scrollview1,,mbc1,,panelbarras,,regresar2
+main,ingresos_click,1,0,298,349
+,hscrooll,,mbc1,,panelbarras,,regresar2,,ingresos_,,gop,,utilidadb,,gadm,,utilidadoai,,impuestos,,uoperativadesp_imp
+,hscrooll,,mbc1,,panelbarras,,regresar2
 
-main,iniciar_click,1,0,116,124
+main,iniciar_click,1,0,117,125
 ,usuario,,nombre,,analisis,,boton,,hiusuario,,info,,label1,,label2,,panel1
 ,usuario,,analisis,,boton,,hiusuario,,info,,label1,,label2,,panel1
 
@@ -56,11 +56,11 @@ main,process_globals,0,1,20,28
 
 
 
-main,regresar_click,1,0,291,295
+main,regresar_click,1,0,292,296
 ,er,,ingresos,,nómina,,panel2
 ,er,,ingresos,,nómina,,panel2
 
-main,regresar2_click,1,0,348,351
+main,regresar2_click,1,0,351,354
 ,er,,ingresos,,nómina,,panel2
 ,er,,ingresos,,nómina,,panel2
 

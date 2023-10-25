@@ -37,4 +37,5 @@ C:\Users\gris8\OneDrive\Documentos\PRACTICAS PROFESIONALES\Dialogs\prueba\Estado
 C:\Users\gris8\OneDrive\Documentos\PRACTICAS PROFESIONALES\Dialogs\prueba\Estado-de-Resultados-Estad-a\Estado de Resultados\Objects\dexed\b4a\example\designerscripts\LS_ingresos_gastos.dex
 C:\Users\gris8\OneDrive\Documentos\PRACTICAS PROFESIONALES\Dialogs\prueba\Estado-de-Resultados-Estad-a\Estado de Resultados\Objects\dexed\b4a\example\designerscripts\LS_pantalla1.dex
 C:\Users\gris8\OneDrive\Documentos\PRACTICAS PROFESIONALES\Dialogs\prueba\Estado-de-Resultados-Estad-a\Estado de Resultados\Objects\dexed\b4a\example\designerscripts\LS_pantalla2.dex
+C:\Users\gris8\OneDrive\Documentos\PRACTICAS PROFESIONALES\Dialogs\prueba\Estado-de-Resultados-Estad-a\Estado de Resultados\Objects\dexed\b4a\example\designerscripts\LS_scroll.dex
 C:\Users\gris8\OneDrive\Documentos\PRACTICAS PROFESIONALES\Dialogs\prueba\Estado-de-Resultados-Estad-a\Estado de Resultados\Objects\dexed\b4a\example\designerscripts\LS_scrollview.dex

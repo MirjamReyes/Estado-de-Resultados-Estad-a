@@ -78,8 +78,7 @@ Sub Globals
 	Dim GOp As Float
 	Dim Ingresos_, UtilidadB, UtilidadOai, Impuestos, UOperativaDesp_Imp As Float
 	
-	Private mbc1 As BarChart
-	
+
 	
 	Private HiUsuario As Label
 	
@@ -114,6 +113,7 @@ Sub Globals
 	Private ScrollView1 As HorizontalScrollView
 	Private Panelbarras As Panel
 	Private HScrooll As HorizontalScrollView
+	Private mbc1 As HorizontalBarChart
 End Sub
 
 
@@ -329,14 +329,56 @@ End Sub
 Private Sub Ingresos_Click
 	Activity.RemoveAllViews
 	
-	Activity.LoadLayout("Scroll")
-	HScrooll.Panel.LoadLayout("ingresos_gastos")
-	HScrooll.Panel.Width=Panelbarras.Width
+'	Activity.LoadLayout("Scroll")
+'	HScrooll.Panel.LoadLayout("ingresos_gastos")
+'	'HScrooll.Panel.Width=Panelbarras.Width
+'	mbc1.Initialize("")
 
-
-	'Activity.LoadLayout("Ingresos_gastos")
+	Activity.LoadLayout("Ingresos_gastos")
 	
 	'SetActivityAttribute (Ingresos_gastos, android:screenOrientation, "unspecified")
+	
+	'    RIGHT_OF_CHART, RIGHT_OF_CHART_CENTER, RIGHT_OF_CHART_INSIDE,
+	'    LEFT_OF_CHART, LEFT_OF_CHART_CENTER, LEFT_OF_CHART_INSIDE,
+	'    BELOW_CHART_LEFT, BELOW_CHART_RIGHT, BELOW_CHART_CENTER,
+
+'	'   LINE, CIRCLE, SQUARE
+'	mbc1.LegendShapeSize = 7.0	    'this line of code needs to be before mbc1.setTheLegendPositionAndForm("BELOW_CHART_CENTER", "CIRCLE")
+'	mbc1.setTheLegendPositionAndForm("BELOW_CHART_CENTER", "CIRCLE")    'pass strings from the above comments
+'	
+'	mbc1.TheLegendColor = Colors.Gray
+'	mbc1.TheLegendTextSize = 13.0
+'	mbc1.LegendTitle = ""
+'	mbc1.ChartDescription = ""
+'	mbc1.ChartDescriptionColor = 0XFFFFA500                 'ORANGE
+'	mbc1.ChartDescriptionTextSize = 13
+'
+'	mbc1.ValueTextColor = Colors.Red
+'	mbc1.ValueTextSize = 6.0
+'
+'	'the following 3 arrays must have the same number of entries/elements
+'	mbc1.BarColors = Array As Int(Colors.Blue, Colors.Green, Colors.Magenta, Colors.Cyan, Colors.Yellow, Colors.DarkGray, Colors.Blue)
+'	mbc1.LegendText = Array As String("Ingresos", "G,Operacionales", "Utilidad Bruta", "G. Admin.", "Utilidad Operativa AI.", "Impuestos", "Utilidad O. Desp Impuestos")
+'	mbc1.ChartData = Array As Float (Ingresos_, GOp, UtilidadB, Gadm, UtilidadOai, Impuestos, UOperativaDesp_Imp)    'values - it will be converted to %
+'	mbc1.LegendShapeSize=5
+'	
+'	mbc1.DoubleTapToZoomEnabled = True
+'	mbc1.DrawBarShadow = False
+'	mbc1.GridBackgroundColor = Colors.Black
+'	mbc1.ValueTextColor = 0XFFFFA500
+'	mbc1.DrawBorders = True
+'	mbc1.DrawGridBackground = True
+'	mbc1.DrawHighlightArrow = True
+'	mbc1.DrawValueAboveBar = True
+'	mbc1.PinchZoom = True
+'	mbc1.ScaleEnabled = True
+'	mbc1.BorderColor = Colors.Blue
+'	mbc1.BorderWidth = 4.0
+'    
+'	mbc1.BarData = 7   'this number must be the same as the number of elements in the above arrays
+	
+	
+	'HORIZONTAL BAR CHART
 	
 	'    RIGHT_OF_CHART, RIGHT_OF_CHART_CENTER, RIGHT_OF_CHART_INSIDE,
 	'    LEFT_OF_CHART, LEFT_OF_CHART_CENTER, LEFT_OF_CHART_INSIDE,
@@ -346,37 +388,44 @@ Private Sub Ingresos_Click
 	mbc1.LegendShapeSize = 7.0	    'this line of code needs to be before mbc1.setTheLegendPositionAndForm("BELOW_CHART_CENTER", "CIRCLE")
 	mbc1.setTheLegendPositionAndForm("BELOW_CHART_CENTER", "CIRCLE")    'pass strings from the above comments
 	
-	mbc1.TheLegendColor = Colors.Gray
-	mbc1.TheLegendTextSize = 13.0
-	mbc1.LegendTitle = ""
-	mbc1.ChartDescription = ""
-	mbc1.ChartDescriptionColor = 0XFFFFA500                 'ORANGE
-	mbc1.ChartDescriptionTextSize = 13
+	mbc1.TheLegendColor = Colors.Blue
+	mbc1.TheLegendTextSize = 15.0
+	mbc1.LegendTitle = "Datos"
 
-	mbc1.ValueTextColor = Colors.Red
-	mbc1.ValueTextSize = 6.0
+	mbc1.ChartDescription = ""
+	mbc1.ChartDescriptionColor = Colors.Blue
+	mbc1.ChartDescriptionTextSize = 15
+'	mbc1.setDescriptionPosition(mbc1.left + 25%x ,mbc1.top + 3%y)
+	
+	mbc1.ValueTextColor = Colors.Black
+	mbc1.ValueTextSize = 10.0
 
 	'the following 3 arrays must have the same number of entries/elements
-	mbc1.BarColors = Array As Int(Colors.Blue, Colors.Green, Colors.Magenta, Colors.Cyan, Colors.Yellow, Colors.DarkGray, Colors.Blue)
-	mbc1.LegendText = Array As String("Ingresos", "G,Operacionales", "Utilidad Bruta", "G. Admin.", "Utilidad Operativa AI.", "Impuestos", "Utilidad O. Desp Impuestos")
-	mbc1.ChartData = Array As Float (Ingresos_, GOp, UtilidadB, Gadm, UtilidadOai, Impuestos, UOperativaDesp_Imp)    'values - it will be converted to %
-	mbc1.LegendShapeSize=5
-	
+	mbc1.BarColors = Array As Int(Colors.Blue, Colors.Yellow, Colors.Green, Colors.Red, Colors.Magenta, Colors.Cyan, Colors.Blue, Colors.Yellow, Colors.Green, Colors.Red, Colors.Magenta, Colors.Cyan)
+	mbc1.LegendText = Array As String("Ingresos", "G,Operacionales", "Utilidad Bruta", "G. Admin.", "Utilidad O. AI.", "Impuestos", "Utilidad O. DI")
+	mbc1.ChartData = Array As Float(Ingresos_, GOp, UtilidadB, Gadm, UtilidadOai, Impuestos, UOperativaDesp_Imp)    'values - it will be converted to %
+
 	mbc1.DoubleTapToZoomEnabled = True
 	mbc1.DrawBarShadow = False
-	mbc1.GridBackgroundColor = Colors.Black
-	mbc1.ValueTextColor = 0XFFFFA500
+	mbc1.GridBackgroundColor = Colors.white
 	mbc1.DrawBorders = True
 	mbc1.DrawGridBackground = True
-	mbc1.DrawHighlightArrow = True
-	mbc1.DrawValueAboveBar = True
+	mbc1.DrawValueAboveBar = False
 	mbc1.PinchZoom = True
 	mbc1.ScaleEnabled = True
-	mbc1.BorderColor = Colors.Blue
-	mbc1.BorderWidth = 4.0
+	mbc1.BorderColor = Colors.White
+	mbc1.BorderWidth = 3.0
+
+	'   TOP, BOTTOM, BOTH_SIDED, TOP_INSIDE, BOTTOM_INSIDE
+	mbc1.XaxisLabelPosition = "TOP"
+	mbc1.XaxisTextSize = 7.0
+	mbc1.XaxisTextColor = Colors.Blue
+	
+	mbc1.DrawYaxisGridLines = True
+	mbc1.YaxisTextColor = Colors.DarkGray
+	mbc1.YaxisTextSize = 10.0
     
 	mbc1.BarData = 7   'this number must be the same as the number of elements in the above arrays
-	
 End Sub
 
 Private Sub Regresar2_Click

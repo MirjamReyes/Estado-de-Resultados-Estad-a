@@ -36,17 +36,17 @@ main,info_click,0,0,127,131
 
 
 
-main,infoub_click,0,0,356,358
+main,infoub_click,0,0,405,407
 
 
 
-main,infoum_click,0,0,360,362
+main,infoum_click,0,0,409,411
 
 
 
-main,ingresos_click,1,0,298,349
-,hscrooll,,mbc1,,panelbarras,,regresar2,,ingresos_,,gop,,utilidadb,,gadm,,utilidadoai,,impuestos,,uoperativadesp_imp
-,hscrooll,,mbc1,,panelbarras,,regresar2
+main,ingresos_click,1,1,298,398
+,mbc1,,panelbarras,,regresar2,,ingresos_,,gop,,utilidadb,,gadm,,utilidadoai,,impuestos,,uoperativadesp_imp
+,mbc1,,panelbarras,,regresar2
 
 main,iniciar_click,1,0,117,125
 ,usuario,,nombre,,analisis,,boton,,hiusuario,,info,,label1,,label2,,panel1
@@ -60,7 +60,7 @@ main,regresar_click,1,0,292,296
 ,er,,ingresos,,nómina,,panel2
 ,er,,ingresos,,nómina,,panel2
 
-main,regresar2_click,1,0,351,354
+main,regresar2_click,1,0,400,403
 ,er,,ingresos,,nómina,,panel2
 ,er,,ingresos,,nómina,,panel2
 

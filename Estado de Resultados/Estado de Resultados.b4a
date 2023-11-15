@@ -156,12 +156,13 @@ MsgboxAsync("Recuerda verificar que el archivo elegido es el correcto", "INFORMA
 End Sub
 
 Private Sub Boton_Click
-	MsgboxAsync("Recuerda que para poder acceder a los archivos primero necesitas ir a Configuración, Aplicaciones y dar permiso al acceso", "AVILITACIÓN DE ACCESO")
+	MsgboxAsync("Recuerda que para poder acceder a los archivos primero necesitas ir a Configuración, Aplicaciones y dar permiso al acceso", "HABILITACIÓN DE ACCESO")
 	Dim fd As FileDialog
 	fd.FastScroll = True
 	fd.ShowOnlyFolders=False
 	fd.TextColor=Colors.Black
 	fd.FilePath = File.DirRootExternal
+	fd.FileFilter = ".xlsx"
 	Dim sf As Object = fd.ShowAsync("Seleccionar Archivo", "SELECCIONAR", "Cancelar", "", Null, False)
 	Wait For (sf) Dialog_Result(Result As Int)
 	If Result = DialogResponse.POSITIVE Then

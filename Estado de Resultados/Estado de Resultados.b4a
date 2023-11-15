@@ -182,8 +182,8 @@ Private Sub Analisis_Click
 	Activity.RemoveAllViews
 	Activity.LoadLayout("Analisis")
 	'Código para tomar datos de la plantilla de Excel "Plantilla"
-	File.Copy(File.DirAssets,archivo,File.DirInternal,archivo)
-	xls.Initialize("",File.Combine(File.DirInternal,archivo))
+	File.Copy(File.DirAssets,archivo,File.DirRootExternal,archivo)
+	xls.Initialize("",File.Combine(File.DirRootExternal,archivo))
 	'Log($"ActiveSheetIndex=${xls.ActiveSheetIndex}"$)
 	Dim sheet As XLSSheet = xls.getSheetAt(xls.ActiveSheetIndex)
 	
@@ -223,8 +223,8 @@ Private Sub Analisis_Click
 End Sub
 
 Private Sub ER_Click
-	File.Copy(File.DirAssets,archivo,File.DirInternal,archivo)
-	xls.Initialize("",File.Combine(File.DirInternal,archivo))
+	File.Copy(File.DirAssets,archivo,File.DirRootExternal,archivo)
+	xls.Initialize("",File.Combine(File.DirRootExternal,archivo))
 	'Log($"ActiveSheetIndex=${xls.ActiveSheetIndex}"$)
 	Dim sheet As XLSSheet = xls.getSheetAt(xls.ActiveSheetIndex)
 	

@@ -1,46 +1,41 @@
-﻿Build1=Default,b4a.example
+﻿Build1=FinanzasContigo,b4a.FinanzasC
 File1=Analisis.bal
 File2=EstadoResultados.bal
 File3=Ingresos_gastos.bal
 File4=Pantalla1.bal
 File5=Pantalla2.bal
-File6=PLANTILLA_.xlsx
-File7=Scroll.bal
-File8=ScrollView.bal
 FileGroup1=Default Group
 FileGroup2=Default Group
 FileGroup3=Default Group
 FileGroup4=Default Group
 FileGroup5=Default Group
-FileGroup6=Default Group
-FileGroup7=Default Group
-FileGroup8=Default Group
 Group=Default Group
 Library1=apoi
 Library2=b4xformatter
 Library3=core
 Library4=dialogs
-Library5=xui
-Library6=mpchartlib
-ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="33"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~CreateResourceFromFile(Macro, Themes.LightTheme)~\n~'SetActivityAttribute(main, android:screenOrientation, "portrait")~\n~'End of default text.~\n~
+Library5=mpchartlib
+Library6=xui
+Library7=phone
+ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="33"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~CreateResourceFromFile(Macro, Themes.LightTheme)~\n~~\n~~\n~'End of default text.~\n~
 Module1=Starter
-NumberOfFiles=8
-NumberOfLibraries=6
+NumberOfFiles=5
+NumberOfLibraries=7
 NumberOfModules=1
 Version=12.5
 @EndOfDesignText@
-#Region  Project Attributes 
-	#ApplicationLabel: B4A Example
+ #Region  Project Attributes 
+	#ApplicationLabel: Finanzas Contigo
 	#VersionCode: 1
 	#VersionName: 
 	'SupportedOrientations possible values: unspecified, landscape or portrait.
-	#SupportedOrientations: unspecified
+	#SupportedOrientations: portrait
 	#CanInstallToExternalStorage: False
 #End Region
 
 #Region  Activity Attributes 
 	#FullScreen: False
-	#IncludeTitle: True
+	#IncludeTitle: FALSE
 	
 #End Region
 
@@ -106,14 +101,13 @@ Sub Globals
 	Private ER As Button
 	Private Panel1 As Panel
 	Private Panel2 As Panel
-	Private Nómina As Button
-	Private Regresar2 As Button
+		Private Regresar2 As Button
 	Private infoUB As Button
 	Private infoUM As Button
-	Private ScrollView1 As HorizontalScrollView
 	Private Panelbarras As Panel
-	Private HScrooll As HorizontalScrollView
 	Private mbc1 As HorizontalBarChart
+	Private Regresar As Button
+	Private Regresar1 As Button
 End Sub
 
 
@@ -162,12 +156,13 @@ MsgboxAsync("Recuerda verificar que el archivo elegido es el correcto", "INFORMA
 End Sub
 
 Private Sub Boton_Click
+	MsgboxAsync("Recuerda que para poder acceder a los archivos primero necesitas ir a Configuración, Aplicaciones y dar permiso al acceso", "AVILITACIÓN DE ACCESO")
 	Dim fd As FileDialog
 	fd.FastScroll = True
 	fd.ShowOnlyFolders=False
 	fd.TextColor=Colors.Black
-	fd.FilePath = File.DirInternal
-	Dim sf As Object = fd.ShowAsync("Seleccionar Archivo", "SELECCIONAR", "Cancelar", "si", Null, False)
+	fd.FilePath = File.DirRootExternal
+	Dim sf As Object = fd.ShowAsync("Seleccionar Archivo", "SELECCIONAR", "Cancelar", "", Null, False)
 	Wait For (sf) Dialog_Result(Result As Int)
 	If Result = DialogResponse.POSITIVE Then
 		Log("File path: " & fd.FilePath)
@@ -175,7 +170,7 @@ Private Sub Boton_Click
 		Log("File name: " & archivo)
 	End If
 	Label1.Text = "Ruta = " & fd.FilePath
-	Label2.Text = "Archivo = " & fd.ChosenName
+	Label2.Text = "Nombre del Archivo = " & fd.ChosenName
  	
 	Log("File path: " & archivo)
 	
@@ -329,62 +324,8 @@ End Sub
 Private Sub Ingresos_Click
 	Activity.RemoveAllViews
 	
-'	Activity.LoadLayout("Scroll")
-'	HScrooll.Panel.LoadLayout("ingresos_gastos")
-'	'HScrooll.Panel.Width=Panelbarras.Width
-'	mbc1.Initialize("")
-
 	Activity.LoadLayout("Ingresos_gastos")
 	
-	'SetActivityAttribute (Ingresos_gastos, android:screenOrientation, "unspecified")
-	
-	'    RIGHT_OF_CHART, RIGHT_OF_CHART_CENTER, RIGHT_OF_CHART_INSIDE,
-	'    LEFT_OF_CHART, LEFT_OF_CHART_CENTER, LEFT_OF_CHART_INSIDE,
-	'    BELOW_CHART_LEFT, BELOW_CHART_RIGHT, BELOW_CHART_CENTER,
-
-'	'   LINE, CIRCLE, SQUARE
-'	mbc1.LegendShapeSize = 7.0	    'this line of code needs to be before mbc1.setTheLegendPositionAndForm("BELOW_CHART_CENTER", "CIRCLE")
-'	mbc1.setTheLegendPositionAndForm("BELOW_CHART_CENTER", "CIRCLE")    'pass strings from the above comments
-'	
-'	mbc1.TheLegendColor = Colors.Gray
-'	mbc1.TheLegendTextSize = 13.0
-'	mbc1.LegendTitle = ""
-'	mbc1.ChartDescription = ""
-'	mbc1.ChartDescriptionColor = 0XFFFFA500                 'ORANGE
-'	mbc1.ChartDescriptionTextSize = 13
-'
-'	mbc1.ValueTextColor = Colors.Red
-'	mbc1.ValueTextSize = 6.0
-'
-'	'the following 3 arrays must have the same number of entries/elements
-'	mbc1.BarColors = Array As Int(Colors.Blue, Colors.Green, Colors.Magenta, Colors.Cyan, Colors.Yellow, Colors.DarkGray, Colors.Blue)
-'	mbc1.LegendText = Array As String("Ingresos", "G,Operacionales", "Utilidad Bruta", "G. Admin.", "Utilidad Operativa AI.", "Impuestos", "Utilidad O. Desp Impuestos")
-'	mbc1.ChartData = Array As Float (Ingresos_, GOp, UtilidadB, Gadm, UtilidadOai, Impuestos, UOperativaDesp_Imp)    'values - it will be converted to %
-'	mbc1.LegendShapeSize=5
-'	
-'	mbc1.DoubleTapToZoomEnabled = True
-'	mbc1.DrawBarShadow = False
-'	mbc1.GridBackgroundColor = Colors.Black
-'	mbc1.ValueTextColor = 0XFFFFA500
-'	mbc1.DrawBorders = True
-'	mbc1.DrawGridBackground = True
-'	mbc1.DrawHighlightArrow = True
-'	mbc1.DrawValueAboveBar = True
-'	mbc1.PinchZoom = True
-'	mbc1.ScaleEnabled = True
-'	mbc1.BorderColor = Colors.Blue
-'	mbc1.BorderWidth = 4.0
-'    
-'	mbc1.BarData = 7   'this number must be the same as the number of elements in the above arrays
-	
-	
-	'HORIZONTAL BAR CHART
-	
-	'    RIGHT_OF_CHART, RIGHT_OF_CHART_CENTER, RIGHT_OF_CHART_INSIDE,
-	'    LEFT_OF_CHART, LEFT_OF_CHART_CENTER, LEFT_OF_CHART_INSIDE,
-	'    BELOW_CHART_LEFT, BELOW_CHART_RIGHT, BELOW_CHART_CENTER,
-
-	'   LINE, CIRCLE, SQUARE
 	mbc1.LegendShapeSize = 7.0	    'this line of code needs to be before mbc1.setTheLegendPositionAndForm("BELOW_CHART_CENTER", "CIRCLE")
 	mbc1.setTheLegendPositionAndForm("BELOW_CHART_CENTER", "CIRCLE")    'pass strings from the above comments
 	
@@ -401,7 +342,7 @@ Private Sub Ingresos_Click
 	mbc1.ValueTextSize = 10.0
 
 	'the following 3 arrays must have the same number of entries/elements
-	mbc1.BarColors = Array As Int(Colors.Blue, Colors.Yellow, Colors.Green, Colors.Red, Colors.Magenta, Colors.Cyan, Colors.Blue, Colors.Yellow, Colors.Green, Colors.Red, Colors.Magenta, Colors.Cyan)
+	mbc1.BarColors = Array As Int(Colors.Blue, Colors.Yellow, Colors.Green, Colors.Red, Colors.Magenta, Colors.Cyan, Colors.LightGray, Colors.Yellow, Colors.Green, Colors.Red, Colors.Magenta, Colors.Cyan)
 	mbc1.LegendText = Array As String("Ingresos", "G,Operacionales", "Utilidad Bruta", "G. Admin.", "Utilidad O. AI.", "Impuestos", "Utilidad O. DI")
 	mbc1.ChartData = Array As Float(Ingresos_, GOp, UtilidadB, Gadm, UtilidadOai, Impuestos, UOperativaDesp_Imp)    'values - it will be converted to %
 
@@ -434,9 +375,33 @@ Private Sub Regresar2_Click
 End Sub
 
 Private Sub infoUB_Click
-	
+		
+	Dim sf As Object = xui.Msgbox2Async("La utilidad bruta, también conocida como utilidad de las ventas o ingresos brutos, es la ganancia que obtiene una compañía después de deducir los costos asociados con la fabricación y venta de sus productos, o los costos asociados con la prestación de sus servicios. ", "¿Que es la Utilidad Bruta?", "MAS INFORMACIÓN", "", "Cerrar", Null)
+	Wait For (sf) Msgbox_Result (Result As Int)
+	If Result = xui.DialogResponse_Positive Then
+		Dim p As PhoneIntents
+		Dim url As String
+		url = "https://www.lifeder.com/utilidad-bruta/"
+		StartActivity(p.OpenBrowser(url))
+	End If
 End Sub
 
 Private Sub infoUM_Click
+	
+	Dim sf As Object = xui.Msgbox2Async("La utilidad de operación u operacional es un valor contable que mide la ganancia obtenida por una empresa a través de sus principales operaciones comerciales, excluyendo deducciones por los intereses e impuestos ", "¿Que es la Utilidad de Operación?", "MAS INFORMACIÓN", "", "Cerrar", Null)
+	Wait For (sf) Msgbox_Result (Result As Int)
+	If Result = xui.DialogResponse_Positive Then
+		Dim p As PhoneIntents
+    Dim url As String
+		url = "https://www.lifeder.com/utilidad-operacional/"
+    StartActivity(p.OpenBrowser(url))
+	End If
+
+
+End Sub
+
+Private Sub Regresar1_Click
+	Activity.RemoveAllViews
+	Activity.LoadLayout("Pantalla2")
 	
 End Sub

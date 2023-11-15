@@ -4,6 +4,6 @@ ModuleBreakpoints0=
 ModuleBreakpoints1=
 ModuleClosedNodes0=
 ModuleClosedNodes1=1
-NavigationStack=Diseñador Visual,EstadoResultados.bal,-100,6,Main,Analisis_Click,170,6,Main,Globals,85,6,Main,Regresar2_Click,400,0,Diseñador Visual,ScrollView.bal,-100,6,Diseñador Visual,Scroll.bal,-100,4,Main,Regresar_Click,296,0,Diseñador Visual,Ingresos_gastos.bal,-100,6,Main,Ingresos_Click,300,6
+NavigationStack=Diseñador Visual,Pantalla2.bal,-100,6,Main,infoUB_Click,354,1,Diseñador Visual,EstadoResultados.bal,-100,6,Diseñador Visual,Analisis.bal,-100,6,Main,ER_Click,289,0,Main,Regresar_Click,291,0,Main,Regresar1_Click,377,1,Main,Globals,40,0,Main,Analisis_Click,151,0,Main,Boton_Click,132,6
 SelectedBuild=0
 VisibleModules=1

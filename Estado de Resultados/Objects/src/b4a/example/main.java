@@ -25,7 +25,7 @@ public class main extends Activity implements B4AActivity{
     ActivityWrapper _activity;
     java.util.ArrayList<B4AMenuItem> menuItems;
 	public static final boolean fullScreen = false;
-	public static final boolean includeTitle = true;
+	public static final boolean includeTitle = false;
     public static WeakReference<Activity> previousOne;
     public static boolean dontPause;
 
@@ -417,13 +417,10 @@ public anywheresoftware.b4a.objects.LabelWrapper _datos7 = null;
 public anywheresoftware.b4a.objects.ButtonWrapper _er = null;
 public anywheresoftware.b4a.objects.PanelWrapper _panel1 = null;
 public anywheresoftware.b4a.objects.PanelWrapper _panel2 = null;
-public anywheresoftware.b4a.objects.ButtonWrapper _nómina = null;
 public anywheresoftware.b4a.objects.ButtonWrapper _regresar2 = null;
 public anywheresoftware.b4a.objects.ButtonWrapper _infoub = null;
 public anywheresoftware.b4a.objects.ButtonWrapper _infoum = null;
-public anywheresoftware.b4a.objects.HorizontalScrollViewWrapper _scrollview1 = null;
 public anywheresoftware.b4a.objects.PanelWrapper _panelbarras = null;
-public anywheresoftware.b4a.objects.HorizontalScrollViewWrapper _hscrooll = null;
 public mpandroidchartwrapper.horizontalBarChartWrapper _mbc1 = null;
 public b4a.example.starter _starter = null;
 public static String  _activity_create(boolean _firsttime) throws Exception{
@@ -641,7 +638,7 @@ RDebugUtils.currentLine=458757;
 _fd.setFilePath(anywheresoftware.b4a.keywords.Common.File.getDirInternal());
 RDebugUtils.currentLine=458758;
  //BA.debugLineNum = 458758;BA.debugLine="Dim sf As Object = fd.ShowAsync(\"Seleccionar Arch";
-_sf = _fd.ShowAsync(BA.ObjectToCharSequence("Seleccionar Archivo"),"SELECCIONAR","Cancelar","si",mostCurrent.activityBA,(android.graphics.Bitmap)(anywheresoftware.b4a.keywords.Common.Null),anywheresoftware.b4a.keywords.Common.False);
+_sf = _fd.ShowAsync(BA.ObjectToCharSequence("Seleccionar Archivo"),"SELECCIONAR","Cancelar","",mostCurrent.activityBA,(android.graphics.Bitmap)(anywheresoftware.b4a.keywords.Common.Null),anywheresoftware.b4a.keywords.Common.False);
 RDebugUtils.currentLine=458759;
  //BA.debugLineNum = 458759;BA.debugLine="Wait For (sf) Dialog_Result(Result As Int)";
 anywheresoftware.b4a.keywords.Common.WaitFor("dialog_result", processBA, new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "main", "boton_click"), _sf);
@@ -668,13 +665,13 @@ case 3:
 this.state = 4;
 RDebugUtils.currentLine=458761;
  //BA.debugLineNum = 458761;BA.debugLine="Log(\"File path: \" & fd.FilePath)";
-anywheresoftware.b4a.keywords.Common.LogImpl("2458761","File path: "+_fd.getFilePath(),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("4458761","File path: "+_fd.getFilePath(),0);
 RDebugUtils.currentLine=458762;
  //BA.debugLineNum = 458762;BA.debugLine="archivo = fd.ChosenName";
 parent.mostCurrent._archivo = _fd.getChosenName();
 RDebugUtils.currentLine=458763;
  //BA.debugLineNum = 458763;BA.debugLine="Log(\"File name: \" & archivo)";
-anywheresoftware.b4a.keywords.Common.LogImpl("2458763","File name: "+parent.mostCurrent._archivo,0);
+anywheresoftware.b4a.keywords.Common.LogImpl("4458763","File name: "+parent.mostCurrent._archivo,0);
  if (true) break;
 
 case 4:
@@ -685,11 +682,11 @@ RDebugUtils.currentLine=458765;
  //BA.debugLineNum = 458765;BA.debugLine="Label1.Text = \"Ruta = \" & fd.FilePath";
 parent.mostCurrent._label1.setText(BA.ObjectToCharSequence("Ruta = "+_fd.getFilePath()));
 RDebugUtils.currentLine=458766;
- //BA.debugLineNum = 458766;BA.debugLine="Label2.Text = \"Archivo = \" & fd.ChosenName";
-parent.mostCurrent._label2.setText(BA.ObjectToCharSequence("Archivo = "+_fd.getChosenName()));
+ //BA.debugLineNum = 458766;BA.debugLine="Label2.Text = \"Nombre del Archivo = \" & fd.Chosen";
+parent.mostCurrent._label2.setText(BA.ObjectToCharSequence("Nombre del Archivo = "+_fd.getChosenName()));
 RDebugUtils.currentLine=458768;
  //BA.debugLineNum = 458768;BA.debugLine="Log(\"File path: \" & archivo)";
-anywheresoftware.b4a.keywords.Common.LogImpl("2458768","File path: "+parent.mostCurrent._archivo,0);
+anywheresoftware.b4a.keywords.Common.LogImpl("4458768","File path: "+parent.mostCurrent._archivo,0);
 RDebugUtils.currentLine=458770;
  //BA.debugLineNum = 458770;BA.debugLine="End Sub";
 if (true) break;
@@ -944,6 +941,9 @@ if (Debug.shouldDelegate(mostCurrent.activityBA, "infoub_click", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "infoub_click", null));}
 RDebugUtils.currentLine=851968;
  //BA.debugLineNum = 851968;BA.debugLine="Private Sub infoUB_Click";
+RDebugUtils.currentLine=851969;
+ //BA.debugLineNum = 851969;BA.debugLine="MsgboxAsync(\"La utilidad bruta, también conocida";
+anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("La utilidad bruta, también conocida como utilidad de las ventas o ingresos brutos, es la ganancia que obtiene una compañía después de deducir los costos asociados con la fabricación y venta de sus productos, o los costos asociados con la prestación de sus servicios. "),BA.ObjectToCharSequence("¿Que es la Utilidad Bruta?"),processBA);
 RDebugUtils.currentLine=851970;
  //BA.debugLineNum = 851970;BA.debugLine="End Sub";
 return "";
@@ -954,6 +954,9 @@ if (Debug.shouldDelegate(mostCurrent.activityBA, "infoum_click", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "infoum_click", null));}
 RDebugUtils.currentLine=917504;
  //BA.debugLineNum = 917504;BA.debugLine="Private Sub infoUM_Click";
+RDebugUtils.currentLine=917505;
+ //BA.debugLineNum = 917505;BA.debugLine="MsgboxAsync(\"La utilidad de operación u operacion";
+anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("La utilidad de operación u operacional es un valor contable que mide la ganancia obtenida por una empresa a través de sus principales operaciones comerciales, excluyendo deducciones por los intereses e impuestos "),BA.ObjectToCharSequence("¿Que es la Utilidad de Operación?"),processBA);
 RDebugUtils.currentLine=917506;
  //BA.debugLineNum = 917506;BA.debugLine="End Sub";
 return "";

@@ -1,6 +1,6 @@
 --release
 --output
-C:\Users\gris8\OneDrive\Documentos\PRACTICAS PROFESIONALES\Backup Estado de Resultados 2023-10-31\Estado de Resultados\Objects
+C:\Users\gris8\OneDrive\Documentos\PRACTICAS PROFESIONALES\Dialogs\prueba\Estado-de-Resultados-Estad-a\Estado de Resultados\Objects
 --lib
 C:\ANDROID\platforms\android-33\android.jar
 --min-api
@@ -15,26 +15,26 @@ C:\ANDROID\tools\..\extras\b4a_local\unpacked-xui-63822351364000\dex_v1\xui.zip
 C:\ANDROID\tools\..\extras\b4a_local\unpacked-phone-63822351362000\dex_v1\phone.zip
 C:\ANDROID\tools\..\extras\b4a_local\unpacked-poi-3.12-android-a-63830925527667\dex_v1\poi-3.12-android-a.zip
 C:\ANDROID\tools\..\extras\b4a_local\unpacked-poi-ooxml-schemas-3.12-20150511-a-63830925629420\dex_v1\poi-ooxml-schemas-3.12-20150511-a.zip
-C:\Users\gris8\OneDrive\Documentos\PRACTICAS PROFESIONALES\Backup Estado de Resultados 2023-10-31\Estado de Resultados\Objects\dexed\b4a\FinanzasC\b4xformatter$_b4xformatdata.dex
-C:\Users\gris8\OneDrive\Documentos\PRACTICAS PROFESIONALES\Backup Estado de Resultados 2023-10-31\Estado de Resultados\Objects\dexed\b4a\FinanzasC\b4xformatter.dex
-C:\Users\gris8\OneDrive\Documentos\PRACTICAS PROFESIONALES\Backup Estado de Resultados 2023-10-31\Estado de Resultados\Objects\dexed\b4a\FinanzasC\main$1.dex
-C:\Users\gris8\OneDrive\Documentos\PRACTICAS PROFESIONALES\Backup Estado de Resultados 2023-10-31\Estado de Resultados\Objects\dexed\b4a\FinanzasC\main$B4AMenuItemsClickListener.dex
-C:\Users\gris8\OneDrive\Documentos\PRACTICAS PROFESIONALES\Backup Estado de Resultados 2023-10-31\Estado de Resultados\Objects\dexed\b4a\FinanzasC\main$HandleKeyDelayed.dex
-C:\Users\gris8\OneDrive\Documentos\PRACTICAS PROFESIONALES\Backup Estado de Resultados 2023-10-31\Estado de Resultados\Objects\dexed\b4a\FinanzasC\main$ResumableSub_Boton_Click.dex
-C:\Users\gris8\OneDrive\Documentos\PRACTICAS PROFESIONALES\Backup Estado de Resultados 2023-10-31\Estado de Resultados\Objects\dexed\b4a\FinanzasC\main$ResumableSub_infoUB_Click.dex
-C:\Users\gris8\OneDrive\Documentos\PRACTICAS PROFESIONALES\Backup Estado de Resultados 2023-10-31\Estado de Resultados\Objects\dexed\b4a\FinanzasC\main$ResumableSub_infoUM_Click.dex
-C:\Users\gris8\OneDrive\Documentos\PRACTICAS PROFESIONALES\Backup Estado de Resultados 2023-10-31\Estado de Resultados\Objects\dexed\b4a\FinanzasC\main$ResumeMessage.dex
-C:\Users\gris8\OneDrive\Documentos\PRACTICAS PROFESIONALES\Backup Estado de Resultados 2023-10-31\Estado de Resultados\Objects\dexed\b4a\FinanzasC\main$WaitForLayout.dex
-C:\Users\gris8\OneDrive\Documentos\PRACTICAS PROFESIONALES\Backup Estado de Resultados 2023-10-31\Estado de Resultados\Objects\dexed\b4a\FinanzasC\main.dex
-C:\Users\gris8\OneDrive\Documentos\PRACTICAS PROFESIONALES\Backup Estado de Resultados 2023-10-31\Estado de Resultados\Objects\dexed\b4a\FinanzasC\R$drawable.dex
-C:\Users\gris8\OneDrive\Documentos\PRACTICAS PROFESIONALES\Backup Estado de Resultados 2023-10-31\Estado de Resultados\Objects\dexed\b4a\FinanzasC\R$style.dex
-C:\Users\gris8\OneDrive\Documentos\PRACTICAS PROFESIONALES\Backup Estado de Resultados 2023-10-31\Estado de Resultados\Objects\dexed\b4a\FinanzasC\R.dex
-C:\Users\gris8\OneDrive\Documentos\PRACTICAS PROFESIONALES\Backup Estado de Resultados 2023-10-31\Estado de Resultados\Objects\dexed\b4a\FinanzasC\starter$1.dex
-C:\Users\gris8\OneDrive\Documentos\PRACTICAS PROFESIONALES\Backup Estado de Resultados 2023-10-31\Estado de Resultados\Objects\dexed\b4a\FinanzasC\starter$2.dex
-C:\Users\gris8\OneDrive\Documentos\PRACTICAS PROFESIONALES\Backup Estado de Resultados 2023-10-31\Estado de Resultados\Objects\dexed\b4a\FinanzasC\starter$starter_BR.dex
-C:\Users\gris8\OneDrive\Documentos\PRACTICAS PROFESIONALES\Backup Estado de Resultados 2023-10-31\Estado de Resultados\Objects\dexed\b4a\FinanzasC\starter.dex
-C:\Users\gris8\OneDrive\Documentos\PRACTICAS PROFESIONALES\Backup Estado de Resultados 2023-10-31\Estado de Resultados\Objects\dexed\b4a\FinanzasC\designerscripts\LS_analisis.dex
-C:\Users\gris8\OneDrive\Documentos\PRACTICAS PROFESIONALES\Backup Estado de Resultados 2023-10-31\Estado de Resultados\Objects\dexed\b4a\FinanzasC\designerscripts\LS_estadoresultados.dex
-C:\Users\gris8\OneDrive\Documentos\PRACTICAS PROFESIONALES\Backup Estado de Resultados 2023-10-31\Estado de Resultados\Objects\dexed\b4a\FinanzasC\designerscripts\LS_ingresos_gastos.dex
-C:\Users\gris8\OneDrive\Documentos\PRACTICAS PROFESIONALES\Backup Estado de Resultados 2023-10-31\Estado de Resultados\Objects\dexed\b4a\FinanzasC\designerscripts\LS_pantalla1.dex
-C:\Users\gris8\OneDrive\Documentos\PRACTICAS PROFESIONALES\Backup Estado de Resultados 2023-10-31\Estado de Resultados\Objects\dexed\b4a\FinanzasC\designerscripts\LS_pantalla2.dex
+C:\Users\gris8\OneDrive\Documentos\PRACTICAS PROFESIONALES\Dialogs\prueba\Estado-de-Resultados-Estad-a\Estado de Resultados\Objects\dexed\b4a\FinanzasC\b4xformatter$_b4xformatdata.dex
+C:\Users\gris8\OneDrive\Documentos\PRACTICAS PROFESIONALES\Dialogs\prueba\Estado-de-Resultados-Estad-a\Estado de Resultados\Objects\dexed\b4a\FinanzasC\b4xformatter.dex
+C:\Users\gris8\OneDrive\Documentos\PRACTICAS PROFESIONALES\Dialogs\prueba\Estado-de-Resultados-Estad-a\Estado de Resultados\Objects\dexed\b4a\FinanzasC\main$1.dex
+C:\Users\gris8\OneDrive\Documentos\PRACTICAS PROFESIONALES\Dialogs\prueba\Estado-de-Resultados-Estad-a\Estado de Resultados\Objects\dexed\b4a\FinanzasC\main$B4AMenuItemsClickListener.dex
+C:\Users\gris8\OneDrive\Documentos\PRACTICAS PROFESIONALES\Dialogs\prueba\Estado-de-Resultados-Estad-a\Estado de Resultados\Objects\dexed\b4a\FinanzasC\main$HandleKeyDelayed.dex
+C:\Users\gris8\OneDrive\Documentos\PRACTICAS PROFESIONALES\Dialogs\prueba\Estado-de-Resultados-Estad-a\Estado de Resultados\Objects\dexed\b4a\FinanzasC\main$ResumableSub_Boton_Click.dex
+C:\Users\gris8\OneDrive\Documentos\PRACTICAS PROFESIONALES\Dialogs\prueba\Estado-de-Resultados-Estad-a\Estado de Resultados\Objects\dexed\b4a\FinanzasC\main$ResumableSub_infoUB_Click.dex
+C:\Users\gris8\OneDrive\Documentos\PRACTICAS PROFESIONALES\Dialogs\prueba\Estado-de-Resultados-Estad-a\Estado de Resultados\Objects\dexed\b4a\FinanzasC\main$ResumableSub_infoUM_Click.dex
+C:\Users\gris8\OneDrive\Documentos\PRACTICAS PROFESIONALES\Dialogs\prueba\Estado-de-Resultados-Estad-a\Estado de Resultados\Objects\dexed\b4a\FinanzasC\main$ResumeMessage.dex
+C:\Users\gris8\OneDrive\Documentos\PRACTICAS PROFESIONALES\Dialogs\prueba\Estado-de-Resultados-Estad-a\Estado de Resultados\Objects\dexed\b4a\FinanzasC\main$WaitForLayout.dex
+C:\Users\gris8\OneDrive\Documentos\PRACTICAS PROFESIONALES\Dialogs\prueba\Estado-de-Resultados-Estad-a\Estado de Resultados\Objects\dexed\b4a\FinanzasC\main.dex
+C:\Users\gris8\OneDrive\Documentos\PRACTICAS PROFESIONALES\Dialogs\prueba\Estado-de-Resultados-Estad-a\Estado de Resultados\Objects\dexed\b4a\FinanzasC\R$drawable.dex
+C:\Users\gris8\OneDrive\Documentos\PRACTICAS PROFESIONALES\Dialogs\prueba\Estado-de-Resultados-Estad-a\Estado de Resultados\Objects\dexed\b4a\FinanzasC\R$style.dex
+C:\Users\gris8\OneDrive\Documentos\PRACTICAS PROFESIONALES\Dialogs\prueba\Estado-de-Resultados-Estad-a\Estado de Resultados\Objects\dexed\b4a\FinanzasC\R.dex
+C:\Users\gris8\OneDrive\Documentos\PRACTICAS PROFESIONALES\Dialogs\prueba\Estado-de-Resultados-Estad-a\Estado de Resultados\Objects\dexed\b4a\FinanzasC\starter$1.dex
+C:\Users\gris8\OneDrive\Documentos\PRACTICAS PROFESIONALES\Dialogs\prueba\Estado-de-Resultados-Estad-a\Estado de Resultados\Objects\dexed\b4a\FinanzasC\starter$2.dex
+C:\Users\gris8\OneDrive\Documentos\PRACTICAS PROFESIONALES\Dialogs\prueba\Estado-de-Resultados-Estad-a\Estado de Resultados\Objects\dexed\b4a\FinanzasC\starter$starter_BR.dex
+C:\Users\gris8\OneDrive\Documentos\PRACTICAS PROFESIONALES\Dialogs\prueba\Estado-de-Resultados-Estad-a\Estado de Resultados\Objects\dexed\b4a\FinanzasC\starter.dex
+C:\Users\gris8\OneDrive\Documentos\PRACTICAS PROFESIONALES\Dialogs\prueba\Estado-de-Resultados-Estad-a\Estado de Resultados\Objects\dexed\b4a\FinanzasC\designerscripts\LS_analisis.dex
+C:\Users\gris8\OneDrive\Documentos\PRACTICAS PROFESIONALES\Dialogs\prueba\Estado-de-Resultados-Estad-a\Estado de Resultados\Objects\dexed\b4a\FinanzasC\designerscripts\LS_estadoresultados.dex
+C:\Users\gris8\OneDrive\Documentos\PRACTICAS PROFESIONALES\Dialogs\prueba\Estado-de-Resultados-Estad-a\Estado de Resultados\Objects\dexed\b4a\FinanzasC\designerscripts\LS_ingresos_gastos.dex
+C:\Users\gris8\OneDrive\Documentos\PRACTICAS PROFESIONALES\Dialogs\prueba\Estado-de-Resultados-Estad-a\Estado de Resultados\Objects\dexed\b4a\FinanzasC\designerscripts\LS_pantalla1.dex
+C:\Users\gris8\OneDrive\Documentos\PRACTICAS PROFESIONALES\Dialogs\prueba\Estado-de-Resultados-Estad-a\Estado de Resultados\Objects\dexed\b4a\FinanzasC\designerscripts\LS_pantalla2.dex

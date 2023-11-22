@@ -442,10 +442,10 @@ de.donmanfred.XSSFCellwrapper _cell = null;
 mostCurrent._activity.RemoveAllViews();
  //BA.debugLineNum = 157;BA.debugLine="Activity.LoadLayout(\"Analisis\")";
 mostCurrent._activity.LoadLayout("Analisis",mostCurrent.activityBA);
- //BA.debugLineNum = 159;BA.debugLine="File.Copy(File.DirAssets,archivo,File.DirInternal";
-anywheresoftware.b4a.keywords.Common.File.Copy(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),mostCurrent._archivo,anywheresoftware.b4a.keywords.Common.File.getDirInternal(),mostCurrent._archivo);
- //BA.debugLineNum = 160;BA.debugLine="xls.Initialize(\"\",File.Combine(File.DirInternal,a";
-_xls.Initialize(processBA,"",anywheresoftware.b4a.keywords.Common.File.Combine(anywheresoftware.b4a.keywords.Common.File.getDirInternal(),mostCurrent._archivo));
+ //BA.debugLineNum = 159;BA.debugLine="File.Copy(File.DirAssets,archivo,File.DirRootExte";
+anywheresoftware.b4a.keywords.Common.File.Copy(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),mostCurrent._archivo,anywheresoftware.b4a.keywords.Common.File.getDirRootExternal(),mostCurrent._archivo);
+ //BA.debugLineNum = 160;BA.debugLine="xls.Initialize(\"\",File.Combine(File.DirRootExtern";
+_xls.Initialize(processBA,"",anywheresoftware.b4a.keywords.Common.File.Combine(anywheresoftware.b4a.keywords.Common.File.getDirRootExternal(),mostCurrent._archivo));
  //BA.debugLineNum = 162;BA.debugLine="Dim sheet As XLSSheet = xls.getSheetAt(xls.Active";
 _sheet = new de.donmanfred.XLSSheetwrapper();
 _sheet = _xls.getSheetAt(_xls.getActiveSheetIndex());
@@ -525,7 +525,7 @@ case 0:
 //C
 this.state = 1;
  //BA.debugLineNum = 133;BA.debugLine="MsgboxAsync(\"Recuerda que para poder acceder a lo";
-anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("Recuerda que para poder acceder a los archivos primero necesitas ir a Configuración, Aplicaciones y dar permiso al acceso"),BA.ObjectToCharSequence("HABILITACIÓN DE ACCESO"),processBA);
+anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("Recuerda que para poder acceder a los archivos primero necesitas ir a Configuración, Aplicaciones, buscar por el nombre de la aplicación 'FINANZAS CONTIGO' y dar permiso al acceso a los archivos y a la lectura de archivos"),BA.ObjectToCharSequence("HABILITACIÓN DE ACCESO"),processBA);
  //BA.debugLineNum = 134;BA.debugLine="Dim fd As FileDialog";
 _fd = new anywheresoftware.b4a.agraham.dialogs.InputDialog.FileDialog();
  //BA.debugLineNum = 135;BA.debugLine="fd.FastScroll = True";
@@ -563,11 +563,11 @@ case 3:
 //C
 this.state = 4;
  //BA.debugLineNum = 143;BA.debugLine="Log(\"File path: \" & fd.FilePath)";
-anywheresoftware.b4a.keywords.Common.LogImpl("8458763","File path: "+_fd.getFilePath(),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("1458763","File path: "+_fd.getFilePath(),0);
  //BA.debugLineNum = 144;BA.debugLine="archivo = fd.ChosenName";
 parent.mostCurrent._archivo = _fd.getChosenName();
  //BA.debugLineNum = 145;BA.debugLine="Log(\"File name: \" & archivo)";
-anywheresoftware.b4a.keywords.Common.LogImpl("8458765","File name: "+parent.mostCurrent._archivo,0);
+anywheresoftware.b4a.keywords.Common.LogImpl("1458765","File name: "+parent.mostCurrent._archivo,0);
  if (true) break;
 
 case 4:
@@ -579,7 +579,7 @@ parent.mostCurrent._label1.setText(BA.ObjectToCharSequence("Ruta = "+_fd.getFile
  //BA.debugLineNum = 148;BA.debugLine="Label2.Text = \"Nombre del Archivo = \" & fd.Chosen";
 parent.mostCurrent._label2.setText(BA.ObjectToCharSequence("Nombre del Archivo = "+_fd.getChosenName()));
  //BA.debugLineNum = 150;BA.debugLine="Log(\"File path: \" & archivo)";
-anywheresoftware.b4a.keywords.Common.LogImpl("8458770","File path: "+parent.mostCurrent._archivo,0);
+anywheresoftware.b4a.keywords.Common.LogImpl("1458770","File path: "+parent.mostCurrent._archivo,0);
  //BA.debugLineNum = 152;BA.debugLine="End Sub";
 if (true) break;
 
@@ -595,10 +595,10 @@ de.donmanfred.XSSFRowwrapper _row = null;
 de.donmanfred.XSSFCellwrapper _cell = null;
 String _texto1 = "";
  //BA.debugLineNum = 199;BA.debugLine="Private Sub ER_Click";
- //BA.debugLineNum = 200;BA.debugLine="File.Copy(File.DirAssets,archivo,File.DirInternal";
-anywheresoftware.b4a.keywords.Common.File.Copy(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),mostCurrent._archivo,anywheresoftware.b4a.keywords.Common.File.getDirInternal(),mostCurrent._archivo);
- //BA.debugLineNum = 201;BA.debugLine="xls.Initialize(\"\",File.Combine(File.DirInternal,a";
-_xls.Initialize(processBA,"",anywheresoftware.b4a.keywords.Common.File.Combine(anywheresoftware.b4a.keywords.Common.File.getDirInternal(),mostCurrent._archivo));
+ //BA.debugLineNum = 200;BA.debugLine="File.Copy(File.DirAssets,archivo,File.DirRootExte";
+anywheresoftware.b4a.keywords.Common.File.Copy(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),mostCurrent._archivo,anywheresoftware.b4a.keywords.Common.File.getDirRootExternal(),mostCurrent._archivo);
+ //BA.debugLineNum = 201;BA.debugLine="xls.Initialize(\"\",File.Combine(File.DirRootExtern";
+_xls.Initialize(processBA,"",anywheresoftware.b4a.keywords.Common.File.Combine(anywheresoftware.b4a.keywords.Common.File.getDirRootExternal(),mostCurrent._archivo));
  //BA.debugLineNum = 203;BA.debugLine="Dim sheet As XLSSheet = xls.getSheetAt(xls.Active";
 _sheet = new de.donmanfred.XLSSheetwrapper();
 _sheet = _xls.getSheetAt(_xls.getActiveSheetIndex());

@@ -13,11 +13,13 @@
 	    android:anyDensity="true"/>
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 	<uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+	<uses-permission android:name="android.permission.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION"/>
 	<application
 		android:name="androidx.multidex.MultiDexApplication"
 		android:icon="@drawable/icon"
 		android:label="Finanzas Contigo"
-		android:theme="@style/LightTheme">
+		android:theme="@style/LightTheme"
+		android:requestLegacyExternalStorage="true">
 		<activity
 			android:windowSoftInputMode="stateHidden"
 			android:launchMode="singleTop"
